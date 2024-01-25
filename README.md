@@ -28,7 +28,7 @@ According to the Gen-Ed [website](https://gened.umd.edu/students/four-categories
 
 * Why is this course taught in the CCJS department?
 
-Actually, courses similar to this one are taught throughout the College of Behavioral and Social Sciences. The disciplinary focus of these courses reflects a belief by University of Maryland faculty that analytic reasoning skills can be effectively conveyed through the disciplinary lens of the student's major. The alternative would be to teach a course like this in a math or statistics department and, indeed, this is what is done at some universities. There is no right or wrong way to deliver this kind of course; what we have at Maryland reflects the views of the faculty who work here.
+The disciplinary focus of this course reflects a belief by the faculty that analytic reasoning skills can be effectively conveyed through the disciplinary lens of the student's major. The alternative would be to teach a course like this in a math or statistics department and, indeed, this is what is done at some universities. There is no right or wrong way to deliver this kind of course; what we have at Maryland reflects the views of the faculty who work here.
 
 * I don't like math and I'm apprehensive about taking this course. Can you help me feel better about this?
 

@@ -91,4 +91,5 @@ This is an aspirational course outline. I will try to stick to the schedule that
 
 #### Lesson 2 - Tuesday 1/30/24
 
-* Two different ways to measure murders and homicides at the national level in the United States ([report](https://bjs.ojp.gov/content/pub/pdf/ntmh.pdf))
+* Assigned Reading: Chapter 1 (continued).
+* Slides in pdf format ([link](https://github.com/rwb/ccjs200/blob/main/gfiles/lesson1.pdf)).

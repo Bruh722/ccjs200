@@ -92,4 +92,4 @@ This is an aspirational course outline. I will try to stick to the schedule that
 #### Lesson 2 - Tuesday 1/30/24
 
 * Assigned Reading: Chapter 1 (continued).
-* Slides in pdf format ([link](https://github.com/rwb/ccjs200/blob/main/gfiles/lesson1.pdf)).
+* Slides in pdf format ([link](https://github.com/rwb/ccjs200/blob/main/gfiles/lesson2.pdf)).

@@ -92,4 +92,5 @@ This is an aspirational course outline. I will try to stick to the schedule that
 #### Lesson 2 - Tuesday 1/30/24
 
 * Assigned Reading: Chapter 1 (continued).
+* Update on course grading: I've decided that at the end of the semester, I will calculate your grades two different ways. The first way will assign 25% weight to each of your exams and 25% weight to the average of your assignment grades. That is what is presented in the syllabus. Second, however, I will calculate your grade assigning 20% weight to each of your exams and 40% weight to the average of your assignment grades. I will assign your final letter grade based on the higher grade out of these 2 calculations.
 * Slides in pdf format ([link](https://github.com/rwb/ccjs200/blob/main/gfiles/lesson2.pdf)).

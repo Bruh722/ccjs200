@@ -97,6 +97,10 @@ This is an aspirational course outline. I will try to stick to the schedule that
 * Washington Post [article](https://www.washingtonpost.com/opinions/2023/11/08/violent-crime-data-2022-mystifying/) mentioned in class.
 * Uniform Crime Reports handling of 9/11/2001 terror attack ([link](https://ucr.fbi.gov/crime-in-the-u.s/2001/toc01.pdf)).
 
-#### Lesson 3 - Tuesday 1/30/24
+#### Lesson 3 - Thursday 2/1/24
 
 * Assigned Reading: Chapter 1 (continued).
+* Slides in pdf format ([link](https://github.com/rwb/ccjs200/blob/main/gfiles/lesson3.pdf)).
+* R [website](https://www.r-project.org).
+* RStudio [website](https://posit.co/download/rstudio-desktop/).
+* OACS Computer Labs, bottom floor of LeFrak ([website](https://oacs.umd.edu/facilities/oacs-computer-labs)). 

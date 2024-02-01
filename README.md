@@ -96,3 +96,7 @@ This is an aspirational course outline. I will try to stick to the schedule that
 * Slides in pdf format ([link](https://github.com/rwb/ccjs200/blob/main/gfiles/lesson2.pdf)).
 * Washington Post [article](https://www.washingtonpost.com/opinions/2023/11/08/violent-crime-data-2022-mystifying/) mentioned in class.
 * Uniform Crime Reports handling of 9/11/2001 terror attack ([link](https://ucr.fbi.gov/crime-in-the-u.s/2001/toc01.pdf)).
+
+#### Lesson 3 - Tuesday 1/30/24
+
+* Assigned Reading: Chapter 1 (continued).

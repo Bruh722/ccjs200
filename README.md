@@ -104,3 +104,8 @@ This is an aspirational course outline. I will try to stick to the schedule that
 * R [website](https://www.r-project.org).
 * RStudio [website](https://posit.co/download/rstudio-desktop/).
 * OACS Computer Labs, bottom floor of LeFrak ([website](https://oacs.umd.edu/facilities/oacs-computer-labs)). 
+
+#### Lesson 4 - Tuesday 2/6/24
+
+* Assigned Reading: Chapter 1 (continued).
+* Slides in pdf format ([link](https://github.com/rwb/ccjs200/blob/main/gfiles/lesson4.pdf)).

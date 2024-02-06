@@ -11,7 +11,7 @@
 * Required Textbook: Bachman, Paternoster, and Wilson (2022, 5th edition), *Statistics for Criminology and Criminal Justice*. 
 * Class Notes: the class notes will be posted on this webpage.
 * Letter grades: At the end of the semester, letter grades will be assigned on a 100-point scale (A+ = 97 and higher; A = 93-96; A- = 90-92; B+ = 87-89; B = 83-86; B- = 80-82; C+ = for 77-79; C = 73-76; C- = 70-72; D+ = 67-69; D = 63-66; D- = 60-62; and F = any grade less than 60). All numeric grades (including the final numeric grade in the class at the end of the semester) will be rounded off to the nearest 1 point (for example, a 78.5 would be rounded to a 79 and a 78.4 would be rounded to a 78).
-* Numeric grades in this class will be based on 3 in-class exams and 3 out-of-class assignments and will all be graded on a 100-point scale. The final numeric grade calculation at the end of the semester will be: 0.25 x Exam 1 + 0.25 x Exam 2 + 0.25 x Exam 3 + 0.25 x Average Assignment Grade. Any formulas needed for exams will be printed on the exam.
+* Numeric grades in this class will be based on 3 in-class exams and 3 out-of-class assignments and will all be graded on a 100-point scale. The final numeric grade calculation at the end of the semester will be: 0.25 x Exam 1 + 0.25 x Exam 2 + 0.25 x Exam 3 + 0.25 x Average Assignment Grade. (Addendum: there will also be a second formula: 0.2 x Exam 1 + 0.2 x Exam 2 + 0.2 x Exam 3 + 0.4 x Average Assignment Grade. At the end of the semester, I will calculate your grade using both approaches and I will assign your grade based on the formula that gives you the higher grade). Any formulas needed for exams will be printed on the exam.
 * Key dates: (1) first class day - Thursday 1/25; (2) spring break - 3/19-3/21; (3) last day of class - Thursday 5/9; and (4) scheduled final exam period - Saturday May 11th from 8-10am.
 * Attendance expectations: My expectation is that you will attend all of the class and discussion sessions (unless you are sick or have some other good reason not to attend). If you have to miss a class or a discussion section, I encourage you to work with other people in the class to get caught up on your notes and contact me or the TA's if you ever need clarification or assistance. If you have to miss an exam, we will follow the notification and make-up policies specified by the University.
 * Statistical software: As noted in the catalog description, there must be a computer component to this course. We will be using R, which is free, easy to get, and works on both Windows and Mac computers.
@@ -108,4 +108,5 @@ This is an aspirational course outline. I will try to stick to the schedule that
 #### Lesson 4 - Tuesday 2/6/24
 
 * Assigned Reading: Chapter 1 (continued).
-* Slides in pdf format
+* Note: we will finish chapter 1 this week and we will post the first assignment on Friday 2/9/24 (due on Friday 2/16/24).
+* Slides in pdf format ([link](https://github.com/rwb/ccjs200/blob/main/gfiles/lesson4.pdf)).

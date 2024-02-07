@@ -110,3 +110,8 @@ This is an aspirational course outline. I will try to stick to the schedule that
 * Assigned Reading: Chapter 1 (continued).
 * Note: we will finish chapter 1 this week and we will post the first assignment on Friday 2/9/24 (due on Friday 2/16/24).
 * Slides in pdf format ([link](https://github.com/rwb/ccjs200/blob/main/gfiles/lesson4.pdf)).
+
+#### Lesson 5 - Thursday 2/8/24
+
+* Assigned Reading: Chapter 1 (continued).
+* Slides in pdf format ([link](https://github.com/rwb/ccjs200/blob/main/gfiles/lesson5.pdf)).

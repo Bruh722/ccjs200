@@ -370,6 +370,6 @@ barplot(table(sample.age),
 <img src="/gfiles/f3.png" width="700px">
 </p>
 
-### Assignment #1 - Due 11:59pm Friday 4/16/24
+### Assignment #1 - Due 11:59pm Friday 2/16/24
 
-* To be posted at 9am on Friday 4/9/24
+* To be posted at 9am on Friday 2/9/24

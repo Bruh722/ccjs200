@@ -246,13 +246,12 @@ pop=c(259177778,263487805,265472973,267764706,
 324280000,328500000)
 
 mrate=(murders/pop)*100000
-df=data.frame(year,murders,pop,mrate)
 
-plot(df$year,df$mrate,type="l",ylim=c(0,10),
+plot(x=year,y=mrate,type="l",ylim=c(0,10),
   main="UCR Murder Rates by Year (1994-2019)",
   xlab="Year (1994-2019)",
   ylab="# of Murders per 100k Population")
-points(x=df$year,df$mrate,pch=19)
+points(x=year,y=mrate,pch=19)
 ```
 
 and here is our output:

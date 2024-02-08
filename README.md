@@ -249,7 +249,7 @@ mrate=(murders/pop)*100000
 df=data.frame(year,murders,pop,mrate)
 
 plot(df$year,df$mrate,type="l",ylim=c(0,10),
-  main="Murder Rates by Year (1994-2019)",
+  main="UCR Murder Rates by Year (1994-2019)",
   xlab="Year (1994-2019)",
   ylab="# of Murders per 100k Population")
 points(x=df$year,df$mrate,pch=19)
@@ -258,5 +258,114 @@ points(x=df$year,df$mrate,pch=19)
 and here is our output:
 
 <p align="center">
-<img src="/gfiles/f1.png" width="500px">
+<img src="/gfiles/f1.png" width="700px">
+</p>
+
+* Age of People Released from NC Prisons in 1978 Example
+
+```R
+# read the dataset - NC Department of Corrections FY1978 Releases
+
+age=c(rep(16,19),rep(17,161),rep(18,492),rep(19,480),rep(20,624),
+  rep(21,599),rep(22,580),rep(23,468),rep(24,537),rep(25,443),rep(26,432),
+  rep(27,338),rep(28,415),rep(29,292),rep(30,324),rep(31,254),rep(32,234),
+  rep(33,179),rep(34,187),rep(35,167),rep(36,177),rep(37,132),rep(38,152),
+  rep(39,117),rep(40,119),rep(41,93),rep(42,113),rep(43,102),rep(44,85),
+  rep(45,75),rep(46,90),rep(47,72),rep(48,86),rep(49,62),rep(50,78),
+  rep(51,61),rep(52,57),rep(53,50),rep(54,44),rep(55,49),rep(56,55),
+  rep(57,34),rep(58,34),rep(59,25),rep(60,21),rep(61,18),rep(62,19),
+  rep(63,11),rep(64,16),rep(65,7),rep(66,5),rep(67,13),rep(68,5),rep(69,3),
+  rep(70,1),rep(71,3),rep(72,5),rep(73,3),rep(74,4),rep(75,2),rep(77,2),rep(78,2))
+n=length(age)
+n
+
+# part 1: create a chart
+
+barplot(table(age),
+  xlab="Age (in years) at Time of Release",
+  ylab="Number of People",
+ main="Age at Release from Prison (1978 NCDOC)") 
+
+# part 2: average age at release for the population
+
+mean(age)
+```
+
+* Here is the output:
+
+```Rout
+> # read the dataset - NC Department of Corrections FY1978 Releases
+> 
+> age=c(rep(16,19),rep(17,161),rep(18,492),rep(19,480),rep(20,624),
++   rep(21,599),rep(22,580),rep(23,468),rep(24,537),rep(25,443),rep(26,432),
++   rep(27,338),rep(28,415),rep(29,292),rep(30,324),rep(31,254),rep(32,234),
++   rep(33,179),rep(34,187),rep(35,167),rep(36,177),rep(37,132),rep(38,152),
++   rep(39,117),rep(40,119),rep(41,93),rep(42,113),rep(43,102),rep(44,85),
++   rep(45,75),rep(46,90),rep(47,72),rep(48,86),rep(49,62),rep(50,78),
++   rep(51,61),rep(52,57),rep(53,50),rep(54,44),rep(55,49),rep(56,55),
++   rep(57,34),rep(58,34),rep(59,25),rep(60,21),rep(61,18),rep(62,19),
++   rep(63,11),rep(64,16),rep(65,7),rep(66,5),rep(67,13),rep(68,5),rep(69,3),
++   rep(70,1),rep(71,3),rep(72,5),rep(73,3),rep(74,4),rep(75,2),rep(77,2),rep(78,2))
+> n=length(age)
+> n
+[1] 9327
+> 
+> # part 1: create a chart
+> 
+> barplot(table(age),
++   xlab="Age (in years) at Time of Release",
++   ylab="Number of People",
++  main="Age at Release from Prison (1978 NCDOC)") 
+> 
+> # part 2: average age at release for the population
+> 
+> mean(age)
+[1] 29.32787
+>
+```
+
+and here is the chart for the population:
+
+<p align="center">
+<img src="/gfiles/f2.png" width="700px">
+</p>
+
+* Now, let's draw a simple random sample from the population, calculate the sample average, and draw a sample barplot.
+
+```R
+# part 3: study a simple random sample
+
+s=sample(1:n,size=100,replace=T)
+sample.age=age[s]
+mean(sample.age)
+
+# part 4: create a chart showing the ages in the sample
+
+barplot(table(sample.age),
+  xlab="Age (in years) at Time of Release",
+  ylab="Number of People",
+ main="Age at Release for Random Sample")
+```
+
+* Here is the output for the random sample:
+
+```Rout
+> # part 3: study a simple random sample
+> 
+> s=sample(1:n,size=100,replace=T)
+> sample.age=age[s]
+> mean(sample.age)
+[1] 31.18
+> 
+> # part 4: create a chart showing the ages in the sample
+> 
+> barplot(table(sample.age),
++   xlab="Age (in years) at Time of Release",
++   ylab="Number of People",
++  main="Age at Release for Random Sample")
+>
+```
+
+<p align="center">
+<img src="/gfiles/f3.png" width="700px">
 </p>

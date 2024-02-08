@@ -115,6 +115,8 @@ This is an aspirational course outline. I will try to stick to the schedule that
 
 * Assigned Reading: Chapter 1 (continued).
 * Slides in pdf format ([link](https://github.com/rwb/ccjs200/blob/main/gfiles/lesson5.pdf)).
+* Please note: to avoid copy/paste problems, all R code and output we have covered so far is included below.
+* In the future, all R code will be posted directly on Github.
 
 ### R code for our examples so far
 

@@ -115,3 +115,148 @@ This is an aspirational course outline. I will try to stick to the schedule that
 
 * Assigned Reading: Chapter 1 (continued).
 * Slides in pdf format ([link](https://github.com/rwb/ccjs200/blob/main/gfiles/lesson5.pdf)).
+
+#### R code for our examples so far
+
+* Basic Calculation in R
+
+```R
+x=2
+y=3
+x+y
+x-y
+x*y
+x/y
+x^y
+factorial(x*y)
+sqrt(y^x)
+```
+
+Here is the output:
+
+```Rout
+> x=2
+> y=3
+> x+y
+[1] 5
+> x-y
+[1] -1
+> x*y
+[1] 6
+> x/y
+[1] 0.6666667
+> x^y
+[1] 8
+> factorial(x*y)
+[1] 720
+> sqrt(y^x)
+[1] 3
+>
+```
+
+* Calculating your grade example
+
+```R
+exam1=77
+exam2=81
+exam3=80
+assignment1=93
+assignment2=87
+assignment3=88
+average.assignment=mean(assignment1,assignment2,assignment3)
+average.assignment
+formula1=0.25*exam1+0.25*exam2+0.25*exam3+0.25*average.assignment
+formula1
+formula2=0.2*exam1+0.2*exam2+0.2*exam3+0.4*average.assignment
+formula2
+```
+
+Here is the output:
+
+```Rout
+> exam1=77
+> exam2=81
+> exam3=80
+> assignment1=93
+> assignment2=87
+> assignment3=88
+> average.assignment=mean(assignment1,assignment2,assignment3)
+> average.assignment
+[1] 93
+> formula1=0.25*exam1+0.25*exam2+0.25*exam3+0.25*average.assignment
+> formula1
+[1] 82.75
+> formula2=0.2*exam1+0.2*exam2+0.2*exam3+0.4*average.assignment
+> formula2
+[1] 84.8
+>
+```
+
+* Household Burglaries in Charlotte and Wilmington Example
+
+```R
+nburg.clt=7305
+nburg.wil=1109
+nburg.clt/nburg.wil
+pop.clt=779541
+pop.wil=106476
+burgrate.clt=(nburg.clt/pop.clt)*100000
+burgrate.clt
+burgrate.wil=(nburg.wil/pop.wil)*100000
+burgrate.wil
+burgrate.clt/burgrate.wil
+```
+
+And, here are the results:
+
+```Rout
+> nburg.clt=7305
+> nburg.wil=1109
+> nburg.clt/nburg.wil
+[1] 6.587015
+> pop.clt=779541
+> pop.wil=106476
+> burgrate.clt=(nburg.clt/pop.clt)*100000
+> burgrate.clt
+[1] 937.0899
+> burgrate.wil=(nburg.wil/pop.wil)*100000
+> burgrate.wil
+[1] 1041.549
+> burgrate.clt/burgrate.wil
+[1] 0.8997077
+>
+```
+
+* UCR Murder Rates by Year (1994-2019 Example)
+
+```R
+year=seq(from=1994,to=2019,by=1)
+
+murders=c(23326,21606,19645,18208,16974,15522,
+15586,16037,16229,16528,16137,16692,17034,
+16929,16272,15241,14748,14612,14827,14196,
+14249,15696,17250,17284,16214,16425)
+
+pop=c(259177778,263487805,265472973,267764706,
+269428571,272315789,283381818,286375000,
+289803571,289964912,293400000,298071429,
+293689655,297000000,301333333,304820000,
+307250000,310893617,315468085,315466667,
+323840909,320326531,325471698,326113208,
+324280000,328500000)
+
+mrate=(murders/pop)*100000
+df=data.frame(year,murders,pop,mrate)
+
+plot(df$year,df$mrate,type="l",ylim=c(0,10),
+  main="Murder Rates by Year (1994-2019)",
+  xlab="Year (1994-2019)",
+  ylab="# of Murders per 100k Population")
+points(x=df$year,df$mrate,pch=19)
+```
+
+and here is our output:
+
+<p align="center">
+<img src="/gfiles/f1.png" width="500px">
+</p>

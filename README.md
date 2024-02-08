@@ -79,7 +79,7 @@ This is an aspirational course outline. I will try to stick to the schedule that
 * Week 15 - 5/7-5/9: Correlation/regression (chapter 12) + final exam review.
 * Final exam - Saturday 5/11: 8am-10am ([official university exam schedule](https://registrar.umd.edu/registration/register-classes/final-exams/spring-2024)).
 
-#### Lesson 1 - Thursday 1/25/24
+### Lesson 1 - Thursday 1/25/24
 
 * Assigned reading: Chapter 1.
 * Slides in pdf format ([link](https://github.com/rwb/ccjs200/blob/main/gfiles/lesson1.pdf)).
@@ -89,7 +89,7 @@ This is an aspirational course outline. I will try to stick to the schedule that
 * 2022 Juvenile Court Data ([report](https://ojjdp.ojp.gov/publications/2022-national-report.pdf)).
 * Washington Post police shootings [database](https://www.washingtonpost.com/graphics/investigations/police-shootings-database/).
 
-#### Lesson 2 - Tuesday 1/30/24
+### Lesson 2 - Tuesday 1/30/24
 
 * Assigned Reading: Chapter 1 (continued).
 * Update on course grading: I've decided that at the end of the semester, I will calculate your grades two different ways. The first way will assign 25% weight to each of your exams and 25% weight to the average of your assignment grades. That is what is presented in the syllabus. Second, however, I will calculate your grade assigning 20% weight to each of your exams and 40% weight to the average of your assignment grades. I will assign your final letter grade based on the higher grade out of these 2 calculations.
@@ -97,7 +97,7 @@ This is an aspirational course outline. I will try to stick to the schedule that
 * Washington Post [article](https://www.washingtonpost.com/opinions/2023/11/08/violent-crime-data-2022-mystifying/) mentioned in class.
 * Uniform Crime Reports handling of 9/11/2001 terror attack ([link](https://ucr.fbi.gov/crime-in-the-u.s/2001/toc01.pdf)).
 
-#### Lesson 3 - Thursday 2/1/24
+### Lesson 3 - Thursday 2/1/24
 
 * Assigned Reading: Chapter 1 (continued).
 * Slides in pdf format ([link](https://github.com/rwb/ccjs200/blob/main/gfiles/lesson3.pdf)).
@@ -105,18 +105,18 @@ This is an aspirational course outline. I will try to stick to the schedule that
 * RStudio [website](https://posit.co/download/rstudio-desktop/).
 * OACS Computer Labs, bottom floor of LeFrak ([website](https://oacs.umd.edu/facilities/oacs-computer-labs)). 
 
-#### Lesson 4 - Tuesday 2/6/24
+### Lesson 4 - Tuesday 2/6/24
 
 * Assigned Reading: Chapter 1 (continued).
 * Note: we will finish chapter 1 this week and we will post the first assignment on Friday 2/9/24 (due on Friday 2/16/24).
 * Slides in pdf format ([link](https://github.com/rwb/ccjs200/blob/main/gfiles/lesson4.pdf)).
 
-#### Lesson 5 - Thursday 2/8/24
+### Lesson 5 - Thursday 2/8/24
 
 * Assigned Reading: Chapter 1 (continued).
 * Slides in pdf format ([link](https://github.com/rwb/ccjs200/blob/main/gfiles/lesson5.pdf)).
 
-#### R code for our examples so far
+### R code for our examples so far
 
 * Basic Calculation in R
 

@@ -380,7 +380,7 @@ barplot(table(sample.age),
 * Part 2: The table gives the total number of homicides in the U.S. for each year from 1994-2019 based on death certificate data from the National Vital Statistics System (NVSS). Using these data construct a figure showing the yearly homicide rates per 100,000 population (similar to the in-class example where we calculated homicide rates using the UCR data). Comment on which series tends to have higher levels -- the one based on UCR data or this one based on the CDC death certificate data.
 
 <p align="center">
-<img src="/gfiles/homicide-table.png" width="500px">
+<img src="/gfiles/homicide-table.png" width="700px">
 </p>
 
 * Part 3: In practice exercise 3, we looked at the age distribution of North Carolina prison releasees in 1978. For this task, you will examine a similar age distribution for the 9,549 people who were released from prison in 1980. The R code for the ages are printed below:

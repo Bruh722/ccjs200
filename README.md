@@ -373,4 +373,29 @@ barplot(table(sample.age),
 
 ### Assignment #1 - Due 11:59pm Friday 2/16/24
 
-* To be posted at 9am on Friday 2/9/24
+* Instructions: Please complete each of the 3 parts listed below. You are allowed to discuss your work with other students and the TA's but the work you submit should be your own work. If you have a question you want to submit in writing, we ask that you post it to the discussion board rather than email. If you do not want to be identified as a questioner by the rest of the class, you may send your question to one of us and we will respond (during business hours). Please note that all questions and answers that we judge to be of interest to the entire class will also be posted on the discussion board. This assignment will be due in pdf format on ELMS by 11:59pm on Friday February 16, 2024.
+
+* Part 1: In 2011, Greensboro police recorded 3,279 household burglaries while Durham police recorded almost the same number -- 3,283. According to the state population database, Greensboro had 263,279 residents in 2011 while Durham had 222,978. Based on this information calculate the number of household burglaries per 100,000 population in each city and identify the city with the higher household burglary rate. Write a sentence where you describe what you learned from this comparison.
+
+* Part 2: The table gives the total number of homicides in the U.S. for each year from 1994-2019 based on death certificate data from the National Vital Statistics System (NVSS). Using these data construct a figure showing the yearly homicide rates per 100,000 population (similar to the in-class example where we calculated homicide rates using the UCR data). Comment on which series tends to have higher levels -- the one based on UCR data or this one based on the CDC death certificate data.
+
+<p align="center">
+<img src="/gfiles/homicide-table.png" width="500px">
+</p>
+
+* Part 3: In practice exercise 3, we looked at the age distribution of North Carolina prison releasees in 1978. For this task, you will examine a similar age distribution for the 9,549 people who were released from prison in 1980. The R code for the ages are printed below:
+
+```R
+age=c(rep(15,1),rep(16,20),rep(17,224),rep(18,504),rep(19,472),rep(20,626),
+  rep(21,517),rep(22,601),rep(23,516),rep(24,565),rep(25,407),rep(26,495),
+  rep(27,302),rep(28,397),rep(29,291),rep(30,298),rep(31,261),rep(32,330),
+  rep(33,224),rep(34,231),rep(35,163),rep(36,194),rep(37,157),rep(38,149),
+  rep(39,125),rep(40,129),rep(41,116),rep(42,100),rep(43,88),rep(44,105),
+  rep(45,88),rep(46,80),rep(47,72),rep(48,60),rep(49,68),rep(50,67),
+  rep(51,64),rep(52,50),rep(53,47),rep(54,51),rep(55,47),rep(56,42),
+  rep(57,28),rep(58,39),rep(59,12),rep(60,29),rep(61,12),rep(62,13),
+  rep(63,8),rep(64,19),rep(65,12),rep(66,9),rep(67,2),rep(68,5),rep(69,3),
+  rep(70,6),rep(71,1),rep(73,2),rep(74,2),rep(75,1),rep(77,1),rep(79,1))
+```
+
+With these ages, you should construct a barplot showing the age distribution for the population of people released from prison in 1980. Next, you should calculate the average age at the time of release for the 1980 cohort. Then, you are asked to draw a simple random sample of 300 people from this population. Create a barplot showing the age distribution for your random sample of people released from prison. Calculate the average age at the time of release for the sample. Compare your population average from 1980 to the population average in 1978. Which one is greater? Now, draw a simple random sample of 300 people from your 1978 population. Compare your sample average from 1978 to your sample average from 1980. Finally, compare the conclusions you draw for the 2 populations to the conclusions you draw from your 2 random samples. *Note*: when I say "compare" I mean show the numeric answers and write a sentence interpreting your results.

@@ -120,7 +120,7 @@ This is an aspirational course outline. I will try to stick to the schedule that
 
 ### R code for our examples so far
 
-* Basic Calculation in R
+* Basic Calculations in R
 
 ```R
 x=2
@@ -229,7 +229,7 @@ And, here are the results:
 >
 ```
 
-* UCR Murder Rates by Year (1994-2019 Example)
+* UCR Murder Rates by Year (1994-2019) Example
 
 ```R
 year=seq(from=1994,to=2019,by=1)

@@ -403,6 +403,7 @@ With these ages, you should construct a barplot showing the age distribution for
 ### Lesson 5 - Tuesday 2/13/24
 
 * Assigned Reading - Chapter 2 of textbook.
+  
 1, Definition of a variable: a quantity that can take on different values.
 2. Definition of a constant: a quantity that can take on only a single value.
 3. In descriptive research, we seek to describe the *location* and the *distribution* of scientifically interesting variables.

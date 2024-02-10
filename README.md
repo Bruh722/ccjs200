@@ -399,3 +399,18 @@ age=c(rep(15,1),rep(16,20),rep(17,224),rep(18,504),rep(19,472),rep(20,626),
 ```
 
 With these ages, you should construct a barplot showing the age distribution for the population of people released from prison in 1980. Next, you should calculate the average age at the time of release for the 1980 cohort. Then, you are asked to draw a simple random sample of 300 people from this population. Create a barplot showing the age distribution for your random sample of people released from prison. Calculate the average age at the time of release for the sample. Compare your population average from 1980 to the population average in 1978. Which one is greater? Now, draw a simple random sample of 300 people from your 1978 population. Compare your sample average from 1978 to your sample average from 1980. Finally, compare the conclusions you draw for the 2 populations to the conclusions you draw from your 2 random samples. *Note*: when I say "compare" I mean show the numeric answers and write a sentence interpreting your results.
+
+### Lesson 5 - Tuesday 2/10/24
+
+* Assigned Reading - Chapter 2 of textbook.
+* Definition of a variable: a quantity that can take on different values.
+* Compared to a constant: a quantity that can take on only a single value.
+* In descriptive research, we seek to describe the *location* and the *distribution* of scientifically interesting variables.
+* In causal research, we seek to *explain* the variation that is observed in a scientifically interesting variable.
+* In evaluation research, we might to both.
+* A *sample space* is a list of all the values that a variable could take on.
+* A *frequency distribution* tells us the number of times that a variable takes on each value in the sample space (slightly different from the book's definition).
+* Variables can be categorized by *level of measurement*.
+* The most basic distinction is between *qualitative* (categorical) and *quantitative* (continuous) variables.
+* Within the category of qualitative variables, there are *nominal* (unordered categories) and *ordinal* (ordered categories).
+* Within the category of quantitative variables, there are *interval* (many ordered categories but no true zero) and *ratio* (continuous with a true zero) variables.

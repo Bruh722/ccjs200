@@ -426,11 +426,10 @@ With these ages, you should construct a barplot showing the age distribution for
 22. Example: we interview a sample of people exiting prison to measure their risk of recidivism. Based on the answers, we divide the respondents (people who participate in a survey) into 3 groups: low, medium, and high risk.
 
 | Outcomes    | N = |
-| ----------- | -----------|
+| ----------- | --: |
 | Low Risk   | 773        |
 | Medium Risk  | 242        |
 | High Risk | 108        |
-| ----------- | -----------|
 | Total | 1123 |
 
 Questions about this: (1) what is the level of measurement?: (2) what are the outcomes in the sample space?; (3) what are the relative frequencies for each of the outcomes?; and (4) what is the probability that someone drawn at random from this sample is high risk?

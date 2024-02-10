@@ -404,7 +404,7 @@ With these ages, you should construct a barplot showing the age distribution for
 
 * Assigned Reading - Chapter 2 of textbook.
 * Definition of a variable: a quantity that can take on different values.
-* Compared to a constant: a quantity that can take on only a single value.
+* Definition of a constant: a quantity that can take on only a single value.
 * In descriptive research, we seek to describe the *location* and the *distribution* of scientifically interesting variables.
 * In causal research, we seek to *explain* the variation that is observed in a scientifically interesting variable.
 * In evaluation research, we might do both.
@@ -414,3 +414,7 @@ With these ages, you should construct a barplot showing the age distribution for
 * The most basic distinction is between *qualitative* (categorical) and *quantitative* (continuous) variables.
 * Within the category of qualitative variables, there are *nominal* (unordered categories) and *ordinal* (ordered categories).
 * Within the category of quantitative variables, there are *interval* (many ordered categories but no true zero) and *ratio* (continuous with a true zero) variables.
+* In criminology, we are typically concerned with *random variables* where we accept the idea that each outcome in the sample space (for qualitative variables) or interval of the sample space (for quantitative variables) occurs with probability, *p*.
+* In this class, we think about *p* in terms of relative frequencies.
+* Example: in a sample of 1,000 prison releasees, we find that 675 people failed (recidivism) while the remaining 325 people did not fail. In this example, failure is a random variable (yes/no). Thus, *p*(fail) = 0.675.
+* Note that *p* must always be a number in the interval [0,1].

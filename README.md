@@ -408,7 +408,7 @@ With these ages, you should construct a barplot showing the age distribution for
 4. In descriptive research, we seek to describe the *location* and the *distribution* of scientifically interesting variables.
 5. In causal research, we seek to *explain* the variation that is observed in a scientifically interesting variable.
 6. In evaluation research, we might do both.
-7. A *sample space* is a list or set of all the values that a variable could take on.
+7. A *sample space* is a list or set of all possible outcomes (values that a variable could have).
 8. The outcomes in a sample space must be mutually exclusive and exhaustive.
 9. A *frequency distribution* tells us the number of times that a variable takes on each value in the sample space (slightly different from the book's definition).
 10. Variables can be categorized by *level of measurement*.

@@ -407,7 +407,7 @@ With these ages, you should construct a barplot showing the age distribution for
 * Compared to a constant: a quantity that can take on only a single value.
 * In descriptive research, we seek to describe the *location* and the *distribution* of scientifically interesting variables.
 * In causal research, we seek to *explain* the variation that is observed in a scientifically interesting variable.
-* In evaluation research, we might to both.
+* In evaluation research, we might do both.
 * A *sample space* is a list of all the values that a variable could take on.
 * A *frequency distribution* tells us the number of times that a variable takes on each value in the sample space (slightly different from the book's definition).
 * Variables can be categorized by *level of measurement*.

@@ -412,7 +412,7 @@ With these ages, you should construct a barplot showing the age distribution for
 8. A *frequency distribution* tells us the number of times that a variable takes on each value in the sample space (slightly different from the book's definition).
 9. Variables can be categorized by *level of measurement*.
 10. The most basic distinction is between *qualitative* (categorical) and *quantitative* (continuous) variables.
-11. Within the category of qualitative variables, there are *nominal* (unordered categories) and *ordinal* (ordered categories).
+11. Within the category of qualitative variables, there are *nominal* (unordered categories) and *ordinal* (small number of ordered categories).
 12. Within the category of quantitative variables, there are *interval* (many ordered categories but no true zero) and *ratio* (continuous with a true zero) variables.
 13. In criminology, we are typically concerned with *random variables* where we accept the idea that each outcome in the sample space (for qualitative variables) or interval of the sample space (for quantitative variables) occurs with probability, *p*.
 14. In this class, we think about *p* in terms of relative frequencies (note: a relative frequency is the number of times an event occurs divided by the total number of times it could have occurred).

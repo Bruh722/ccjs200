@@ -409,12 +409,13 @@ With these ages, you should construct a barplot showing the age distribution for
 5. In causal research, we seek to *explain* the variation that is observed in a scientifically interesting variable.
 6. In evaluation research, we might do both.
 7. A *sample space* is a list or set of all the values that a variable could take on.
-8. A *frequency distribution* tells us the number of times that a variable takes on each value in the sample space (slightly different from the book's definition).
-9. Variables can be categorized by *level of measurement*.
-10. The most basic distinction is between *qualitative* (categorical) and *quantitative* (continuous) variables.
-11. Within the category of qualitative variables, there are *nominal* (unordered categories) and *ordinal* (small number of ordered categories).
-12. Within the category of quantitative variables, there are *interval* (many ordered categories but no true zero) and *ratio* (continuous with a true zero) variables.
-13. In criminology, we are typically concerned with *random variables* where we accept the idea that each outcome in the sample space (for qualitative variables) or interval of the sample space (for quantitative variables) occurs with probability, *p*.
-14. In this class, we think about *p* in terms of relative frequencies (note: a relative frequency is the number of times an event occurs divided by the total number of times it could have occurred).
-15. Example: in a sample of 1,000 prison releasees, we find that 675 people failed (recidivism) while the remaining 325 people did not fail. In this example, *failure* is a random variable where the sample space has two outcomes, "fail" or "did not fail". Thus, *p*(fail) = 0.675 = 675/1000 and *p*(did not fail) = 0.325 = 325/1000. 
-16. Note that *p* must always be a number in the interval [0,1].
+8. The outcomes in a sample space must be mutually exclusive and exhaustive.
+9. A *frequency distribution* tells us the number of times that a variable takes on each value in the sample space (slightly different from the book's definition).
+10. Variables can be categorized by *level of measurement*.
+11. The most basic distinction is between *qualitative* (categorical) and *quantitative* (continuous) variables.
+12. Within the category of qualitative variables, there are *nominal* (unordered categories) and *ordinal* (small number of ordered categories).
+13. Within the category of quantitative variables, there are *interval* (many ordered categories but no true zero) and *ratio* (continuous with a true zero) variables.
+14. In criminology, we are typically concerned with *random variables* where we accept the idea that each outcome in the sample space (for qualitative variables) or interval of the sample space (for quantitative variables) occurs with probability, *p*.
+15. In this class, we think about *p* in terms of relative frequencies (note: a relative frequency is the number of times an event occurs divided by the total number of times it could have occurred).
+16. Example: in a sample of 1,000 prison releasees, we find that 675 people failed (recidivism) while the remaining 325 people did not fail. In this example, *failure* is a random variable where the sample space has two outcomes, "fail" or "did not fail". Thus, *p*(fail) = 0.675 = 675/1000 and *p*(did not fail) = 0.325 = 325/1000. 
+17. Note that *p* must always be a number in the interval [0,1].

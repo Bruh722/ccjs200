@@ -432,4 +432,4 @@ With these ages, you should construct a barplot showing the age distribution for
 | High Risk | 108        |
 | Total | 1123 |
 
-Questions about this: (1) what is the level of measurement?: (2) what are the outcomes in the sample space?; (3) what are the relative frequencies for each of the outcomes?; and (4) what is the probability that someone drawn at random from this sample is high risk?
+Questions about this example: (1) what is the level of measurement?: (2) what are the outcomes in the sample space?; (3) what are the relative frequencies for each of the outcomes?; (4) what is the probability that someone drawn at random from this sample is high risk?;

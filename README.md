@@ -419,11 +419,12 @@ With these ages, you should construct a barplot showing the age distribution for
 15. Examples of quantitative variables: (1) interval: an offense gravity score for criminal sentencing; and (2) ratio: amount of money stolen from the victim in a robbery.
 16. In criminology, we are typically concerned with *random variables* where we accept the idea that each outcome in the sample space (for qualitative variables) or interval of the sample space (for quantitative variables) occurs with probability, *p*.
 17. In this class, we think about *p* in terms of relative frequencies (note: a relative frequency is the number of times an event occurs divided by the total number of times it could have occurred).
-18. Example: in a sample of 1,000 prison releasees, we find that 675 people failed (recidivism) while the remaining 325 people did not fail. In this example, *failure* is a random variable where the sample space has two outcomes, "fail" or "did not fail". Thus, *p*(fail) = 0.675 = 675/1000 and *p*(did not fail) = 0.325 = 325/1000. 
-19. Note that *p* must always be a number in the interval [0,1].
-20. When *p* = 0, we say the outcome cannot occur; symmetrically, when *p* = 1, we say that the outcome must occur.
-21. The sum of the probabilities of the outcomes in the sample space is 1.0 (for quantitative variables, the sum is an integral).
-22. Example: we interview a sample of people exiting prison to measure their risk of recidivism. Based on the answers, we divide the respondents (people who participate in a survey) into 3 groups: low, medium, and high risk.
+19. Example: in a sample of 1,000 prison releasees, we find that 675 people failed (recidivism) while the remaining 325 people did not fail. In this example, *failure* is a random variable where the sample space has two outcomes, "fail" or "did not fail". Thus, *p*(fail) = 0.675 = 675/1000 and *p*(did not fail) = 0.325 = 325/1000. 
+20. Note that *p* must always be a number in the interval [0,1].
+21. When *p* = 0, we say the outcome cannot occur; symmetrically, when *p* = 1, we say that the outcome must occur.
+22. The sum of the probabilities of the outcomes in the sample space is 1.0 (for quantitative variables, the sum is an integral).
+23. Sometimes, we consider the probabilities of each of the outcomes in a sample space together; the set of probabilities corresponding to the outcomes in a sample space is called a *probability distribution*.
+24. Example: we interview a sample of people exiting prison to measure their risk of recidivism. Based on the answers, we divide the respondents (people who participate in a survey) into 3 groups: low, medium, and high risk.
 
 | Outcomes    | N = |
 | :---------- | --: |

@@ -434,3 +434,11 @@ With these ages, you should construct a barplot showing the age distribution for
 | Total | 1123 |
 
 Questions about this example: (1) what is the level of measurement?: (2) what are the outcomes in the sample space?; (3) what are the relative frequencies for each of the outcomes?; (4) what is the probability that someone drawn at random from this sample is high risk?;
+
+### Lesson 7 - Thursday 2/15/24
+
+1. Recall from our last class that we presented a taxonomy of different kinds of variables corresponding to their levels of measurement. Here is a summary:
+
+<p align="center">
+<img src="/gfiles/var-types" width="600px">
+</p>

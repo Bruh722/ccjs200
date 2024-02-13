@@ -437,8 +437,10 @@ Questions about this example: (1) what is the level of measurement?: (2) what ar
 
 ### Lesson 7 - Thursday 2/15/24
 
-1. Recall from our last class that we presented a taxonomy of different kinds of variables corresponding to their levels of measurement. Here is a summary:
+1. Reminder: first assignments are due on ELMS by 11:59pm on Friday 2/16/24; after that point, late submission deductions begin. You must submit your assignment in a pdf file.
+2. Assigned reading, Chapter 2; you can also go ahead and begin looking at chapter 4.
+3. Recall from our last class that we presented a taxonomy of different kinds of variables corresponding to their levels of measurement. Here is a summary:
 
 <p align="center">
-<img src="/gfiles/var-types" width="600px">
+<img src="/gfiles/var-types.png" width="600px">
 </p>

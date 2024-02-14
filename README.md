@@ -466,6 +466,8 @@ Based on this comparison, we can say that Philadelphia's murder rate is higher t
 - Comparison year estimated number of robberies per 1000 persons - 2019: 1.9
 - Percent change statistic: ((1.9-2.1)/2.1)*100 = -9.5%
 
+- Formula: ((comparison year - base year)/base year)*100
+
 Comparing the raw number of estimated robberies from one year to the next is less meaningful than comparing the rates because the nation's estimated population size did not stay the same from one year to the next.
 
 10. For several decades, the Bureau of Justice Statistics (BJS) has carefully studies recidivism patterns for various groups of state prison releasees (you can see the collection [here](https://bjs.ojp.gov/data-collection/recidivism-state-prisoners#1-0)). Some relatively recent data appear in this [document](https://bjs.ojp.gov/BJS_PUB/rpr24s0810yfup0818/Web%20content/508%20compliant%20PDFs). 

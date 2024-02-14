@@ -471,4 +471,30 @@ Based on this comparison, we can say that Philadelphia's murder rate is higher t
 
 Comparing the raw number of estimated robberies from one year to the next is less meaningful than comparing the rates because the nation's estimated population size did not stay the same from one year to the next.
 
-10. For several decades, the Bureau of Justice Statistics (BJS) has carefully studies recidivism patterns for various groups of state prison releasees (you can see the collection [here](https://bjs.ojp.gov/data-collection/recidivism-state-prisoners#1-0)). Some relatively recent data appear in this [document](https://bjs.ojp.gov/BJS_PUB/rpr24s0810yfup0818/Web%20content/508%20compliant%20PDFs). 
+10. Example 3: For several decades, the Bureau of Justice Statistics (BJS) has carefully studies recidivism patterns for various groups of state prison releasees (you can see the collection [here](https://bjs.ojp.gov/data-collection/recidivism-state-prisoners#1-0)). Some relatively recent data appear in this [document](https://bjs.ojp.gov/BJS_PUB/rpr24s0810yfup0818/Web%20content/508%20compliant%20PDFs). Suppose we want to measure the fraction of people who were released from prison who are in each of 3 age groups. Here is our data:
+
+| Outcomes    | N = | # Rearrested |
+| :---------- | --: | --:|
+| Age ≤ 24    | 62,700 | 47,000 |
+| Age 25-39   | 206,000  | 141,500 |
+| Age ≥ 40    | 140,600 | 82,400 |
+| Total        | 409,300 | 270,900 |
+
+- Based on this information, we could calculate the fraction or proportion of people who were in the youngest age group using the proportion formula on page 36:
+- Proportion formula = Number of people in subset of sample / Total number of people in sample
+- Calculation: 62700/409300 = 0.153
+- Proportions can also be called *relative frequencies* (see top of page 37).
+- Now, we often want to convert proportions into percentages which we can do by using the proportion to percent conversion formula on page 37:
+- Proportion to percent conversion formula: Estimated proportion x 100
+- Application: 0.153*100 = 15.3%
+- Convince yourself that if you calculate the proportions and percentages for the other 2 age groups that all 3 of them will add up to 1 (proportions) and 100 (percents).
+
+11. Example 3 (Continued): Suppose you are asked to write a report to a legislative committee studying recidivism and you are responsible for describing how the "recidivism rate" varies between age groups. How would you proceed? What would your analysis show?
+
+- Our first step would be to define the term *recidivism rate*. When people use this term, they are usually referring to the proportion or percent of people who get rearrested, reconvicted, or reimprisoned within some well-defined time period. The definition we are using is *rearrest* and the time period on which these data are based is 3 years. This is an example of an operational definition. Our next step is to calculate the proportion of people who get rearrested within 3 years of the time of prison release.
+- Formula for recidivism rate (proportion rearrested) for age group *g*: # of people in subgroup *g* who got rearrested / total # of people in subgroup *g*
+- For the youngest age group: 47000/62700 = 0.750
+- Expressed in percent terms: 0.750 x 100 = 75.0%
+- Next, you can calculate the proporton or percent rearrested for the other 2 age groups. Which group has the highest recidivism rate? (*Hint*: it is not the group with the largest number of people getting rearrested).
+
+12. 

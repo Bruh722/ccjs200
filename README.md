@@ -446,4 +446,26 @@ Questions about this example: (1) what is the level of measurement?: (2) what ar
 </p>
 
 4. Dichotomous/binary variables: 2-category variables that usually measure either the presence or absence of an attribute, experience, or intervention. This means the sample space is usually written down in terms of the presence or absence of a condition. Examples: (1) whether someone gets arrested; (2) whether someone has been a crime victim; (3) whether a study participant has been assigned to a treatment or control group; (4) whether a state has the death penalty; and (5) whether a U.S. county experienced any homicides in a given year. With dichotomous or binary variables, we are often interested in the fraction or proportion of cases that/who are in each category of the sample space.
-5. Event count variables: these are variables that measure the number of times that something happens, so the sample space is an integer count. 
+5. Event count variables: these are variables that measure the number of times that something happens, so the sample space is comprised of positive integers (whole numbers). Event counts are qualitative variables in the sense that the sample space is only comprised of integers (fractional values of counts for a specific unit don't make sense). But it does make sense to think about averages of counts. Statements like 2x is twice the number of events as 1x (where x is a counted variable value) are reasonable because counts can have a true zero. Event counts are often converted into rates, where we divide the count by some amount of time or by some number of people (to get the number of events in a particular period of time (say, 1 year) or the number of events per number of people in the population (say, 100,000 people)). 
+6. Criminologists have to be careful in their analysis of binary and count variables because they present special analysis issues.
+7. Two of the issues of particular concern are properly documenting: (1) the amount of change that occurs from one time to the next; and (2) the variation in how often something happens between different groups.
+8. Example 1: In 2018, the city of Pittsburgh reported that there were 57 murders known to the police ([link](https://ucr.fbi.gov/crime-in-the-u.s/2018/crime-in-the-u.s.-2018/tables/table-8/table-8-state-cuts/pennsylvania.xls)). By comparison, the city of Philadelphia reported 351 murders. These are both counts. Yet it is problematic to compare them directly in terms of a discussion about which city experiences a higher incidence of murders. The problem is the 2 cities have vastly different population sizes: Philadelphia's population in 2018 was estimated to be 1,586,916 while Pittsburgh's population was estimated to be 302,544. Surely, this should be taken into consideration. Here is how we could do it:
+
+- Pittsburgh: # of murders per 100,000 population = (57/302544)*100000 = 18.8
+- Philadelphia: # of murders per 100,000 population = (351/1586916)*100000 = 22.1
+
+Based on this comparison, we can say that Philadelphia's murder rate is higher than Pittsburgh's but it is a dramatically different story than a comparison of 351 to 57.
+
+9. Example 2: Each year, the National Crime Victimization Survey (NCVS) publishes a national personal robbery victimization rate per 1,000 persons covering the entire nation. For the year [2018](https://bjs.ojp.gov/content/pub/pdf/cv21.pdf), the estimated number of robberies was 573,100 and the rate was estimated to be 2.1 robberies per 1,000 persons. For 2019, the estimated number of robberies was 534,420 while the rate was estimated to be 1.9 robberies per 1,000 population. Using both the count and the rate, we would infer that robberies dropped. However, we can quantify both drops by using the *percent change* statistic. To get the percent change, we have to decide which year will be the base year and which year will be the comparison year. When we are comparing years, we usually say that the first year is the base year and the second year is the comparison year. Here is our worked example:
+
+- Base year - 2018: 573100
+- Comparison year - 2019: 534420
+- Percent change statistic: ((534420-573100)/573100)*100 = -6.7%
+
+- Base year - 2018: 2.1
+- Comparison year - 2019: 1.9
+- Percent change statistic: ((1.9-2.1)/2.1)*100 = -9.5%
+
+Comparing the raw number of estimated robberies from one year to the next is less meaningful than comparing the rates because the nation's estimated population size did not stay the same from one year to the next.
+
+10. 

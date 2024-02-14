@@ -745,4 +745,12 @@ r
 
 * Again, please note what stayed the same and what changed.
 
-17. A short example to clarify the use of 0/1 codes for dichotomous/binary variables. Say, we are in a state that has the death penalty and we want to look at the last 6 executions. In each of the 6 cases, we code the case 1 if the person had been on death row for more than 10 years and 0 if the person had been on death row for less than 10 years. Based on this rule, 4 of our 6 cases had been on death row for more than 10 years so they receive a code of 1; the other 2 had been on death row for less than 10 years so they receive a code of 0. If we add up our 0's and 1's, we get the following: 1+1+1+1+0+0 = 4. The 4 represents the sum of the scores. Since there are 6 cases, the number of scores is 6. The average or the mean is the sum of the scores divided by the number of scores which in this cases means we have 4/6 = 2/3 or about 0.667. So, the mean of the 0's and 1's corresponds to the proportion or fraction of cases that have a code of 1 (i.e., the fraction of people who spent more than 10 years on death row before execution).
+17. A short example to clarify the use of 0/1 codes for dichotomous/binary variables:
+* Say we are in a state that has the death penalty and we want to look at the last 6 executions.
+* In each of the 6 cases, we code the case 1 if the person had been on death row for more than 10 years and 0 if the person had been on death row for less than 10 years.
+* Based on this rule, 4 of our 6 cases had been on death row for more than 10 years so they receive a code of 1; the other 2 had been on death row for less than 10 years so they receive a code of 0.
+* If we add up our 0's and 1's, we get the following: 1+1+1+1+0+0 = 4.
+* The 4 represents the sum of the scores.
+* Since there are 6 cases, the number of scores is 6.
+* The average or the mean is the sum of the scores divided by the number of scores which -- in this case -- means we have 4/6 = 2/3 or about 0.667.
+* So, the mean of the 0's and 1's corresponds to the proportion or fraction of cases that have a code of 1 (i.e., the fraction of people who spent more than 10 years on death row before execution).

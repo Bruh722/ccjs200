@@ -442,5 +442,8 @@ Questions about this example: (1) what is the level of measurement?: (2) what ar
 3. Recall from our last class that we presented a taxonomy of different kinds of variables corresponding to their levels of measurement. Here is a summary:
 
 <p align="center">
-<img src="/gfiles/var-types.png" width="600px">
+<img src="/gfiles/vartypes.png" width="600px">
 </p>
+
+4. Dichotomous/binary variables: 2-category variables that usually measure either the presence or absence of an attribute, experience, or intervention. This means the sample space is usually written down in terms of the presence or absence of a condition. Examples: (1) whether someone gets arrested; (2) whether someone has been a crime victim; (3) whether a study participant has been assigned to a treatment or control group; (4) whether a state has the death penalty; and (5) whether a U.S. county experienced any homicides in a given year. With dichotomous or binary variables, we are often interested in the fraction or proportion of cases that/who are in each category of the sample space.
+5. Event count variables: these are variables that measure the number of times that something happens, so the sample space is an integer count. 

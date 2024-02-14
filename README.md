@@ -457,7 +457,7 @@ Questions about this example: (1) what is the level of measurement?: (2) what ar
 
 Based on this comparison, we can say that Philadelphia's murder rate is higher than Pittsburgh's but it is a dramatically different story than a comparison of 351 to 57.
 
-9. Example 2: Each year, the National Crime Victimization Survey (NCVS) publishes a national personal robbery victimization rate per 1,000 persons covering the entire nation. For the year [2018](https://bjs.ojp.gov/content/pub/pdf/cv21.pdf) (go to Table 1 on page 2 to see the data), the estimated number of robberies was 573,100 and the rate was estimated to be 2.1 robberies per 1,000 persons. For 2019, the estimated number of robberies was 534,420 while the rate was estimated to be 1.9 robberies per 1,000 population. Using both the count and the rate, we would infer that robberies dropped. However, we can quantify both drops by using the *percent change* statistic. To get the percent change, we have to decide which year will be the base year and which year will be the comparison year. When we are comparing years, we usually say that the first year is the base year and the second year is the comparison year. Here is our worked example:
+10. Example 2: Each year, the National Crime Victimization Survey (NCVS) publishes a national personal robbery victimization rate per 1,000 persons covering the entire nation. For the year [2018](https://bjs.ojp.gov/content/pub/pdf/cv21.pdf) (go to Table 1 on page 2 to see the data), the estimated number of robberies was 573,100 and the rate was estimated to be 2.1 robberies per 1,000 persons. For 2019, the estimated number of robberies was 534,420 while the rate was estimated to be 1.9 robberies per 1,000 population. Using both the count and the rate, we would infer that robberies dropped. However, we can quantify both drops by using the *percent change* statistic. To get the percent change, we have to decide which year will be the base year and which year will be the comparison year. When we are comparing years, we usually say that the first year is the base year and the second year is the comparison year. Here is our worked example:
 
 - Base year estimated number of robberies - 2018: 573100
 - Comparison year estimate number of robberies - 2019: 534420
@@ -471,7 +471,7 @@ Based on this comparison, we can say that Philadelphia's murder rate is higher t
 
 Comparing the raw number of estimated robberies from one year to the next is less meaningful than comparing the rates because the nation's estimated population size did not stay the same from one year to the next.
 
-10. Example 3: For several decades, the Bureau of Justice Statistics (BJS) has carefully studies recidivism patterns for various groups of state prison releasees (you can see the collection [here](https://bjs.ojp.gov/data-collection/recidivism-state-prisoners#1-0)). Some relatively recent data appear in this [document](https://bjs.ojp.gov/BJS_PUB/rpr24s0810yfup0818/Web%20content/508%20compliant%20PDFs). Suppose we want to measure the fraction of people who were released from prison who are in each of 3 age groups. Here is our data:
+11. Example 3: For several decades, the Bureau of Justice Statistics (BJS) has carefully studies recidivism patterns for various groups of state prison releasees (you can see the collection [here](https://bjs.ojp.gov/data-collection/recidivism-state-prisoners#1-0)). Some relatively recent data appear in this [document](https://bjs.ojp.gov/BJS_PUB/rpr24s0810yfup0818/Web%20content/508%20compliant%20PDFs). Suppose we want to measure the fraction of people who were released from prison who are in each of 3 age groups. Here is our data:
 
 | Outcomes    | N = | # Rearrested |
 | :---------- | --: | --:|
@@ -489,12 +489,11 @@ Comparing the raw number of estimated robberies from one year to the next is les
 - Application: 0.153*100 = 15.3%
 - Convince yourself that if you calculate the proportions and percentages for the other 2 age groups that all 3 of them will add up to 1 (proportions) and 100 (percents).
 
-11. Example 3 (Continued): Suppose you are asked to write a report to a legislative committee studying recidivism and you are responsible for describing how the "recidivism rate" varies between age groups. How would you proceed? What would your analysis show?
-
+12. Example 3 (Continued): Suppose you are asked to write a report to a legislative committee studying recidivism and you are responsible for describing how the "recidivism rate" varies between age groups. How would you proceed? What would your analysis show?
 - Our first step would be to define the term *recidivism rate*. When people use this term, they are usually referring to the proportion or percent of people who get rearrested, reconvicted, or reimprisoned within some well-defined time period. The definition we are using is *rearrest* and the time period on which these data are based is 3 years. This is an example of an operational definition. Our next step is to calculate the proportion of people who get rearrested within 3 years of the time of prison release.
 - Formula for recidivism rate (proportion rearrested) for age group *g*: # of people in subgroup *g* who got rearrested / total # of people in subgroup *g*
 - For the youngest age group: 47000/62700 = 0.750
 - Expressed in percent terms: 0.750 x 100 = 75.0%
 - Next, you can calculate the proporton or percent rearrested for the other 2 age groups. Which group has the highest recidivism rate? (*Hint*: it is not the group with the largest number of people getting rearrested).
 
-12. 
+13. 

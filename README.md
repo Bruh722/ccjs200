@@ -499,7 +499,7 @@ Comparing the raw number of estimated robberies from one year to the next is les
 
 13. Sample spaces (review): What is the sample space for the age at release variable?
 14. Sample spaces (review): What is the sample space for the rearrest/recidivism variable?
-15. Alphanumeric data: when we have qualitative/categorical or dichotomous variables, we can symbolize the elements in the sample space with either numbers or letters. Here is a computer example to illustrate:
+15. Alphanumeric data (page 27): when we have qualitative/categorical or dichotomous variables, we can symbolize the elements in the sample space with either numbers or letters. Here is a computer example to illustrate:
 
 ```R
 # enter the data

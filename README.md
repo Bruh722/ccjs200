@@ -473,7 +473,7 @@ Comparing the raw number of estimated robberies from one year to the next is les
 
 11. Example 3: For several decades, the Bureau of Justice Statistics (BJS) has carefully studies recidivism patterns for various groups of state prison releasees (you can see the collection [here](https://bjs.ojp.gov/data-collection/recidivism-state-prisoners#1-0)). Some relatively recent data appear in this [document](https://bjs.ojp.gov/BJS_PUB/rpr24s0810yfup0818/Web%20content/508%20compliant%20PDFs). Suppose we want to measure the fraction of people who were released from prison who are in each of 3 age groups. Here is our data:
 
-| Outcomes    | N = | # Rearrested |
+| Age at Release from Prison    | N = | # Rearrested |
 | :---------- | --: | --:|
 | Age ≤ 24    | 62,700 | 47,000 |
 | Age 25-39   | 206,000  | 141,500 |
@@ -484,10 +484,11 @@ Comparing the raw number of estimated robberies from one year to the next is les
 - Proportion formula = Number of people in subset of sample / Total number of people in sample
 - Calculation: 62700/409300 = 0.153
 - Proportions can also be called *relative frequencies* (see top of page 37).
-- Now, we often want to convert proportions into percentages which we can do by using the proportion to percent conversion formula on page 37:
+- Now, we often want to convert proportions into percentages which we can do by using the proportion to percent conversion formula on page 37.
 - Proportion to percent conversion formula: Estimated proportion x 100
 - Application: 0.153*100 = 15.3%
 - Convince yourself that if you calculate the proportions and percentages for the other 2 age groups that all 3 of them will add up to 1 (proportions) and 100 (percents).
+- *Note*: once you have calculated the proportion of people who are in each age group, you have the *relative frequency distribution*.
 
 12. Example 3 (Continued): Suppose you are asked to write a report to a legislative committee studying recidivism and you are responsible for describing how the "recidivism rate" varies between age groups. How would you proceed? What would your analysis show?
 - Our first step would be to define the term *recidivism rate*. When people use this term, they are usually referring to the proportion or percent of people who get rearrested, reconvicted, or reimprisoned within some well-defined time period. The definition we are using is *rearrest* and the time period on which these data are based is 3 years. This is an example of an operational definition. Our next step is to calculate the proportion of people who get rearrested within 3 years of the time of prison release.
@@ -496,4 +497,250 @@ Comparing the raw number of estimated robberies from one year to the next is les
 - Expressed in percent terms: 0.750 x 100 = 75.0%
 - Next, you can calculate the proporton or percent rearrested for the other 2 age groups. Which group has the highest recidivism rate? (*Hint*: it is not the group with the largest number of people getting rearrested).
 
-13. 
+13. Sample spaces (review): What is the sample space for the age at release variable?
+14. Sample spaces (review): What is the sample space for the rearrest/recidivism variable?
+15. Alphanumeric data: when we have qualitative/categorical or dichotomous variables, we can symbolize the elements in the sample space with either numbers or letters. Here is a computer example to illustrate:
+
+```R
+# enter the data
+age <- c(rep("age <= 24",62700), rep("age 25-39",206000),rep("age >= 40",140600))
+
+# frequency distribution for age groups
+table(age)
+
+# total number of people in the study
+
+length(age)
+
+# proportion of people in each age group
+
+table(age)/length(age)
+
+# percent of people in each age group
+
+(table(age)/length(age))*100
+```
+
+* Here is the output:
+
+```Rout
+> # enter the data
+> age <- c(rep("age <= 24",62700), rep("age 25-39",206000),rep("age >= 40",140600))
+> 
+> # frequency distribution for age groups
+> table(age)
+age
+age <= 24 age >= 40 age 25-39 
+    62700    140600    206000 
+> 
+> # total number of people in the study
+> 
+> length(age)
+[1] 409300
+> 
+> # proportion of people in each age group
+> 
+> table(age)/length(age)
+age
+age <= 24 age >= 40 age 25-39 
+0.1531884 0.3435133 0.5032983 
+> 
+> # percent of people in each age group
+> 
+> (table(age)/length(age))*100
+age
+age <= 24 age >= 40 age 25-39 
+ 15.31884  34.35133  50.32983 
+>
+```
+
+* Now, let's do the same exercise with the age groups coded numerically:
+
+```R
+# enter the data
+age <- c(rep(1,62700), rep(2,206000),rep(3,140600))
+
+# frequency distribution for age groups
+table(age)
+
+# total number of people in the study
+
+length(age)
+
+# proportion of people in each age group
+
+table(age)/length(age)
+
+# percent of people in each age group
+
+(table(age)/length(age))*100
+```
+
+* Here is the output:
+
+```Rout
+> # enter the data
+> age <- c(rep(1,62700), rep(2,206000),rep(3,140600))
+> 
+> # frequency distribution for age groups
+> table(age)
+age
+     1      2      3 
+ 62700 206000 140600 
+> 
+> # total number of people in the study
+> 
+> length(age)
+[1] 409300
+> 
+> # proportion of people in each age group
+> 
+> table(age)/length(age)
+age
+        1         2         3 
+0.1531884 0.5032983 0.3435133 
+> 
+> # percent of people in each age group
+> 
+> (table(age)/length(age))*100
+age
+       1        2        3 
+15.31884 50.32983 34.35133 
+>
+```
+
+* Notice what changed and what stayed the same.
+
+16. Dichotomous/binary variables can also be coded alphanumerically or just numerically. Here is an example using the recidivism data from the table in #11 above. For this example, please note that the number of people who got rearrested was 270,900; this means the number of people who did not get rearrested was 409300-270900 = 138400. First, we code recidivism alphanumerically.
+
+```R
+# enter the data
+r <- c(rep("no rearrest",138400),rep("rearrest",270900))
+
+# calculate the frequency table
+
+table(r)
+
+# count the number of people in the study
+
+length(r)
+
+# calculate the relative frequency table (i.e., the proportion or fraction of people in each group)
+
+table(r)/length(r)
+
+# convert to percents
+
+(table(r)/length(r))*100
+```
+
+Here is the output:
+
+```Rout
+> # enter the data
+> r <- c(rep("no rearrest",138400),rep("rearrest",270900))
+> 
+> # calculate the frequency table
+> 
+> table(r)
+r
+no rearrest    rearrest 
+     138400      270900 
+> 
+> # count the number of people in the study
+> 
+> length(r)
+[1] 409300
+> 
+> # calculate the relative frequency table (i.e., the proportion or fraction of people in each group)
+> 
+> table(r)/length(r)
+r
+no rearrest    rearrest 
+  0.3381383   0.6618617 
+> 
+> # convert to percents
+> 
+> (table(r)/length(r))*100
+r
+no rearrest    rearrest 
+   33.81383    66.18617 
+>
+```
+
+* Next, let's code recidivism numerically:
+
+```R
+# enter the data
+r <- c(rep(0,138400),rep(1,270900))
+
+# calculate the frequency table
+
+table(r)
+
+# count the number of people in the study
+
+length(r)
+
+# calculate the relative frequency table (i.e., the proportion or fraction of people in each group)
+
+table(r)/length(r)
+
+# convert to percents
+
+(table(r)/length(r))*100
+
+# calculate the recidivism rate by taking the average of the 0's and 1's
+
+mean(r)
+
+# convert to a percent
+
+mean(r)*100
+```
+
+* Here is the output:
+
+```Rout
+> # enter the data
+> r <- c(rep(0,138400),rep(1,270900))
+> 
+> # calculate the frequency table
+> 
+> table(r)
+r
+     0      1 
+138400 270900 
+> 
+> # count the number of people in the study
+> 
+> length(r)
+[1] 409300
+> 
+> # calculate the relative frequency table (i.e., the proportion or fraction of people in each group)
+> 
+> table(r)/length(r)
+r
+        0         1 
+0.3381383 0.6618617 
+> 
+> # convert to percents
+> 
+> (table(r)/length(r))*100
+r
+       0        1 
+33.81383 66.18617 
+> 
+> # calculate the recidivism rate by taking the average of the 0's and 1's
+> 
+> mean(r)
+[1] 0.6618617
+> 
+> # convert to a percent
+> 
+> mean(r)*100
+[1] 66.18617
+>
+```
+
+* Again, please note what stayed the same and what changed.

@@ -453,15 +453,15 @@ Questions about this example: (1) what is the level of measurement?: (2) what ar
    - Example 1: from your assignment that is due tomorrow, the unit of analysis in the NC age at time of release from prison study, the unit of analysis is each individual person leaving a NC prison in the year 1980 (N = 9,549).
    - Example 2: also, from your assignment this week, the unit of analysis in the CDC homicide study is the year (1994-2019; N = 26).
    - Whenever you encounter a study you should try to clearly identify the unit of analysis (a description of the particular cases being studied).
-10. Two of the issues of particular concern are properly documenting: (1) the amount of change that occurs from one time to the next; and (2) the variation in how often something happens between different groups.
-11. Example 1: In 2018, the city of Pittsburgh reported that there were 57 murders known to the police ([link](https://ucr.fbi.gov/crime-in-the-u.s/2018/crime-in-the-u.s.-2018/tables/table-8/table-8-state-cuts/pennsylvania.xls)). By comparison, the city of Philadelphia reported 351 murders. These are both counts. Yet it is problematic to compare them directly in terms of a discussion about which city experiences a higher incidence of murders. The problem is the 2 cities have vastly different population sizes: Philadelphia's population in 2018 was estimated to be 1,586,916 while Pittsburgh's population was estimated to be 302,544. Surely, this should be taken into consideration. Here is how we could do it:
+9. Two of the issues of particular concern are properly documenting: (1) the amount of change that occurs from one time to the next; and (2) the variation in how often something happens between different groups.
+10. Example 1: In 2018, the city of Pittsburgh reported that there were 57 murders known to the police ([link](https://ucr.fbi.gov/crime-in-the-u.s/2018/crime-in-the-u.s.-2018/tables/table-8/table-8-state-cuts/pennsylvania.xls)). By comparison, the city of Philadelphia reported 351 murders. These are both counts. Yet it is problematic to compare them directly in terms of a discussion about which city experiences a higher incidence of murders. The problem is the 2 cities have vastly different population sizes: Philadelphia's population in 2018 was estimated to be 1,586,916 while Pittsburgh's population was estimated to be 302,544. Surely, this should be taken into consideration. Here is how we could do it:
 
 - Pittsburgh: # of murders per 100,000 population = (57/302544)*100000 = 18.8
 - Philadelphia: # of murders per 100,000 population = (351/1586916)*100000 = 22.1
 
 Based on this comparison, we can say that Philadelphia's murder rate is higher than Pittsburgh's but it is a dramatically different story than a comparison of 351 to 57.
 
-10. Example 2: Each year, the National Crime Victimization Survey (NCVS) publishes a national personal robbery victimization rate per 1,000 persons covering the entire nation. For the year [2018](https://bjs.ojp.gov/content/pub/pdf/cv21.pdf) (go to Table 1 on page 2 to see the data), the estimated number of robberies was 573,100 and the rate was estimated to be 2.1 robberies per 1,000 persons. For 2019, the estimated number of robberies was 534,420 while the rate was estimated to be 1.9 robberies per 1,000 population. Using both the count and the rate, we would infer that robberies dropped. However, we can quantify both drops by using the *percent change* statistic. To get the percent change, we have to decide which year will be the base year and which year will be the comparison year. When we are comparing years, we usually say that the first year is the base year and the second year is the comparison year. Here is our worked example:
+11. Example 2: Each year, the National Crime Victimization Survey (NCVS) publishes a national personal robbery victimization rate per 1,000 persons covering the entire nation. For the year [2018](https://bjs.ojp.gov/content/pub/pdf/cv21.pdf) (go to Table 1 on page 2 to see the data), the estimated number of robberies was 573,100 and the rate was estimated to be 2.1 robberies per 1,000 persons. For 2019, the estimated number of robberies was 534,420 while the rate was estimated to be 1.9 robberies per 1,000 population. Using both the count and the rate, we would infer that robberies dropped. However, we can quantify both drops by using the *percent change* statistic. To get the percent change, we have to decide which year will be the base year and which year will be the comparison year. When we are comparing years, we usually say that the first year is the base year and the second year is the comparison year. Here is our worked example:
 
 - Base year estimated number of robberies - 2018: 573100
 - Comparison year estimate number of robberies - 2019: 534420
@@ -475,7 +475,7 @@ Based on this comparison, we can say that Philadelphia's murder rate is higher t
 
 Comparing the raw number of estimated robberies from one year to the next is less meaningful than comparing the rates because the nation's estimated population size did not stay the same from one year to the next.
 
-11. Example 3: For several decades, the Bureau of Justice Statistics (BJS) has carefully studies recidivism patterns for various groups of state prison releasees (you can see the collection [here](https://bjs.ojp.gov/data-collection/recidivism-state-prisoners#1-0)). Some relatively recent data appear in this [document](https://bjs.ojp.gov/BJS_PUB/rpr24s0810yfup0818/Web%20content/508%20compliant%20PDFs). Suppose we want to measure the fraction of people who were released from prison who are in each of 3 age groups. Here is our data:
+12. Example 3: For several decades, the Bureau of Justice Statistics (BJS) has carefully studies recidivism patterns for various groups of state prison releasees (you can see the collection [here](https://bjs.ojp.gov/data-collection/recidivism-state-prisoners#1-0)). Some relatively recent data appear in this [document](https://bjs.ojp.gov/BJS_PUB/rpr24s0810yfup0818/Web%20content/508%20compliant%20PDFs). Suppose we want to measure the fraction of people who were released from prison who are in each of 3 age groups. Here is our data:
 
 | Age at Release from Prison    | N = | # Rearrested |
 | :---------- | --: | --:|
@@ -494,16 +494,16 @@ Comparing the raw number of estimated robberies from one year to the next is les
 - Convince yourself that if you calculate the proportions and percentages for the other 2 age groups that all 3 of them will add up to 1 (proportions) and 100 (percents).
 - *Note*: once you have calculated the proportion of people who are in each age group, you have the *relative frequency distribution*.
 
-12. Example 3 (Continued): Suppose you are asked to write a report to a legislative committee studying recidivism and you are responsible for describing how the "recidivism rate" varies between age groups. How would you proceed? What would your analysis show?
+13. Example 3 (Continued): Suppose you are asked to write a report to a legislative committee studying recidivism and you are responsible for describing how the "recidivism rate" varies between age groups. How would you proceed? What would your analysis show?
 - Our first step would be to define the term *recidivism rate*. When people use this term, they are usually referring to the proportion or percent of people who get rearrested, reconvicted, or reimprisoned within some well-defined time period. The definition we are using is *rearrest* and the time period on which these data are based is 3 years. This is an example of an operational definition. Our next step is to calculate the proportion of people who get rearrested within 3 years of the time of prison release.
 - Formula for recidivism rate (proportion rearrested) for age group *g*: # of people in subgroup *g* who got rearrested / total # of people in subgroup *g*
 - For the youngest age group: 47000/62700 = 0.750
 - Expressed in percent terms: 0.750 x 100 = 75.0%
 - Next, you can calculate the proporton or percent rearrested for the other 2 age groups. Which group has the highest recidivism rate? (*Hint*: it is not the group with the largest number of people getting rearrested).
 
-13. Sample spaces (review): What is the sample space for the age at release variable?
-14. Sample spaces (review): What is the sample space for the rearrest/recidivism variable?
-15. Alphanumeric data (page 27): when we have qualitative/categorical or dichotomous variables, we can symbolize the elements in the sample space with either numbers or letters. Here is a computer example to illustrate:
+14. Sample spaces (review): What is the sample space for the age at release variable?
+15. Sample spaces (review): What is the sample space for the rearrest/recidivism variable?
+16. Alphanumeric data (page 27): when we have qualitative/categorical or dichotomous variables, we can symbolize the elements in the sample space with either numbers or letters. Here is a computer example to illustrate:
 
 ```R
 # enter the data
@@ -524,7 +524,6 @@ table(age)/length(age)
 
 (table(age)/length(age))*100
 ```
-
 * Here is the output:
 
 ```Rout
@@ -557,7 +556,6 @@ age <= 24 age >= 40 age 25-39
  15.31884  34.35133  50.32983 
 >
 ```
-
 * Now, let's do the same exercise with the age groups coded numerically:
 
 ```R
@@ -615,7 +613,7 @@ age
 
 * Notice what changed and what stayed the same.
 
-16. Dichotomous/binary variables can also be coded alphanumerically or just numerically. The advantage of coding them alphanumerically is that it is easy to see what the categories mean. The advantage of coding them with numbers is that we can easily do calculations using the codes. Here is an example using the recidivism data from the table in #11 above. For this example, please note that the number of people who got rearrested was 270,900; this means the number of people who did not get rearrested was 409300-270900 = 138400. First, we code recidivism alphanumerically.
+17. Dichotomous/binary variables can also be coded alphanumerically or just numerically. The advantage of coding them alphanumerically is that it is easy to see what the categories mean. The advantage of coding them with numbers is that we can easily do calculations using the codes. Here is an example using the recidivism data from the table in #11 above. For this example, please note that the number of people who got rearrested was 270,900; this means the number of people who did not get rearrested was 409300-270900 = 138400. First, we code recidivism alphanumerically.
 
 ```R
 # enter the data
@@ -637,7 +635,6 @@ table(r)/length(r)
 
 (table(r)/length(r))*100
 ```
-
 Here is the output:
 
 ```Rout
@@ -749,7 +746,7 @@ r
 
 * Again, please note what stayed the same and what changed.
 
-17. A short example to clarify the use of 0/1 codes for dichotomous/binary variables:
+18. A short example to clarify the use of 0/1 codes for dichotomous/binary variables:
 * Say we are in a state that has the death penalty and we want to look at the last 6 executions.
 * In each of the 6 cases, we code the case 1 if the person had been on death row for more than 10 years and 0 if the person had been on death row for less than 10 years.
 * Based on this rule, 4 of our 6 cases had been on death row for more than 10 years so they receive a code of 1; the other 2 had been on death row for less than 10 years so they receive a code of 0.

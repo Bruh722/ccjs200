@@ -458,12 +458,12 @@ Based on this comparison, we can say that Philadelphia's murder rate is higher t
 
 9. Example 2: Each year, the National Crime Victimization Survey (NCVS) publishes a national personal robbery victimization rate per 1,000 persons covering the entire nation. For the year [2018](https://bjs.ojp.gov/content/pub/pdf/cv21.pdf), the estimated number of robberies was 573,100 and the rate was estimated to be 2.1 robberies per 1,000 persons. For 2019, the estimated number of robberies was 534,420 while the rate was estimated to be 1.9 robberies per 1,000 population. Using both the count and the rate, we would infer that robberies dropped. However, we can quantify both drops by using the *percent change* statistic. To get the percent change, we have to decide which year will be the base year and which year will be the comparison year. When we are comparing years, we usually say that the first year is the base year and the second year is the comparison year. Here is our worked example:
 
-- Base year - 2018: 573100
-- Comparison year - 2019: 534420
+- Base year estimated number of robberies - 2018: 573100
+- Comparison year estimate number of robberies - 2019: 534420
 - Percent change statistic: ((534420-573100)/573100)*100 = -6.7%
 
-- Base year - 2018: 2.1
-- Comparison year - 2019: 1.9
+- Base year estimated number of robberies per 1000 persons - 2018: 2.1
+- Comparison year estimated number of robberies per 1000 persons - 2019: 1.9
 - Percent change statistic: ((1.9-2.1)/2.1)*100 = -9.5%
 
 Comparing the raw number of estimated robberies from one year to the next is less meaningful than comparing the rates because the nation's estimated population size did not stay the same from one year to the next.

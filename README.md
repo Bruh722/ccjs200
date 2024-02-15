@@ -494,16 +494,18 @@ Comparing the raw number of estimated robberies from one year to the next is les
 - Convince yourself that if you calculate the proportions and percentages for the other 2 age groups that all 3 of them will add up to 1 (proportions) and 100 (percents).
 - *Note*: once you have calculated the proportion of people who are in each age group, you have the *relative frequency distribution*.
 
-13. Example 3 (Continued): Suppose you are asked to write a report to a legislative committee studying recidivism and you are responsible for describing how the "recidivism rate" varies between age groups. How would you proceed? What would your analysis show?
+### Lesson 8 - Tuesday 2/20/24
+
+1. Example 3 (Continued): Suppose you are asked to write a report to a legislative committee studying recidivism and you are responsible for describing how the "recidivism rate" varies between age groups. How would you proceed? What would your analysis show?
 - Our first step would be to define the term *recidivism rate*. When people use this term, they are usually referring to the proportion or percent of people who get rearrested, reconvicted, or reimprisoned within some well-defined time period. The definition we are using is *rearrest* and the time period on which these data are based is 3 years. This is an example of an operational definition. Our next step is to calculate the proportion of people who get rearrested within 3 years of the time of prison release.
 - Formula for recidivism rate (proportion rearrested) for age group *g*: # of people in subgroup *g* who got rearrested / total # of people in subgroup *g*
 - For the youngest age group: 47000/62700 = 0.750
 - Expressed in percent terms: 0.750 x 100 = 75.0%
 - Next, you can calculate the proporton or percent rearrested for the other 2 age groups. Which group has the highest recidivism rate? (*Hint*: it is not the group with the largest number of people getting rearrested).
 
-14. Sample spaces (review): What is the sample space for the age at release variable?
-15. Sample spaces (review): What is the sample space for the rearrest/recidivism variable?
-16. Alphanumeric data (page 27): when we have qualitative/categorical or dichotomous variables, we can symbolize the elements in the sample space with either numbers or letters. Here is a computer example to illustrate:
+2. Sample spaces (review): What is the sample space for the age at release variable?
+3. Sample spaces (review): What is the sample space for the rearrest/recidivism variable?
+4. Alphanumeric data (page 27): when we have qualitative/categorical or dichotomous variables, we can symbolize the elements in the sample space with either numbers or letters. Here is a computer example to illustrate:
 
 ```R
 # enter the data
@@ -613,7 +615,7 @@ age
 
 * Notice what changed and what stayed the same.
 
-17. Dichotomous/binary variables can also be coded alphanumerically or just numerically. The advantage of coding them alphanumerically is that it is easy to see what the categories mean. The advantage of coding them with numbers is that we can easily do calculations using the codes. Here is an example using the recidivism data from the table in #11 above. For this example, please note that the number of people who got rearrested was 270,900; this means the number of people who did not get rearrested was 409300-270900 = 138400. First, we code recidivism alphanumerically.
+5. Dichotomous/binary variables can also be coded alphanumerically or just numerically. The advantage of coding them alphanumerically is that it is easy to see what the categories mean. The advantage of coding them with numbers is that we can easily do calculations using the codes. Here is an example using the recidivism data from the table in #11 above. For this example, please note that the number of people who got rearrested was 270,900; this means the number of people who did not get rearrested was 409300-270900 = 138400. First, we code recidivism alphanumerically.
 
 ```R
 # enter the data
@@ -746,7 +748,7 @@ r
 
 * Again, please note what stayed the same and what changed.
 
-18. A short example to clarify the use of 0/1 codes for dichotomous/binary variables:
+6. A short example to clarify the use of 0/1 codes for dichotomous/binary variables:
 * Say we are in a state that has the death penalty and we want to look at the last 6 executions.
 * In each of the 6 cases, we code the case 1 if the person had been on death row for more than 10 years and 0 if the person had been on death row for less than 10 years.
 * Based on this rule, 4 of our 6 cases had been on death row for more than 10 years so they receive a code of 1; the other 2 had been on death row for less than 10 years so they receive a code of 0.

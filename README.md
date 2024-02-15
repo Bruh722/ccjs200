@@ -410,7 +410,7 @@ With these ages, you should construct a barplot showing the age distribution for
 6. In evaluation research, we might do both.
 7. A *sample space* is a list or set of all possible outcomes (values that a variable could have).
 8. The outcomes in a sample space must be mutually exclusive and exhaustive.
-9. A *frequency distribution* tells us the number of times that a variable takes on each value in the sample space (slightly different from the book's definition).
+9. A *frequency distribution* tells us the number of times that a variable takes on each value in the sample space (slightly different from the book's definition; page 25).
 10. Variables can be categorized by *level of measurement*.
 11. The most basic distinction is between *qualitative* (categorical) and *quantitative* (continuous) variables.
 12. Within the category of qualitative variables, there are *nominal* (unordered categories) and *ordinal* (small number of ordered categories; the distance between any of the categories is not well defined).

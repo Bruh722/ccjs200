@@ -548,3 +548,32 @@ The probability that a person in this sample is in the 40 and older age group is
 ```
 p(person in this sample is 39 or younger) = 62700/409300 + 206000/409300 = 0.153 + 0.503 = 0.656
 ```
+
+
+* Practice Question #1 (PQ1): Suppose you are asked to indicate your level of agreement with the following statement: "I feel safe walking alone in my neighborhood at night." The response scale has the following options: (1) strongly agree; (2) agree; (3) disagree; (4) strongly disagree. What is the level of measurement for this variable?
+
+- a. nominal
+- b. ordinal
+- c. interval
+- d. ratio
+
+* PQ2: The city of Mount Holly has 172,000 residents. During 2023, there were 47 residential burglaries. Calculate the number of residential burglaries per 100,000 population (rounded off to the nearest 1st decimal place).
+
+- a. 18.2
+- b. 24.3
+- c. 27.3
+- d. 33.7
+
+* PQ3: Suppose that in 2022, the city of Mount Holly had 170,000 residents and 45 residential burglaries. Calculate the percentage change in the residential burglary rates for 2023 compared to 2022 (do your arithmetic out to the first decimal place).
+
+- a. 3 percent decrease
+- b. 1 percent increase
+- c. 3 percent increase
+- d. 7 percent increase
+  
+* PQ4: what is the probability that someone drawn at random from the prisoner releasee sample is 25 years old or older? (calculate probabilities out to 3 decimal places).
+
+- a. 0.537
+- b. 0.401
+- c. 0.847
+- d. none of the above are correct

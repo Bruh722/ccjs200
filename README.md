@@ -515,4 +515,36 @@ Comparing the raw number of estimated robberies from one year to the next is les
 | Total        | 409,300 | 270,900 |
 
 * Last week, we calculated the proportion or percent of the sample in each age group.
-* I also asked you as an exercise to convince yourself that the proportions would add up to 1 across the age categories.
+* I also asked you as an exercise to convince yourself that the proportions (relative frequencies) would add up to 1 across the age categories:
+
+```
+62700/409300 = 0.153
+206000/409300 = 0.503
+140600/409300 = 0.344
+
+0.153+0.503+0.344 = 1.0
+```
+
+* We can also convert these proportions into percentages:
+
+```
+0.153 x 100 = 15.3%
+0.503 x 100 = 50.3%
+0.344 x 100 = 34.4%
+
+15.3+50.3+34.4 = 100.0%
+```
+* We can think about these proportions in terms of *probabilities*. Here is an example:
+
+```
+The probability that a person drawn at random from the sample of prison releasees is in the 24 and younger age group is 62700/409300 = 0.153.
+The probability that a person drawn at random from the sample of prison releasees is in the 25-39 age group is 206000/409300 = 0.503.
+The probability that a person drawn at random from the sample of prison releasees is in the 40 and older age group is 140600/409300 = 0.344.
+```
+
+* We can carry out certain arithmetic operations with these probabilities.
+* For example, we might want to know the probability that someone drawn at random from the sample is age 39 or younger. This is equivalent to saying "what is the probability that someone drawn at random from this sample is in the 24 and younger age group *or* the 25-39 age group?" To perform this calculation, we can add the probabilities for the first 2 groups together to get:
+
+```
+p(person in this sample is 39 or younger) = 62700/409300 + 206000/409300 = 0.153 + 0.503 = 0.656
+```

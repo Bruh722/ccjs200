@@ -537,9 +537,9 @@ Comparing the raw number of estimated robberies from one year to the next is les
 * We can think about these proportions in terms of *probabilities*. Here is an example:
 
 ```
-The probability that a person drawn at random from the sample of prison releasees is in the 24 and younger age group is 62700/409300 = 0.153.
-The probability that a person drawn at random from the sample of prison releasees is in the 25-39 age group is 206000/409300 = 0.503.
-The probability that a person drawn at random from the sample of prison releasees is in the 40 and older age group is 140600/409300 = 0.344.
+The probability that a person in this sample is in the 24 and younger age group is 62700/409300 = 0.153.
+The probability that a person in this sample is in the 25-39 age group is 206000/409300 = 0.503.
+The probability that a person in this sample is in the 40 and older age group is 140600/409300 = 0.344.
 ```
 
 * We can carry out certain arithmetic operations with these probabilities.

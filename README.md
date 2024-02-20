@@ -607,7 +607,7 @@ b. 0.401
 c. 0.847
 d. none of the above are correct
 ```
-* PQ5: Calculate recidivism rates for the 25-39 and over-39 groups in the BJS data above. Which of the 3 groups has the highest recidivism rate?
+* PQ5: Calculate recidivism rates for the each of the age groups in the BJS data above. Which of the 3 groups has the highest recidivism rate?
 ```
 a. 24 and younger
 b. 25-39

@@ -563,89 +563,96 @@ Recidivism rate for people 24 and younger = 47000/62700 = 0.750 or 75.0%
 ```
 
 * We can use 0/1 codes to calculate the mean of a binary/dichotomous variable. At the same time, we can introduce the concept of an arithmetic average or mean. Here is an example:
-- Say we are in a state that has the death penalty and we want to look at the last 6 executions.
-- In each of the 6 cases, we code the case 1 if the person had been on death row for more than 10 years and 0 if the person had been on death row for less than 10 years.
-- Based on this rule, 4 of our 6 cases had been on death row for more than 10 years so they receive a code of 1; the other 2 had been on death row for less than 10 years so they receive a code of 0.
-- If we add up our 0's and 1's, we get the following: 1+1+1+1+0+0 = 4.
-- The 4 represents the sum of the scores.
-- Since there are 6 cases, the number of scores is 6.
-- The average or the mean is the sum of the scores divided by the number of scores which -- in this case -- means we have 4/6 = 2/3 or about 0.667.
-- So, the mean of the 0's and 1's corresponds to the proportion or fraction of cases that have a code of 1 (i.e., the fraction of people who spent more than 10 years on death row before execution).
+-- Say we are in a state that has the death penalty and we want to look at the last 6 executions.
+-- In each of the 6 cases, we code the case 1 if the person had been on death row for more than 10 years and 0 if the person had been on death row for less than 10 years.
+-- Based on this rule, 4 of our 6 cases had been on death row for more than 10 years so they receive a code of 1; the other 2 had been on death row for less than 10 years so they receive a code of 0.
+-- If we add up our 0's and 1's, we get the following: 1+1+1+1+0+0 = 4.
+-- The 4 represents the sum of the scores.
+-- Since there are 6 cases, the number of scores is 6.
+-- The average or the mean is the sum of the scores divided by the number of scores which -- in this case -- means we have 4/6 = 2/3 or about 0.667.
+-- So, the mean of the 0's and 1's corresponds to the proportion or fraction of cases that have a code of 1 (i.e., the fraction of people who spent more than 10 years on death row before execution).
 
 * Practice Question #1 (PQ1): Suppose you are asked to indicate your level of agreement with the following statement: "I feel safe walking alone in my neighborhood at night." The response scale has the following options: (1) strongly agree; (2) agree; (3) disagree; (4) strongly disagree. What is the level of measurement for this variable?
-
-- a. nominal
-- b. ordinal
-- c. interval
-- d. ratio
-
+```
+a. nominal
+b. ordinal
+c. interval
+d. ratio
+```
 * PQ2: The city of Mount Holly has 172,000 residents. During 2023, there were 47 residential burglaries. Calculate the number of residential burglaries per 100,000 population (rounded off to the nearest 1st decimal place).
-
-- a. 18.2
-- b. 24.3
-- c. 27.3
-- d. 33.7
-
+```
+a. 18.2
+b. 24.3
+c. 27.3
+d. 33.7
+```
 * PQ3: Suppose that in 2022, the city of Mount Holly had 170,000 residents and 45 residential burglaries. Calculate the percentage change in the residential burglary rates for 2023 compared to 2022 (do your arithmetic out to the first decimal place).
-
-- a. 3 percent decrease
-- b. 1 percent increase
-- c. 3 percent increase
-- d. 7 percent increase
-  
+```
+a. 3 percent decrease
+b. 1 percent increase
+c. 3 percent increase
+d. 7 percent increase
+```  
 * PQ4: what is the probability that someone drawn at random from the prisoner releasee sample is 25 years old or older? (calculate probabilities out to 3 decimal places).
-
-- a. 0.537
-- b. 0.401
-- c. 0.847
-- d. none of the above are correct
-
+```
+a. 0.537
+b. 0.401
+c. 0.847
+d. none of the above are correct
+```
 * PQ5: Calculate recidivism rates for the 25-39 and over-39 groups in the BJS data above. Which of the 3 groups has the highest recidivism rate?
-
-- a. 24 and younger
-- b. 25-39
-- c. 40 and over
+```
+a. 24 and younger
+b. 25-39
+c. 40 and over
+```
 
 * PQ6: What is the recidivism rate for the 2 oldest age groups combined?
-
-- a. 0.472 or 47.2%
-- b. 0.585 or 58.5%
-- c. 0.646 or 64.6%
-- d. 0.821 or 82.1%
+```
+a. 0.472 or 47.2%
+b. 0.585 or 58.5%
+c. 0.646 or 64.6%
+d. 0.821 or 82.1%
+```
 
 * PQ7: Consider the following 2 cities: Sunset Beach which had 85,000 residents and Crescent Beach which had 107,000 residents (according to last year's Census). Next, we learn from the 2 cities' police departments that Crescent Beach had 103 robberies last year while Sunset Beach had 95 robberies. Which city had the higher robbery rate? What was the robbery rate for the higher of the 2 cities?
-
-- a. Sunset Beach / 111.8
-- b. Crescent Beach / 87.3
-- c. Sunset Beach / 104.2
-- d. Crescent Beach / 78.5
+```
+a. Sunset Beach / 111.8
+b. Crescent Beach / 87.3
+c. Sunset Beach / 104.2
+d. Crescent Beach / 78.5
+```
 
 * PQ8: What is the unit of analysis in the BJS recidivism study above? (short-answer question).
 
 * PQ9: Suppose we do a study where we examine America's 100 largest cities and we count the number of these cities where at least one person was killed by the police last year. Next, we calculate the proportion of the cities where at least one person was killed by the police. What is the unit of analysis for this study?
-
-- a. individual persons who were killed by the police
-- b. the police officers who killed citizens
-- c. each of the cities in the group of America's 100 largest cities
-- d. the states where the 100 largest cities are located
+```
+a. individual persons who were killed by the police
+b. the police officers who killed citizens
+c. each of the cities in the group of America's 100 largest cities
+d. the states where the 100 largest cities are located
+```
 
 * PQ10: Suppose we do a study where we examine the records of a random sample of juvenile arrestees in a large American city. For each of the arrestees in our sample, we record the person's age at the time they were first arrested (i.e., age of onset). What is the level of measurement for this variable?
-
-- a. nominal
-- b. ordinal
-- c. interval
-- d. ratio
+```
+a. nominal
+b. ordinal
+c. interval
+d. ratio
+```
 
 * PQ11: Using the sample of juvenile arrestees in PQ10, we also record for each juvenile a binary/dichotomous variable measuring whether the child's case was waived up to the adult criminal justice system. Suppose there were 837 kids in the sample and 94 were waived up to the adult system. What is the sample estimate of *p*(waived) for this sample?
-
-- a. 0.038
-- b. 0.079
-- c. 0.112
-- d. 0.187
+```
+a. 0.038
+b. 0.079
+c. 0.112
+d. 0.187
+```
 
 * PQ12: We visited a drug treatment court each Monday for 3 months. Each day, we ask all of the defendants in drug court to participate in a survey of drug usage patterns. This sample would be a:
-
+```
 a. random sample
 b. systematic sample
 c. snowball sample
 d. purposive sample
+```

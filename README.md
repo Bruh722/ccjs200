@@ -645,7 +645,7 @@ Recidivism rate for people 24 and younger = 47000/62700 = 0.750 or 75.0%
 
 * PQ12: We visited a drug treatment court each Monday for 3 months. Each day, we ask all of the defendants in drug court to participate in a survey of drug usage patterns. This sample would be a:
 
--- a. random sample
-- b. systematic sample
-- c. snowball sample
-- d. purposive sample
+a. random sample
+b. systematic sample
+c. snowball sample
+d. purposive sample

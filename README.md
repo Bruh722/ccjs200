@@ -504,7 +504,7 @@ Comparing the raw number of estimated robberies from one year to the next is les
 
 * Reminder: first exam is scheduled for Thursday 2/29/24.
 * The best way to prepare for the exam is to work on practice problems at the end of each chapter.
-* I will post some additional practice problems this week.
+* I will post some additional practice problems today.
 * Recall these data from the Bureau of Justice Statistics that we discussed last week:
 
 | Age at Release from Prison    | N = | # Rearrested |
@@ -549,6 +549,28 @@ The probability that a person in this sample is in the 40 and older age group is
 p(person in this sample is 39 or younger) = 62700/409300 + 206000/409300 = 0.153 + 0.503 = 0.656
 ```
 
+* Binary/dichotomous variable example: calculating *recidivism rates*. Let's consider the BJS data (above) as a basis for calculating a recidivism rate statistic. There are different ways to calculate recidivism rates. For purposes of this class, we will define the concept of a recidivism rate as the proportion or fraction of people who are apprehended for committing new crimes within a well-defined period of time. Considering the BJS data, we have a total of 409,300 people who were in the sample of prison releasees (i.e., people who were at risk for recidivism). Within this sample, a total of 270,900 people were arrested for a new crime within 3 years of their release date. Thus, the recidivism rate calculation is:
+
+```
+Recidivism rate = # of people who failed / total # of people at risk = 270900/409300 = 0.662 or 66.2%
+```
+An equivalent way to think about this statistic is in probability terms. So, the probability that someone drawn at random from this sample was rearrested within 3 years is 0.662 or 66.2%. 
+
+* We can also calculate the recidivism rate for the people in the youngest age group (24 and younger). For this calculation, we see that there were 62,700 people at risk for recidivism within this group. Among these people, a subset of 47,000 were arrested for a new crime within 3 years time. The recidvism rate for this group is:
+
+```
+Recidivism rate for people 24 and younger = 47000/62700 = 0.750 or 75.0%
+```
+
+* We can use 0/1 codes to calculate the mean of a binary/dichotomous variable. At the same time, we can introduce the concept of an arithmetic average or mean. Here is an example:
+- Say we are in a state that has the death penalty and we want to look at the last 6 executions.
+- In each of the 6 cases, we code the case 1 if the person had been on death row for more than 10 years and 0 if the person had been on death row for less than 10 years.
+- Based on this rule, 4 of our 6 cases had been on death row for more than 10 years so they receive a code of 1; the other 2 had been on death row for less than 10 years so they receive a code of 0.
+- If we add up our 0's and 1's, we get the following: 1+1+1+1+0+0 = 4.
+- The 4 represents the sum of the scores.
+- Since there are 6 cases, the number of scores is 6.
+- The average or the mean is the sum of the scores divided by the number of scores which -- in this case -- means we have 4/6 = 2/3 or about 0.667.
+- So, the mean of the 0's and 1's corresponds to the proportion or fraction of cases that have a code of 1 (i.e., the fraction of people who spent more than 10 years on death row before execution).
 
 * Practice Question #1 (PQ1): Suppose you are asked to indicate your level of agreement with the following statement: "I feel safe walking alone in my neighborhood at night." The response scale has the following options: (1) strongly agree; (2) agree; (3) disagree; (4) strongly disagree. What is the level of measurement for this variable?
 
@@ -577,3 +599,53 @@ p(person in this sample is 39 or younger) = 62700/409300 + 206000/409300 = 0.153
 - b. 0.401
 - c. 0.847
 - d. none of the above are correct
+
+* PQ5: Calculate recidivism rates for the 25-39 and over-39 groups in the BJS data above. Which of the 3 groups has the highest recidivism rate?
+
+- a. 24 and younger
+- b. 25-39
+- c. 40 and over
+
+* PQ6: What is the recidivism rate for the 2 oldest age groups combined?
+
+- a. 0.472 or 47.2%
+- b. 0.585 or 58.5%
+- c. 0.646 or 64.6%
+- d. 0.821 or 82.1%
+
+* PQ7: Consider the following 2 cities: Sunset Beach which had 85,000 residents and Crescent Beach which had 107,000 residents (according to last year's Census). Next, we learn from the 2 cities' police departments that Crescent Beach had 103 robberies last year while Sunset Beach had 95 robberies. Which city had the higher robbery rate? What was the robbery rate for the higher of the 2 cities?
+
+- a. Sunset Beach / 111.8
+- b. Crescent Beach / 87.3
+- c. Sunset Beach / 104.2
+- d. Crescent Beach / 78.5
+
+* PQ8: What is the unit of analysis in the BJS recidivism study above? (short-answer question).
+
+* PQ9: Suppose we do a study where we examine America's 100 largest cities and we count the number of these cities where at least one person was killed by the police last year. Next, we calculate the proportion of the cities where at least one person was killed by the police. What is the unit of analysis for this study?
+
+- a. individual persons who were killed by the police
+- b. the police officers who killed citizens
+- c. each of the cities in the group of America's 100 largest cities
+- d. the states where the 100 largest cities are located
+
+* PQ10: Suppose we do a study where we examine the records of a random sample of juvenile arrestees in a large American city. For each of the arrestees in our sample, we record the person's age at the time they were first arrested (i.e., age of onset). What is the level of measurement for this variable?
+
+- a. nominal
+- b. ordinal
+- c. interval
+- d. ratio
+
+* PQ11: Using the sample of juvenile arrestees in PQ10, we also record for each juvenile a binary/dichotomous variable measuring whether the child's case was waived up to the adult criminal justice system. Suppose there were 837 kids in the sample and 94 were waived up to the adult system. What is the sample estimate of *p*(waived) for this sample?
+
+- a. 0.038
+- b. 0.079
+- c. 0.112
+- d. 0.187
+
+* PQ12: We visited a drug treatment court each Monday for 3 months. Each day, we ask all of the defendants in drug court to participate in a survey of drug usage patterns. This sample would be a:
+
+- a. random sample
+- b. systematic sample
+- c. snowball sample
+- d. purposive sample

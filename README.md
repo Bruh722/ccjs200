@@ -553,6 +553,8 @@ p(person in this sample is 39 or younger) = 62700/409300 + 206000/409300 = 0.153
 
 ```
 Recidivism rate = # of people who failed / total # of people at risk = 270900/409300 = 0.662 or 66.2%
+or equivalently,
+p(recidivism) = 270900/409300 = 0.662
 ```
 An equivalent way to think about this statistic is in probability terms. So, the probability that someone drawn at random from this sample was rearrested within 3 years is 0.662 or 66.2%. 
 

@@ -613,53 +613,10 @@ a. 24 and younger
 b. 25-39
 c. 40 and over
 ```
+### Lesson 9 - Thursday 2/22/24
 
-* PQ6: What is the recidivism rate for the 2 oldest age groups combined?
-```
-a. 0.472 or 47.2%
-b. 0.585 or 58.5%
-c. 0.646 or 64.6%
-d. 0.821 or 82.1%
-```
-
-* PQ7: Consider the following 2 cities: Sunset Beach which had 85,000 residents and Crescent Beach which had 107,000 residents (according to last year's Census). Next, we learn from the 2 cities' police departments that Crescent Beach had 103 robberies last year while Sunset Beach had 95 robberies. Which city had the higher robbery rate? What was the robbery rate for the higher of the 2 cities?
-```
-a. Sunset Beach / 111.8
-b. Crescent Beach / 87.3
-c. Sunset Beach / 104.2
-d. Crescent Beach / 78.5
-```
-
-* PQ8: What is the unit of analysis in the BJS recidivism study above? (short-answer question).
-
-* PQ9: Suppose we do a study where we examine America's 100 largest cities and we count the number of these cities where at least one person was killed by the police last year. Next, we calculate the proportion of the cities where at least one person was killed by the police. What is the unit of analysis for this study?
-```
-a. individual persons who were killed by the police
-b. the police officers who killed citizens
-c. each of the cities in the group of America's 100 largest cities
-d. the states where the 100 largest cities are located
-```
-
-* PQ10: Suppose we do a study where we examine the records of a random sample of juvenile arrestees in a large American city. For each of the arrestees in our sample, we record the person's age at the time they were first arrested (i.e., age of onset). What is the level of measurement for this variable?
-```
-a. nominal
-b. ordinal
-c. interval
-d. ratio
-```
-
-* PQ11: Using the sample of juvenile arrestees in PQ10, we also record for each juvenile a binary/dichotomous variable measuring whether the child's case was waived up to the adult criminal justice system. Suppose there were 837 kids in the sample and 94 were waived up to the adult system. What is the sample estimate of *p*(waived) for this sample?
-```
-a. 0.038
-b. 0.079
-c. 0.112
-d. 0.187
-```
-
-* PQ12: We visited a drug treatment court each Monday for 3 months. Each day, we ask all of the defendants in drug court to participate in a survey of drug usage patterns. This sample would be a:
-```
-a. random sample
-b. systematic sample
-c. snowball sample
-d. purposive sample
-```
+* Reminder: first exam is scheduled for Thursday 2/29/24
+* Today we are going to start by reviewing the use and interpretation of binary/dichotomous variables and percent change statistics.
+* We will then work on a few more practice problems.
+* Finally, we transition to Chapter 4.
+* Slides [linked here](https://github.com/rwb/ccjs200/blob/main/gfiles/lesson9.pdf)

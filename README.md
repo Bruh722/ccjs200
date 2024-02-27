@@ -620,3 +620,12 @@ c. 40 and over
 * We will then work on a few more practice problems.
 * Finally, we transition to Chapter 4.
 * Slides [linked here](https://github.com/rwb/ccjs200/blob/main/gfiles/lesson9.pdf)
+
+### Lesson 10 - Tuesday 2/27/24
+
+* Reminder: first exam is scheduled for Thursday 2/29/24
+* Today we are going to work on some more practice problems
+* We will also review for the first exam
+* The exam will cover chapters 1, 2, and 4.
+* Slides [linked here](https://github.com/rwb/ccjs200/blob/main/gfiles/lesson10.pdf)
+* Draft Formula Sheet [linked here](https://github.com/rwb/ccjs200/blob/main/gfiles/formulas-exam1.pdf)

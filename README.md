@@ -586,6 +586,9 @@ b. ordinal
 c. interval
 d. ratio
 ```
+
+Correct answer: b. ordinal
+
 * PQ2: The city of Mount Holly has 172,000 residents. During 2023, there were 47 residential burglaries. Calculate the number of residential burglaries per 100,000 population (rounded off to the nearest 1st decimal place).
 ```
 a. 18.2
@@ -593,13 +596,19 @@ b. 24.3
 c. 27.3
 d. 33.7
 ```
+
+Correct answer: c. 27.3
+
 * PQ3: Suppose that in 2022, the city of Mount Holly had 170,000 residents and 45 residential burglaries. Calculate the percentage change in the residential burglary rates for 2023 compared to 2022 (do your arithmetic out to the first decimal place).
 ```
 a. 3 percent decrease
 b. 1 percent increase
 c. 3 percent increase
 d. 7 percent increase
-```  
+```
+
+Correct answer: c. 3 percent increase
+
 * PQ4: what is the probability that someone drawn at random from the prisoner releasee sample is 25 years old or older? (calculate probabilities out to 3 decimal places).
 ```
 a. 0.537
@@ -607,12 +616,18 @@ b. 0.401
 c. 0.847
 d. none of the above are correct
 ```
+
+Correct answer: c. 0.847
+
 * PQ5: Calculate recidivism rates for the each of the age groups in the BJS data above. Which of the 3 groups has the highest recidivism rate?
 ```
 a. 24 and younger
 b. 25-39
 c. 40 and over
 ```
+
+Correct answer: a. 24 and younger
+
 ### Lesson 9 - Thursday 2/22/24
 
 * Reminder: first exam is scheduled for Thursday 2/29/24

@@ -77,7 +77,7 @@ This is an aspirational course outline. I will try to stick to the schedule that
 * Week 13 - 4/23-4/26: Categorical data (chapter 9).
 * Week 14 - 4/30-5/3: Two-sample tests (chapter 10).
 * Week 15 - 5/7-5/9: Correlation/regression (chapter 12) + final exam review.
-* Final exam - Saturday 5/11: 8am-10am ([official university exam schedule](https://registrar.umd.edu/registration/register-classes/final-exams/spring-2024)).
+* Final exam - Saturday 5/11: 10:30am-12:30pm ([official university exam schedule](https://registrar.umd.edu/registration/register-classes/final-exams/spring-2024)).
 
 ### Lesson 1 - Thursday 1/25/24
 

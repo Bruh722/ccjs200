@@ -799,4 +799,4 @@ and this code gives us the following chart:
 <img src="/gfiles/jailtable3.png" width="800px">
 </p>
 
-* There is some complexity to these plots but they are valuable for comparing distributions.
+* There is some complexity to these plots but they are useful for comparing distributions.

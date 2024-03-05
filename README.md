@@ -776,7 +776,7 @@ barplot(table(y),
 * Here are the 2 charts together:
 
 <p align="center">
-<img src="/gfiles/jailtable2.png" width="700px">
+<img src="/gfiles/jailtable2.png" width="800px">
 </p>
 
 * There are a number of ways we could compare these 2 charts: (1) skewness; (2) unimodality; (3) range of values; and (4) mean > median or median > mean.
@@ -796,7 +796,7 @@ axis(side=1,at=1:2,c("County 1","County 2"))
 and this code gives us the following chart:
 
 <p align="center">
-<img src="/gfiles/jailtable3.png" width="700px">
+<img src="/gfiles/jailtable3.png" width="800px">
 </p>
 
 * There is some complexity to these plots but they are valuable for comparing distributions.

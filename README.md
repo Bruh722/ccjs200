@@ -800,3 +800,210 @@ and this code gives us the following chart:
 </p>
 
 * There is some complexity to these plots but they are useful for comparing distributions.
+
+### Lesson 12 - Thursday 3/7/24
+
+* Assigned reading: finish Chapter 5 (measures of dispersion)
+* Slides [linked here](https://github.com/rwb/ccjs200/blob/main/gfiles/lesson12.pdf)
+* Recall the jail sentence data (300 cases) from County Court #1 which we examined last time:
+
+```R
+x = c(rep(1,5),rep(2,29),rep(3,51),rep(4,61),
+  rep(5,61),rep(6,44),rep(7,22),rep(8,17),rep(9,5),rep(10,4),11)
+table(x)
+```
+
+Here is the frequency table:
+
+```Rout
+> x = c(rep(1,5),rep(2,29),rep(3,51),rep(4,61),
++   rep(5,61),rep(6,44),rep(7,22),rep(8,17),rep(9,5),rep(10,4),11)
+> table(x)
+x
+ 1  2  3  4  5  6  7  8  9 10 11 
+ 5 29 51 61 61 44 22 17  5  4  1 
+>
+```
+
+* What is the range for this dataset?
+
+```R
+max(x)
+min(x)
+max(x)-min(x)
+```
+
+* Here is the output:
+
+```Rout
+> max(x)
+[1] 11
+> min(x)
+[1] 1
+> max(x)-min(x)
+[1] 10
+>
+```
+
+* Next, let's consider the inter-quartile range (IQR):
+
+```R
+quantile(x,0.75)
+quantile(x,0.25)
+quantile(x,0.75)-quantile(x,0.25)
+```
+
+* Here is the output:
+
+```Rout
+> quantile(x,0.75)
+75% 
+  6 
+> quantile(x,0.25)
+25% 
+  3 
+> quantile(x,0.75)-quantile(x,0.25)
+75% 
+  3 
+>
+```
+
+* Note: this underscores that the IQR will generally be a smaller number than the range.
+* Next, we calculate the mean and standard deviation for county 1:
+
+```R
+nx=length(x)
+nx
+meanx=sum(x)/nx
+meanx
+mean(x)
+xmxsq=(x-meanx)^2
+sdx=sqrt(1/(nx-1)*sum(xmxsq))
+sdx
+sd(x)
+```
+* Here is our output:
+
+```Rout
+> nx=length(x)
+> nx
+[1] 300
+> meanx=sum(x)/nx
+> meanx
+[1] 4.716667
+> mean(x)
+[1] 4.716667
+> xmxsq=(x-meanx)^2
+> sdx=sqrt(1/(nx-1)*sum(xmxsq))
+> sdx
+[1] 1.903101
+> sd(x)
+[1] 1.903101
+>
+```
+
+* Now, let's compare the range and the IQR for the two county courts we discussed last time. We begin by reading in the 2 datasets.
+
+```
+x = c(rep(1,5),rep(2,29),rep(3,51),rep(4,61),
+  rep(5,61),rep(6,44),rep(7,22),rep(8,17),rep(9,5),rep(10,4),11)
+table(x)
+y = c(1,rep(2,7),rep(3,28),rep(4,45),rep(5,55),rep(6,57),
+  rep(7,39),rep(8,28),rep(9,22),rep(10,12),rep(11,3),rep(12,3))
+table(y)
+```
+
+* Here is the output:
+
+```Rout
+> x = c(rep(1,5),rep(2,29),rep(3,51),rep(4,61),
++   rep(5,61),rep(6,44),rep(7,22),rep(8,17),rep(9,5),rep(10,4),11)
+> table(x)
+x
+ 1  2  3  4  5  6  7  8  9 10 11 
+ 5 29 51 61 61 44 22 17  5  4  1 
+> y = c(1,rep(2,7),rep(3,28),rep(4,45),rep(5,55),rep(6,57),
++   rep(7,39),rep(8,28),rep(9,22),rep(10,12),rep(11,3),rep(12,3))
+> table(y)
+y
+ 1  2  3  4  5  6  7  8  9 10 11 12 
+ 1  7 28 45 55 57 39 28 22 12  3  3 
+>
+```
+
+* Here are the calculations for the range and IQR for both datasets:
+
+```r
+range.x=max(x)-min(x)
+range.x
+range.y=max(y)-min(y)
+range.y
+
+iqr.x=quantile(x,0.75)-quantile(x,0.25)
+iqr.x
+iqr.y=quantile(y,0.75)-quantile(y,0.25)
+iqr.y
+```
+
+* Here is our output:
+
+```Rout
+> range.x=max(x)-min(x)
+> range.x
+[1] 10
+> range.y=max(y)-min(y)
+> range.y
+[1] 11
+> 
+> iqr.x=quantile(x,0.75)-quantile(x,0.25)
+> iqr.x
+75% 
+  3 
+> iqr.y=quantile(y,0.75)-quantile(y,0.25)
+> iqr.y
+75% 
+  3 
+>
+```
+* So, these 2 distributions have different ranges but the same IQR. This suggests that there may be some differences in the extreme values of the 2 distributions. Note that differences between IQR's and ranges don't imply anything about differences between the means or medians of the 2 variables.
+* Next, we compare the means and standard deviations of the 2 distributions:
+
+```R
+mean(x)
+sd(x)
+mean(y)
+sd(y)
+```
+
+* Here are our results:
+
+```R
+> mean(x)
+[1] 4.716667
+> sd(x)
+[1] 1.903101
+> mean(y)
+[1] 5.933333
+> sd(y)
+[1] 2.12224
+>
+```
+
+* These results suggest that the mean sentence length in county 2 (y) is greater than the mean sentence length in county 1 (x). In addition, the distribution of sentence lengths in county 2 is a little more dispersed than it is in county 1. Since the distributions have some skew (review our boxplot from last time), it would also be useful to look at the medians of the 2 distributions:
+
+```R
+median(x)
+median(y)
+```
+
+with the following results:
+
+```Rout
+> median(x)
+[1] 5
+> median(y)
+[1] 6
+>
+```
+
+which confirm that the median for county 2 is higher than the median for county 1. Often (but not always), the median will be a preferred measure of central tendency when the data are skewed.

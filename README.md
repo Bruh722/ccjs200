@@ -654,7 +654,7 @@ Correct answer: a. 24 and younger
 * Suppose I give you the following dataset comprised of the last 300 jail sentences (in months) handed down by the county court. We denote the jail/prison sentence lengths by the variable, *x*.
 
 ```R
-x <- c(rep(1,5),rep(2,29),rep(3,51),rep(4,61),
+x = c(rep(1,5),rep(2,29),rep(3,51),rep(4,61),
   rep(5,61),rep(6,44),rep(7,22),rep(8,17),rep(9,5),rep(10,4),11)
 table(x)
 ```
@@ -662,7 +662,7 @@ table(x)
 * This gives us the following output:
 
 ```Rout
-> x <- c(rep(1,5),rep(2,29),rep(3,51),rep(4,61),
+> x = c(rep(1,5),rep(2,29),rep(3,51),rep(4,61),
 +   rep(5,61),rep(6,44),rep(7,22),rep(8,17),rep(9,5),rep(10,4),11)
 > table(x)
 x
@@ -714,7 +714,7 @@ max(x)-min(x)
 * Now, let's look at a similar dataset from the next-door neighbor county. We will call the sentence length variable in this dataset, *y*
 
 ```R
-y <- c(1,rep(2,7),rep(3,28),rep(4,45),rep(5,55),rep(6,57),
+y = c(1,rep(2,7),rep(3,28),rep(4,45),rep(5,55),rep(6,57),
   rep(7,39),rep(8,28),rep(9,22),rep(10,12),rep(11,3),rep(12,3))
 table(y)
 ```
@@ -722,7 +722,7 @@ table(y)
 and here is the output:
 
 ```Rout
-> y <- c(1,rep(2,7),rep(3,28),rep(4,45),rep(5,55),rep(6,57),
+> y = c(1,rep(2,7),rep(3,28),rep(4,45),rep(5,55),rep(6,57),
 +   rep(7,39),rep(8,28),rep(9,22),rep(10,12),rep(11,3),rep(12,3))
 > table(y)
 y

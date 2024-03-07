@@ -806,6 +806,29 @@ and this code gives us the following chart:
 * Assigned reading: finish Chapter 5 (measures of dispersion)
 * Reminder: Assignment #2 will be distributed Friday 3/8/24 at 9am; it will be due at 11:59pm on Friday 3/15/24.
 * Slides [linked here](https://github.com/rwb/ccjs200/blob/main/gfiles/lesson12.pdf)
+* A point about data entry in R:
+
+```R
+z = c(1,1,1,2,2,3,3,3,3)
+table(z)
+z = c(rep(1,3),rep(2,2),rep(3,4))
+table(z)
+```
+which gives us this:
+```Rout
+> z = c(1,1,1,2,2,3,3,3,3)
+> table(z)
+z
+1 2 3 
+3 2 4 
+> z = c(rep(1,3),rep(2,2),rep(3,4))
+> table(z)
+z
+1 2 3 
+3 2 4 
+>
+```
+
 * Recall the jail sentence data (300 cases) from County Court #1 which we examined last time:
 
 ```R

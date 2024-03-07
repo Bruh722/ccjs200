@@ -1021,5 +1021,5 @@ axis(side=1,at=1:2,c("County 1","County 2"))
 and this code gives us the following chart:
 
 <p align="center">
-<img src="/gfiles/box2.png" width="800px">
+<img src="/gfiles/box2.png" width="700px">
 </p>

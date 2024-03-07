@@ -1007,7 +1007,7 @@ with the following results:
 >
 ```
 
-which confirm that the median for county 2 is higher than the median for county 1. Often (but not always), the median will be a preferred measure of central tendency when the data are skewed. We complete the analysis by examining the boxplot:
+which confirm that the median for county 2 is higher than the median for county 1. We complete the analysis by examining the boxplot:
 
 ```R
 boxplot(x,y,

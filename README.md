@@ -804,6 +804,7 @@ and this code gives us the following chart:
 ### Lesson 12 - Thursday 3/7/24
 
 * Assigned reading: finish Chapter 5 (measures of dispersion)
+* Reminder: Assignment #2 will be distributed Friday 3/8/24 at 9am; it will be due at 11:59pm on Friday 3/15/24.
 * Slides [linked here](https://github.com/rwb/ccjs200/blob/main/gfiles/lesson12.pdf)
 * Recall the jail sentence data (300 cases) from County Court #1 which we examined last time:
 
@@ -1006,4 +1007,19 @@ with the following results:
 >
 ```
 
-which confirm that the median for county 2 is higher than the median for county 1. Often (but not always), the median will be a preferred measure of central tendency when the data are skewed.
+which confirm that the median for county 2 is higher than the median for county 1. Often (but not always), the median will be a preferred measure of central tendency when the data are skewed. We complete the analysis by examining the boxplot:
+
+```R
+boxplot(x,y,
+  main="Distribution of Jail Sentences by County",
+  xlab="",
+  ylab="Jail Sentence Length (in months)",
+  xaxt="n")
+axis(side=1,at=1:2,c("County 1","County 2"))
+```
+
+and this code gives us the following chart:
+
+<p align="center">
+<img src="/gfiles/box2.png" width="800px">
+</p>

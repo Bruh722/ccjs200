@@ -1062,7 +1062,7 @@ p2 = c(15,rep(18,2),rep(19,8),rep(20,15),rep(21,29),rep(22,48),
   rep(28,21),rep(29,3),30)
 ```
 
-As an example, please note that rep(14,4) means 14 days appears in the data 14 times, rep(15,5) means that the number 15 appears 5 times, etc.
+As an example, please note that rep(14,4) means 14 days appears in the data 4 times, rep(15,5) means that the number 15 appears 5 times, etc.
 
 Please address each of the following questions:
 

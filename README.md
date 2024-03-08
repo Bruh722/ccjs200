@@ -1064,6 +1064,8 @@ p2 = c(15,rep(18,2),rep(19,8),rep(20,15),rep(21,29),rep(22,48),
 
 As an example, please note that rep(14,4) means 14 days appears in the data 14 times, rep(15,5) means that the number 15 appears 5 times, etc.
 
+Please address each of the following questions:
+
 1. Present a frequency table for each distribution (10pts).
 2. Identify the mode of each distribution (5pts).
 3. Use arithmetic formulas (in R) to calculate the means for each prison; check your work using the mean() function (15pts).

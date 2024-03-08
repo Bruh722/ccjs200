@@ -1046,3 +1046,29 @@ and this code gives us the following chart:
 <p align="center">
 <img src="/gfiles/box2.png" width="700px">
 </p>
+
+### Assignment 2
+
+Data description: Consider the problem of how long (in days) people sentenced to prison have to wait for drug treatment when they have a documented need. Suppose we have measures of this variable for samples of people from 2 different prisons and we want to compare them. We denote prison 1 by p1 and prison 2 by p2. Here is the data you should enter into R to get started:
+
+```Rout
+p1 = c(rep(14,4),rep(15,5),rep(16,10),rep(17,11),rep(18,31),
+  rep(19,36),rep(20,57),rep(21,51),rep(22,66),rep(23,44),
+  rep(24,32),rep(25,25),rep(26,10),rep(27,2),rep(28,3))
+p2 = c(15,rep(18,2),rep(19,8),rep(20,15),rep(21,29),rep(22,48),
+  rep(23,51),rep(24,83),rep(25,75),rep(26,55),rep(27,37),
+  rep(28,21),rep(29,3),30)
+```
+
+As an example, please note that rep(14,4) means 14 days appears in the data 14 times, rep(15,5) means that the number 15 appears 5 times, etc.
+
+1. Present a frequency table for each distribution (10pts).
+2. Identify the mode of each distribution (5pts).
+3. Use arithmetic formulas (in R) to calculate the means for each prison; check your work using the mean() function (15pts).
+4. Use arithmetic formulas (in R) to calculate the standard deviations for each prison; check your work using the sd() function. (15pts)
+5. Calculate the range for each prison. (7pts)
+6. Calculate the inter-quartile range (IQR) for each prison. (7pts)
+7. Use the median() function to calculate the median waiting time in each prison; comment on which prison has the longer median waiting time (8pts).
+8. Create a properly labeled side-by-side barplot for each distribution (15pts).
+9. Create a properly labeled boxplot of the 2 distributions (15pts).
+10. Your work should be assembled into a neatly formatted, readable, and well-organized pdf file so Jane and Jordan can easily read it (3 points).

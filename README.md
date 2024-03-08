@@ -1047,7 +1047,9 @@ and this code gives us the following chart:
 <img src="/gfiles/box2.png" width="700px">
 </p>
 
-### Assignment 2
+### Assignment 2 
+
+*Note* Due to this being posted late (10:15am on Friday), I am extending the submission deadline for this assignment to Monday March 18th at 11:59pm.
 
 Data description: Consider the problem of how long (in days) people sentenced to prison have to wait for drug treatment when they have a documented need. Suppose we have measures of this variable for samples of people from 2 different prisons and we want to compare them. We denote prison 1 by p1 and prison 2 by p2. Here is the data you should enter into R to get started:
 

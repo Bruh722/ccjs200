@@ -804,7 +804,7 @@ and this code gives us the following chart:
 ### Lesson 12 - Thursday 3/7/24
 
 * Assigned reading: finish Chapter 5 (measures of dispersion)
-* Reminder: Assignment #2 will be distributed Friday 3/8/24 at 9am; it will be due at 11:59pm on Friday 3/15/24.
+* Reminder: Assignment #2 will be distributed Friday 3/8/24 at 9am; it will be due at 11:59pm on Monday 3/18/24.
 * Slides [linked here](https://github.com/rwb/ccjs200/blob/main/gfiles/lesson12.pdf)
 * A point about data entry in R:
 
@@ -1076,3 +1076,10 @@ Please address each of the following questions:
 8. Create a properly labeled side-by-side barplot for each distribution (15pts).
 9. Create a properly labeled boxplot of the 2 distributions (15pts).
 10. Your work should be assembled into a neatly formatted, readable, and well-organized pdf file so Jane and Jordan can easily read it (3 points).
+
+
+### Lesson 13 - Tuesday 3/12/24
+
+* Assigned reading: Chapter 6 (probability)
+* Reminder: Assignment #2 due at 11:59pm on Monday 3/18/24; no questions after 5pm on Friday 3/15/24.
+* Slides [linked here](https://github.com/rwb/ccjs200/blob/main/gfiles/lesson13.pdf)

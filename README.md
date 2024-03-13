@@ -1083,4 +1083,4 @@ Please address each of the following questions:
 * Assigned reading: Chapter 6 (probability)
 * Reminder: Assignment #2 due at 11:59pm on Monday 3/18/24; no questions after 5pm on Friday 3/15/24.
 * Slides [linked here](https://github.com/rwb/ccjs200/blob/main/gfiles/lesson13s.pdf)
-* *Note*: I took the coin flipping examples out of today's notes because I think it was confusing. I will use different examples in class on Thursday!
+* *Note*: I took the coin flipping examples out of today's notes because I think it was confusing.

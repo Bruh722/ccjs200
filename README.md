@@ -1130,4 +1130,12 @@ c. 0.678
 d. 0.588
 e. 0.242
 ```
-2. 
+2. What is the maximum value the variation ratio can take on in this dataset?
+
+```rout
+a. 0.917
+b. 0.833
+c. 0.723
+d. 0.791
+e. 0.642
+```

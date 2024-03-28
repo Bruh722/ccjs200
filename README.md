@@ -1123,7 +1123,7 @@ Note*: remember that exam 2 starts with Lesson 11 and Chapter 5. Please focus yo
 
 What is the variation ratio for this dataset?
 
-a. 0.322
+a. 0.322 </nl>
 b. 0.187
 c. 0.678
 d. 0.588

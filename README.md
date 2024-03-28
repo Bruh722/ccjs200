@@ -1104,3 +1104,29 @@ Please address each of the following questions:
 * Assigned reading: Chapter 6 (probability)
 * Reminder: Exam 2 scheduled for Thursday 4/4/24.
 * Slides [linked here](https://github.com/rwb/ccjs200/blob/main/gfiles/lesson16.pdf)
+
+### Practice Problems for Exam #2
+
+Note*: remember that exam 2 starts with Lesson 11 and Chapter 5. Please focus your studying efforts on material we have covered in class and discussion sections.
+
+1. Consider the following dataset capturing causes of death among a state's prison inmate population for a 1-year period:
+
+| Causes of Death | N = |
+| :---------- | --:| 
+| Cancer    | 337 |
+| Heart Disease   | 278  |
+| Stroke    | 189 |
+| COVID-19 | 93 |
+| Liver Failure | 81 |
+| Other | 68 |
+| Total | 1,046 |
+
+What is the variation ratio for this dataset?
+
+a. 0.322
+b. 0.187
+c. 0.678
+d. 0.588
+e. 0.242
+
+2. 

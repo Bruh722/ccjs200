@@ -1098,3 +1098,9 @@ Please address each of the following questions:
 * Assigned reading: Chapter 6 (probability)
 * Reminder: Exam 2 scheduled for Thursday 4/4/24.
 * Slides [linked here](https://github.com/rwb/ccjs200/blob/main/gfiles/lesson15.pdf)
+
+### Lesson 16 - Thursday 3/28/24
+
+* Assigned reading: Chapter 6 (probability)
+* Reminder: Exam 2 scheduled for Thursday 4/4/24.
+* Slides [linked here](https://github.com/rwb/ccjs200/blob/main/gfiles/lesson16.pdf)

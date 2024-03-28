@@ -1107,7 +1107,7 @@ Please address each of the following questions:
 
 ### Practice Problems for Exam #2
 
-Note*: remember that exam 2 starts with Lesson 11 and Chapter 5. Please focus your studying efforts on material we have covered in class and discussion sections.
+Note*: remember that exam 2 starts with Lesson 11 and Chapter 5. Please focus your studying efforts on material we have covered in class and discussion sections (correct answers are italicized).
 
 1. Consider the following dataset capturing causes of death among a state's prison inmate population for a 1-year period:
 
@@ -1121,21 +1121,46 @@ Note*: remember that exam 2 starts with Lesson 11 and Chapter 5. Please focus yo
 | Other | 68 |
 | Total | 1,046 |
 
-What is the variation ratio for this dataset?
+1a. What is the variation ratio for this dataset?
 
 ```rout
 a. 0.322
 b. 0.187
-c. 0.678
+*c. 0.678*
 d. 0.588
 e. 0.242
 ```
-2. What is the maximum value the variation ratio can take on in this dataset?
+1b. What is the maximum value the variation ratio can take on in this dataset?
 
 ```rout
 a. 0.917
-b. 0.833
+*b. 0.833*
 c. 0.723
 d. 0.791
 e. 0.642
 ```
+
+2. Consider the following distribution of 10 parole risk scores (100 means highest risk):
+
+```rout
+78 80 84 82 86 87 71 86 96 84
+```
+
+2a. What is the range of the distribution?
+
+```rout
+a. 9
+b. 17
+c. 18
+d. 28
+*e. 25*
+```
+
+2b. What is the inter-quartile range of the distribution?
+
+```rout
+*a. 6*
+b. 3
+c. 2
+d. 8
+e. 7

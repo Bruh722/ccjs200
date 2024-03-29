@@ -1272,5 +1272,15 @@ d. 0.905
 e. 0.894
 ```
 
+5c. What is the probability that 0 people will be arrested within 3 years?
 
-Answer Key: 1a. c; 1b. b; 2a. e; 2b. a; 2c. c; 2d. b; 3. a; 4a. c; 4b. a.; 4c. e; 4d. b; 5a d; 5b a
+```rout
+a. 0.054
+b. 0.037
+c. 0.003
+d. 0.015
+e. 0.894
+```
+
+
+Answer Key: 1a(c); 1b(b); 2a(e); 2b(a); 2c(c); 2d(b); 3(a); 4a(c); 4b(a); 4c(e); 4d(b); 5a(d); 5b(a); 5c(c)

@@ -1234,7 +1234,7 @@ c. What is the probability that someone drawn at random from this sample was pre
 
 ```Rout
 a. 0.242
-b. 0.065
+b. 0.085
 c. 0.038
 d. 0.123
 e. 0.081
@@ -1244,7 +1244,7 @@ d. What is the probability that someone drawn at random from this sample was pre
 
 ```Rout
 a. 0.242
-b. 0.065
+b. 0.085
 c. 0.038
 d. 0.123
 e. 0.081
@@ -1273,4 +1273,4 @@ e. 0.894
 ```
 
 
-Answer Key: 1a. c; 1b. b; 2a. e; 2b. a; 2c. c; 2d. b; 3. a; 4a. c; 4b. a.; 4c. e; de e; 5a d; 5b a
+Answer Key: 1a. c; 1b. b; 2a. e; 2b. a; 2c. c; 2d. b; 3. a; 4a. c; 4b. a.; 4c. e; 4d. b; 5a d; 5b a

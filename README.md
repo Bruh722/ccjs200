@@ -1250,13 +1250,6 @@ d. 0.123
 e. 0.081
 ```
 
-e. Based on the answers in 4c and 4d, it seems the events "prior violent arrests" and "prior nonviolent arrests" are:
-
-```Rout
-a. independent
-b. dependent
-```
-
 5. Past experience tells us that the probability a newly released prisoner will be arrested for a new crime within 3 years is 0.682. Based on this information, calculate a probability distribution for the number of people who will be arrested for a new crime out of 5 new prison releasees.
 
 5a. What is the probability that exactly 3 of the 5 people will be rearrested within 3 years?
@@ -1269,4 +1262,4 @@ d. 0.321
 e. 0.415
 ```
 
-Answer Key: 1a. c; 1b. b; 2a. e; 2b. a; 2c. c; 2d. b; 3. a; 4a. c; 4b. a.; 4c. e; 4d b; 4e b; 5a d
+Answer Key: 1a. c; 1b. b; 2a. e; 2b. a; 2c. c; 2d. b; 3. a; 4a. c; 4b. a.; 4c. e; 4e b; 5a d

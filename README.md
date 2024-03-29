@@ -1206,8 +1206,38 @@ e. 12.1
 
 | Prior Arrests | Violent=No | Violent=Yes | Total|
 | :---------- | --:| --:|--:| 
-| Property = No    | 325 | 89 | 414 |
-| Property = Yes   | 231 | 57 | 288 | 
+| Nonviolent = No    | 325 | 89 | 414 |
+| Nonviolent = Yes   | 231 | 57 | 288 | 
 | Total    | 556 | 146 | 702 |
 
-Answer Key: 1a. c; 1b. b; 2a. e; 2b. a; 2c. c; 2d. b; 3. a
+a. What is the probability that someone drawn at random from this sample was not previously arrested?
+
+```Rout
+a. 0.287
+b. 0.382
+c. 0.463
+d. 0.224
+e. 0.512
+```
+
+b. What is the probability that someone drawn at random from this sample was previously arrested for either a violent or a nonviolent offense?
+
+```Rout
+a. 0.537
+b. 0.609
+c. 0.422
+d. 0.223
+e. 0.311
+```
+
+c. What is the probability that someone drawn at random from this sample was previously arrested for both a violent and a nonviolent offense?
+
+```Rout
+a. 0.242
+b. 0.157
+c. 0.038
+d. 0.123
+e. 0.081
+```
+
+Answer Key: 1a. c; 1b. b; 2a. e; 2b. a; 2c. c; 2d. b; 3. a; 4a. c; 4b. a.; 4c. e

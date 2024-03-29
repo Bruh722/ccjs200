@@ -1192,7 +1192,7 @@ e. 6.184
 Data: 31 28 51 28 30 25 33 29 42
 ```
 
-* What is the standard deviation of this dataset?
+* What is the sample standard deviation of this dataset?
 
 ```Rout
 a. 8.3

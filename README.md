@@ -1164,21 +1164,26 @@ b. 3
 c. 2
 d. 8
 e. 7
+```
 
 2c. The sum of the mean deviations for this distribution is:
 
+```rout
 a. -2
 b. -1
 c. 0
 d. 1
 e. 2
+```
 
 2d. The sample variance of the distribution is:
 
+```rout
 a. 38.240
 b. 42.489
 c. 31.357
 d. 6.518
 e. 6.184
+```
 
 Answer Key: 1a. c; 1b. b; 2a. e; 2b. a; 2c. c; 2d. b;

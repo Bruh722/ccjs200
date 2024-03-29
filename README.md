@@ -1230,14 +1230,30 @@ d. 0.223
 e. 0.311
 ```
 
-c. What is the probability that someone drawn at random from this sample was previously arrested for both a violent and a nonviolent offense?
+c. What is the probability that someone drawn at random from this sample was previously arrested for both a violent and a nonviolent offense (use general multiplication rule)?
 
 ```Rout
 a. 0.242
-b. 0.157
+b. 0.065
 c. 0.038
 d. 0.123
 e. 0.081
 ```
 
-Answer Key: 1a. c; 1b. b; 2a. e; 2b. a; 2c. c; 2d. b; 3. a; 4a. c; 4b. a.; 4c. e
+d. What is the probability that someone drawn at random from this sample was previously arrested for both a violent and a nonviolent offense (use restricted multiplication rule)?
+
+```Rout
+a. 0.242
+b. 0.065
+c. 0.038
+d. 0.123
+e. 0.081
+
+e. Based on the answers in 4c and 4d, it seems the probability of both prior violent and prior nonviolent arrests are:
+
+```Rout
+a. independent
+b. dependent
+```
+
+Answer Key: 1a. c; 1b. b; 2a. e; 2b. a; 2c. c; 2d. b; 3. a; 4a. c; 4b. a.; 4c. e; 4d b; 4e b

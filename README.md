@@ -1248,6 +1248,7 @@ b. 0.065
 c. 0.038
 d. 0.123
 e. 0.081
+```
 
 e. Based on the answers in 4c and 4d, it seems the probability of both prior violent and prior nonviolent arrests are:
 

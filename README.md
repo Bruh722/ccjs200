@@ -1107,7 +1107,7 @@ Please address each of the following questions:
 
 ### Practice Problems for Exam #2
 
-Note*: remember that exam 2 starts with Lesson 11 and Chapter 5. Please focus your studying efforts on material we have covered in class and discussion sections (correct answers are italicized).
+Note*: remember that exam 2 starts with Lesson 11 and Chapter 5. Please focus your studying efforts on material we have covered in class and discussion sections (correct answers are below questions).
 
 1. Consider the following dataset capturing causes of death among a state's prison inmate population for a 1-year period:
 
@@ -1126,7 +1126,7 @@ Note*: remember that exam 2 starts with Lesson 11 and Chapter 5. Please focus yo
 ```rout
 a. 0.322
 b. 0.187
-*c*. 0.678
+c. 0.678
 d. 0.588
 e. 0.242
 ```
@@ -1134,7 +1134,7 @@ e. 0.242
 
 ```rout
 a. 0.917
-*b*. 0.833
+b. 0.833
 c. 0.723
 d. 0.791
 e. 0.642
@@ -1153,13 +1153,13 @@ a. 9
 b. 17
 c. 18
 d. 28
-*e*. 25
+e. 25
 ```
 
 2b. What is the inter-quartile range of the distribution?
 
 ```rout
-*a*. 6
+a. 6
 b. 3
 c. 2
 d. 8
@@ -1169,14 +1169,16 @@ e. 7
 
 a. -2
 b. -1
-*c*. 0
+c. 0
 d. 1
 e. 2
 
 2d. The sample variance of the distribution is:
 
 a. 38.240
-*b*. 42.489
+b. 42.489
 c. 31.357
 d. 6.518
 e. 6.184
+
+Answer Key: 1a. c; 1b. b; 2a. e; 2b. a; 2c. c; 2d. b;

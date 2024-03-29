@@ -1273,4 +1273,4 @@ e. 0.894
 ```
 
 
-Answer Key: 1a. c; 1b. b; 2a. e; 2b. a; 2c. c; 2d. b; 3. a; 4a. c; 4b. a.; 4c. e; 4e b; 5a d; 5b a
+Answer Key: 1a. c; 1b. b; 2a. e; 2b. a; 2c. c; 2d. b; 3. a; 4a. c; 4b. a.; 4c. e; de e; 5a d; 5b a

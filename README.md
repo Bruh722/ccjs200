@@ -1107,7 +1107,7 @@ Please address each of the following questions:
 
 ### Practice Problems for Exam #2
 
-Note*: remember that exam 2 starts with Lesson 11 and Chapter 5. Please focus your studying efforts on material we have covered in class and discussion sections (correct answers are below questions).
+*Note*: remember that exam 2 starts with Lesson 11 and Chapter 5 and ends with Chapter 6, page 181. Please focus your studying efforts on material we have covered in class and discussion sections (correct answers are below questions).
 
 1. Consider the following dataset capturing causes of death among a state's prison inmate population for a 1-year period:
 

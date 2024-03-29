@@ -1186,4 +1186,21 @@ d. 6.518
 e. 6.184
 ```
 
-Answer Key: 1a. c; 1b. b; 2a. e; 2b. a; 2c. c; 2d. b;
+3. Consider the following data points for the number of days between prison release and first re-arrest for a sample of 9 ex-prisoners:
+
+```rout
+Data: 31 28 51 28 30 25 33 29 42
+```
+
+* What is the standard deviation of this dataset?
+
+```Rout
+a. 8.3
+b. 16.5
+c. 7.1
+d. 9.7
+e. 12.1
+```
+
+
+Answer Key: 1a. c; 1b. b; 2a. e; 2b. a; 2c. c; 2d. b; 3. a

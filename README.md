@@ -1202,5 +1202,12 @@ d. 9.7
 e. 12.1
 ```
 
+4. A group of juveniles were arrested during the month of January. We examine the prior arrest records for each of these juveniles and obtain the following information about their prior offending:
+
+| Prior Arrests | Violent=No | Violent=Yes | Total|
+| :---------- | --:| --:|--:| 
+| Property = No    | 325 | 89 | 414 |
+| Property = Yes   | 231 | 57 | 288 | 
+| Total    | 556 | 146 | 702 |
 
 Answer Key: 1a. c; 1b. b; 2a. e; 2b. a; 2c. c; 2d. b; 3. a

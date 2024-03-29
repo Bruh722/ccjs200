@@ -1262,4 +1262,14 @@ d. 0.321
 e. 0.415
 ```
 
+5b. What is the probability that 3 or more people will be arrested within 3 years?
+
+```rout
+a. 0.813
+b. 0.721
+c. 0.685
+d. 0.905
+e. 0.894
+
+
 Answer Key: 1a. c; 1b. b; 2a. e; 2b. a; 2c. c; 2d. b; 3. a; 4a. c; 4b. a.; 4c. e; 4e b; 5a d

@@ -1250,7 +1250,7 @@ d. 0.123
 e. 0.081
 ```
 
-5. Past experience tells us that the probability a newly released prisoner will be arrested for a new crime within 3 years is 0.682. Based on this information, calculate a probability distribution for the number of people who will be arrested for a new crime out of 5 new prison releasees.
+5. Past experience tells us that the probability a newly released prisoner will be arrested for a new crime within 3 years is 0.682. Based on this information, calculate a probability distribution for the number of people who will be arrested for a new crime out of 5 new prison releasees (over the next 3 years).
 
 5a. What is the probability that exactly 3 of the 5 people will be rearrested within 3 years?
 

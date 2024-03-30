@@ -1313,4 +1313,14 @@ c. 38.0
 d. 14.7
 e. 5.2
 ```
-Answer Key: 1a(c); 1b(b); 2a(e); 2b(a); 2c(c); 2d(b); 3(a); 4a(c); 4b(a); 4c(e); 4d(b); 5a(d); 5b(a); 5c(c); 6(b); 7a(c); 7b(d)
+
+7c. What is the probability that a prisoner drawn at random from the population of prisoners has a first arrest age greater than 25 years old?
+
+```rout
+a. 0.195
+b. 0.187
+c. 0.782
+d. 0.805
+```
+
+Answer Key: 1a(c); 1b(b); 2a(e); 2b(a); 2c(c); 2d(b); 3(a); 4a(c); 4b(a); 4c(e); 4d(b); 5a(d); 5b(a); 5c(c); 6(b); 7a(c); 7b(d); 7c(a)

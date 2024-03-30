@@ -1282,5 +1282,35 @@ d. 0.015
 e. 0.894
 ```
 
+6. The average age of juveniles arrested in a particular community is 15.5; the standard deviation of the average age is 1.7. What is the age of someone who is 2 standard deviations below the mean?
 
-Answer Key: 1a(c); 1b(b); 2a(e); 2b(a); 2c(c); 2d(b); 3(a); 4a(c); 4b(a); 4c(e); 4d(b); 5a(d); 5b(a); 5c(c)
+```rout
+a. 13.8
+b. 12.1
+c. 13.0
+d. 14.2
+e. 15.5
+```
+
+7. Consider a group of prison inmates being releaased from prison. We know the age of each of these inmates the first time they were arrested. Based on our calculations, we find that the average age of first arrest was 23.2 years old with a standard deviation of 2.1.
+
+7a. What is the z-score of someone who was first arrested at age 21?
+
+```rout
+a. -1.25
+b. -1.57
+c. -1.05
+d. -1.85
+e. -1.37
+```
+
+7b. What is the percentile rank of someone who was first arrested at age 21?
+
+```rout
+a. 85.3
+b. 50.0
+c. 38.0
+d. 14.7
+e. 5.2
+```
+Answer Key: 1a(c); 1b(b); 2a(e); 2b(a); 2c(c); 2d(b); 3(a); 4a(c); 4b(a); 4c(e); 4d(b); 5a(d); 5b(a); 5c(c); 6(b); 7a(c); 7b(d)

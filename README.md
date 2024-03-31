@@ -1331,4 +1331,24 @@ b. fail to reject hypothesis that p = 0.5
 c. neither a nor b; evidence is inconclusive
 ```
 
-Answer Key: 1a(c); 1b(b); 2a(e); 2b(a); 2c(c); 2d(b); 3(a); 4a(c); 4b(a); 4c(e); 4d(b); 5a(d); 5b(a); 5c(c); 6(b); 7a(c); 7b(d); 7c(a); 8(b)
+9. As noted in practice problem 8, historically, late night car accidents in High Noon County have had a 0.5 probability of involving an impaired driver. Suppose we want to predict the probability that at least 2 out of the next 3 late night car accidents will involve an impaired driver. The correct probability estimate would be:
+
+```rout
+a. 0.2
+b. 0.3
+c. 0.4
+d. 0.5
+e. 0.6
+```
+
+10. A total of 7 people are expected to be released from the local prison next month. This prison primarily houses older inmates and the historical rearrest recidivism rate for people exiting this prison (over a 3-year follow-up period) is about 30.0% or 0.300. What is the estimated probability that 0 of these 7 people will be rearrested over the next 3 years.
+
+```rout
+a. 0.082
+b. 0.157
+c. 0.382
+d. 0.321
+e. 0.242
+```
+
+Answer Key: 1a(c); 1b(b); 2a(e); 2b(a); 2c(c); 2d(b); 3(a); 4a(c); 4b(a); 4c(e); 4d(b); 5a(d); 5b(a); 5c(c); 6(b); 7a(c); 7b(d); 7c(a); 8(b); 9(d); 10(a).

@@ -1341,7 +1341,7 @@ d. 0.5
 e. 0.6
 ```
 
-10. A total of 7 people are expected to be released from the local prison next month. This prison primarily houses older inmates and the historical rearrest recidivism rate for people exiting this prison (over a 3-year follow-up period) is about 30.0% or 0.300. What is the estimated probability that 0 of these 7 people will be rearrested over the next 3 years.
+10. A total of 7 people are expected to be released from the local prison next month. This prison primarily houses older inmates and the historical rearrest recidivism rate for people exiting this prison (over a 3-year follow-up period) is about 30.0% or 0.300. What is the estimated probability that none of these 7 people will be rearrested over the next 3 years?
 
 ```rout
 a. 0.082

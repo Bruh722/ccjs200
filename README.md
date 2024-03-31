@@ -1323,7 +1323,7 @@ c. 0.782
 d. 0.805
 ```
 
-8. Historically, late night car accidents in High Noon County have had a 0.5 probability of involving an impaired driver. However, 5 of the most recent 7 late night accidents have involved an impaired driver. Our goal is to determine whether the hypothesis that p = 0.5 should be rejected. If we decide that events in the central 0.875 region of the probability distribution will not be strong enough evidence to reject the hypothesis that p = 0.5 (meaning that events in either 0.0625 end of the distribution will be strong enough evidence), what decision should we make?
+8. Historically, late night car accidents in High Noon County have had a 0.5 probability of involving an impaired driver. However, 5 of the most recent 7 late night accidents have involved an impaired driver. Our goal is to determine whether the hypothesis that p = 0.5 should be rejected. If we decide that events in the central 0.875 region of the probability distribution will not be strong enough evidence to reject the hypothesis that p = 0.5 (meaning that events in either 0.0625 end of the distribution will be strong enough evidence to reject), what decision should we make?
 
 ```rout
 a. reject hypothesis that p = 0.5

@@ -1351,4 +1351,12 @@ d. 0.321
 e. 0.242
 ```
 
-Answer Key: 1a(c); 1b(b); 2a(e); 2b(a); 2c(c); 2d(b); 3(a); 4a(c); 4b(a); 4c(e); 4d(b); 5a(d); 5b(a); 5c(c); 6(b); 7a(c); 7b(d); 7c(a); 8(b); 9(d); 10(a).
+11. Deductive research means:
+
+```rout
+a. data followed by theory
+b. theory followed by data
+c. neither a nor b is correct
+```
+
+Answer Key: 1a(c); 1b(b); 2a(e); 2b(a); 2c(c); 2d(b); 3(a); 4a(c); 4b(a); 4c(e); 4d(b); 5a(d); 5b(a); 5c(c); 6(b); 7a(c); 7b(d); 7c(a); 8(b); 9(d); 10(a); 11(a)

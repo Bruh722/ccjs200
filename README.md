@@ -1323,7 +1323,7 @@ c. 0.782
 d. 0.805
 ```
 
-8. Historically, late night car accidents in High Noon County have had a 0.5 probability of involving an impaired driver. However, 5 of the most recent 7 late night accidents have involved an impaired driver. Our goal is to determine whether the hypothesis that p = 0.5 should be rejected. If we decide that events in the central 0.875 region of the probability distribution will not be strong enough evidence to reject the hypothesis that p = 0.5 (meaning that events in either 0.0625 end of the distribution will be strong enough evidence to reject), what decision should we make?
+8. Historically, late night car accidents in High Noon County have had a 0.5 probability of involving an impaired driver. However, 5 of the most recent 7 late night accidents have involved an impaired driver. Our goal is to determine whether the hypothesis that p = 0.5 should be rejected. If we decide that events in the central 0.872 region of the probability distribution will not be strong enough evidence to reject the hypothesis that p = 0.5 (meaning that events in either 0.064 end of the distribution will be strong enough evidence to reject), what decision should we make?
 
 ```rout
 a. reject hypothesis that p = 0.5
@@ -1368,3 +1368,186 @@ c. not enough information to tell
 ```
 
 Answer Key: 1a(c); 1b(b); 2a(e); 2b(a); 2c(c); 2d(b); 3(a); 4a(c); 4b(a); 4c(e); 4d(b); 5a(d); 5b(a); 5c(c); 6(b); 7a(c); 7b(d); 7c(a); 8(b); 9(d); 10(a); 11(a), 12(b)
+
+```rout
+Full solutions to practice problems:
+
+1a. fm = 337, n = 1046; 1-fm/n = 1-337/1046 = 0.678
+1b. max(vr) = 1-(n/k)/n = 1-(1046/6)/1046 = 0.833
+2a. range(x) = max(x)-min(x) = 96-71 = 25
+
+2b. IQR 
+    - step 1 - sort the data set: 71 78 80 82 84 84 86 86 87 96
+    - step 2 - median position = 5.5 and truncated median position = 5
+    - step 3 - identify q1 and q3 by evaluating (TMP+1)/2 = (5+1)/2 = 3
+    - step 4 - q1 is 80 (3rd position from left); q3 is 86 (3rd position from right)
+    - step 5 - iqr = 86-80 = 6
+
+2c. sum of the mean deviations = sum(x-mean(x))
+    - step 1 - list the values: 78 80 84 82 86 87 71 86 96 84
+    - step 2 - calculate the mean: (78+80+84+82+86+87+71+86+96+84)/10 = 834/10 = 83.4
+    - step 3 - calculate the deviations: -5.4 -3.4 0.6 -1.4 2.6 3.6 -12.4 2.6 12.6 0.6
+    - step 4 - sum the deviations: 0
+
+2d. sample variance = 1/(n-1) sum(x-xbar)^2
+    - step 1 - 1/(n-1) = 1/(10-1) = 1/9 = 0.111
+    - step 2 - mean = (78+80+84+82+86+87+71+86+96+84)/10 = 834/10 = 83.4
+    - step 3 - (78-83.4)^2 =  29.16
+               (80-83.4)^2 =  11.56
+               (84-83.4)^2 =   0.36
+               (82-83.4)^2 =   1.96
+               (86-83.4)^2 =   6.76
+               (87-83.4)^2 =  12.96
+               (71-83.4)^2 = 153.76
+               (86-83.4)^2 =   6.76
+               (96-83.4)^2 = 158.76
+               (84-83.4)^2 =   0.36
+               sum of squares = 29.16+11.56+0.36+1.96+6.76+12.96+
+                  153.76+6.76+158.76+0.36 = 382.4
+    - step 4 - 0.111*382.4 = 42.4xx
+
+3. standard deviation of: 31 28 51 28 30 25 33 29 42
+   - step 1 - 1/(n-1) = 1/(9-1) = 1/8 = 0.125
+   - step 2 - mean = (31+28+51+28+30+25+33+29+42)/9 = 33
+   - step 3 - (31-33)^2 =    4
+              (28-33)^2 =   25
+              (51-33)^2 =  324
+              (28-33)^2 =   25
+              (30-33)^2 =    9
+              (25-33)^2 =   64
+              (33-33)^2 =    0
+              (29-33)^2 =   16
+              (42-33)^2 =   81
+   - step 4 - sum the squares = 4+25+324+25+9+64+0+16+81 = 548
+   - step 5 - calculate the variance: 0.125*548 = 68.5
+   - step 6 - take the square root: sqrt(68.5) = 8.3
+
+p(m|d) = p(m) p(d|m) / p(d)
+p(m & d) = p(m) p(d|m)
+
+4a. p(violent = no & nonviolent = no)
+    p(violent = no) x p(nonviolent = no | violent=no)
+    556/702           325/556                        
+    0.792             0.585      = 0.463
+
+
+4b. p(violent or nonviolent)
+    p(violent) + p(nonviolent) - p(violent and nonviolent) 
+    146/702    + 288/702       - 57/702
+    0.208      + 0.410         - 0.081 = 0.537
+
+4c. p(violent and nonviolent)
+    p(violent)*p(nonviolent|violent)
+    146/702   * 57/146 =
+    0.208     * 0.390 = 0.081
+
+4d. p(violent and nonviolent)
+    p(violent) * p(nonviolent)
+    146/702      288/702
+    0.208      * 0.410 = 0.085
+
+5. calculate the probability distribution
+
+p = 0.682
+1-p = 0.318
+n = 5
+x ranges from 0 to 5
+
+p(x=0) = 5!/(0!(5-0)!) 0.682^0 (0.318)^(5-0)
+       = 120/(1*120)*1*0.003
+       = 0.003
+p(x=1) = 5!/(1!(5-1)!) 0.682^1 (0.318)^(5-1)
+       = 120/24 * 0.682 * 0.010
+       = 5*0.682*0.010
+       = 0.034
+p(x=2) = 5!/(2!(5-2)!) 0.682^2 (0.318)^(5-2)
+       = 120/12 * 0.465 * 0.032
+       = 10*0.465*0.032
+       = 0.149
+p(x=3) = 5!/(3!(5-3)!) 0.682^3 (0.318)^(5-3)
+       = 120/12 * 0.317 * 0.101
+       = 10*0.317*0.101
+       = 0.320
+p(x=4) = 5!/(4!(5-4)!) 0.682^4 (0.318)^(5-4)
+       = 120/24 * 0.216 * 0.318
+       = 5*0.216*0.318
+       = 0.343
+p(x=5) = 5!/(5!(5-5)!) 0.682^5 (0.318)^(5-5)
+       = 1 * 0.148 * 0.318
+       = 1*0.148*1
+       = 0.148    
+              
+5a. p(x=3) = 0.320
+5b. p(x=3)+p(x=4)+p(x=5) = 0.320+0.343+0.148 = 0.811
+5c. p(x=0) = 0.003
+
+6. Age | 2 sd's below mean = mean(age)-2*sd(age) = 15.5-2*1.7 = 12.1
+
+7. average age = 23.2; sd = 2.1
+
+7a. z-score | age = 21 = (21-23.2)/2.1 = -1.05
+7b. percentile rank of someone who is 21 years old
+    z-table entry for a z-score of -1.05 = 0.3531
+    percentile = 0.5-0.3531 = 0.147 or 14.7th percentile
+7c. percentile rank of someone who is 25 years old
+    z-score | age = 25 = (25-23.2)/2.1 = 0.857
+    look up z-table for zscore = 0.86, entry is 0.3051
+    percentile = 0.5+0.3051 = 0.8051 or 80.5th percentile
+    p(draw someone at random above 80.5th percentile) = 1-0.805 = 0.195
+
+8. n=7, x=0,1,2,3,4,5,6,7; hypothesized p = 0.5
+
+p(x=0|p=0.5) = 7!(0!(7-0)!)*0.5^0*(1-0.5)^(7-0)
+             = 1*1*0.5^7
+             = 0.008   ---> critical
+p(x=1|p=0.5) = 7!(1!(7-1)!)*0.5^1*(1-0.5)^(7-1)
+             = 7*0.5*0.016
+             = 0.056   ---> critical
+p(x=2|p=0.5) = 7!(2!(7-2)!)*0.5^2*(1-0.5)^(7-2)
+             = 21*0.25*0.031
+             = 0.163
+p(x=3|p=0.5) = 7!(3!(7-3)!)*0.5^3*(1-0.5)^(7-3)
+             = 35*0.125*0.063
+             = 0.276
+p(x=4|p=0.5) = 7!(4!(7-4)!)*0.5^4*(1-0.5)^(7-4)
+             = 35*0.063*0.125
+             = 0.276
+p(x=5|p=0.5) = 7!(5!(7-5)!)*0.5^5*(1-0.5)^(7-5)
+             = 21*0.031*0.25
+             = 0.163
+p(x=6|p=0.5) = 7!(6!(7-6)!)*0.5^6*(1-0.5)^(7-6)
+             = 7*0.016*0.5
+             = 0.056   ----> critical
+p(x=7|p=0.5) = 7!(7!(7-7)!)*0.5^7*(1-0.5)^(7-7)
+             = 1*0.008*1
+             = 0.008   ----> critical
+
+decision: fail to reject
+
+9. p = 0.5, n = 3, x = 0,1,2,3; 
+p(at least 2 out of the next 3 accidents will involve an impaired driver)
+
+p(x=0|p=0.5) = 3!(0!(3-0)!)*0.5^0*(1-0.5)^(3-0)
+             = 1*1*0.125
+             = 0.125
+p(x=1|p=0.5) = 3!(1!(3-1)!)*0.5^1*(1-0.5)^(3-1)
+             = 3*0.5*0.25
+             = 0.375
+p(x=2|p=0.5) = 3!(2!(3-2)!)*0.5^2*(1-0.5)^(3-2)
+             = 3*0.25*0.5
+             = 0.375
+p(x=3|p=0.5) = 3!(3!(3-0)!)*0.5^3*(1-0.5)^(3-3)
+             = 1*0.125*1
+             = 0.125
+
+p(at least 2) = p(x=2)+p(x=3) = 0.375+0.125 = 0.5
+
+10. n = 7, p = 0.3, x=0
+
+p(x=0|p=0.3) = 7!(0!(7-0)!)*0.3^0*(1-0.3)^(7-0)
+             = 1*1*0.082
+             = 0.082
+
+11. b - theory followed by data
+12. median less than mean when distribution has a long right hand tail
+```

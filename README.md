@@ -259,7 +259,7 @@ points(x=year,y=mrate,pch=19)
 and here is our output:
 
 <p align="center">
-<img src="/gfiles/f1.png" width="700px">
+<img src="/gfiles/f1c.png" width="700px">
 </p>
 
 * Age of People Released from NC Prisons in 1978 Example

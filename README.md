@@ -1099,7 +1099,7 @@ Please address each of the following questions:
 * Reminder: Exam 2 scheduled for Thursday 4/4/24.
 * Slides [linked here](https://github.com/rwb/ccjs200/blob/main/gfiles/lesson16.pdf)
 
-### Practice Problems for Exam #2
+### Lesson 17 - Practice Problems for Exam #2 - Tuesday 4/2/24
 
 *Note*: remember that exam 2 starts with Lesson 11 and Chapter 5 and ends with Chapter 6, page 181. Please focus your studying efforts on material we have covered in class and discussion sections (correct answers are below questions).
 

@@ -1549,5 +1549,5 @@ p(x=0|p=0.3) = 7!(0!(7-0)!)*0.3^0*(1-0.3)^(7-0)
 ```
 
 <p align="center">
-<img src="/gfiles/f1.png" width="700px">
+<img src="/gfiles/f1a.png" width="700px">
 </p>

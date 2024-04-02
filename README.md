@@ -1370,7 +1370,7 @@ c. not enough information to tell
 Answer Key: 1a(c); 1b(b); 2a(e); 2b(a); 2c(c); 2d(b); 3(a); 4a(c); 4b(a); 4c(e); 4d(b); 5a(d); 5b(a); 5c(c); 6(b); 7a(c); 7b(d); 7c(a); 8(b); 9(d); 10(a); 11(a), 12(b)
 
 ```rout
-Full solutions to practice problems:
+Worked solutions to practice problems:
 
 1a. fm = 337, n = 1046; 1-fm/n = 1-337/1046 = 0.678
 1b. max(vr) = 1-(n/k)/n = 1-(1046/6)/1046 = 0.833
@@ -1484,7 +1484,7 @@ p(x=5) = 5!/(5!(5-5)!) 0.682^5 (0.318)^(5-5)
 7a. z-score | age = 21 = (21-23.2)/2.1 = -1.05
 7b. percentile rank of someone who is 21 years old
     z-table entry for a z-score of -1.05 = 0.3531
-    percentile = 0.5-0.3531 = 0.147 or 14.7th percentile
+    percentile = 0.5-0.3531 = 0.147 or 14.7th percentile (see figure below)
 7c. percentile rank of someone who is 25 years old
     z-score | age = 25 = (25-23.2)/2.1 = 0.857
     look up z-table for zscore = 0.86, entry is 0.3051
@@ -1547,3 +1547,7 @@ p(x=0|p=0.3) = 7!(0!(7-0)!)*0.3^0*(1-0.3)^(7-0)
 11. b - theory followed by data
 12. median less than mean when distribution has a long right hand tail
 ```
+
+<p align="center">
+<img src="/gfiles/f1.png" width="700px">
+</p>

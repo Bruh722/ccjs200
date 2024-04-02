@@ -1416,27 +1416,27 @@ Worked solutions to practice problems:
    - step 5 - calculate the variance: 0.125*548 = 68.5
    - step 6 - take the square root: sqrt(68.5) = 8.3
 
-4a. p(violent = no & nonviolent = no)
+4a. p(violent = no & nonviolent = no); use general multiplication rule
     p(violent = no) x p(nonviolent = no | violent=no)
     556/702           325/556                        
     0.792             0.585      = 0.463
 
-4b. p(violent or nonviolent)
+4b. p(violent or nonviolent); use general addition rule
     p(violent) + p(nonviolent) - p(violent and nonviolent) 
     146/702    + 288/702       - 57/702
     0.208      + 0.410         - 0.081 = 0.537
 
-4c. p(violent and nonviolent)
+4c. p(violent and nonviolent); use general multiplication rule
     p(violent)*p(nonviolent|violent)
     146/702   * 57/146 =
     0.208     * 0.390 = 0.081
 
-4d. p(violent and nonviolent)
+4d. p(violent and nonviolent); use restricted multiplication rule
     p(violent) * p(nonviolent)
     146/702      288/702
     0.208      * 0.410 = 0.085
 
-5. calculate the probability distribution
+5. calculate the probability distribution of x (from 0 to 5) when p = 0.682 and n is 5.
 
 p = 0.682
 1-p = 0.318
@@ -1485,7 +1485,7 @@ p(x=5) = 5!/(5!(5-5)!) 0.682^5 (0.318)^(5-5)
     percentile = 0.5+0.3051 = 0.8051 or 80.5th percentile
     p(draw someone at random above 80.5th percentile) = 1-0.805 = 0.195
 
-8. n=7, x=0,1,2,3,4,5,6,7; hypothesized p = 0.5
+8. test hypothesis that p = 0.5; Information given: n=7, x=0,1,2,3,4,5,6,7; hypothesized p = 0.5
 
 p(x=0|p=0.5) = 7!(0!(7-0)!)*0.5^0*(1-0.5)^(7-0)
              = 1*1*0.5^7

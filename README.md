@@ -1370,7 +1370,7 @@ Worked solutions to practice problems:
 1b. max(vr) = 1-(n/k)/n = 1-(1046/6)/1046 = 0.833
 2a. range(x) = max(x)-min(x) = 96-71 = 25
 
-2b. IQR 
+2b. IQR - inter-quartile range
     - step 1 - sort the data set: 71 78 80 82 84 84 86 86 87 96
     - step 2 - median position = 5.5 and truncated median position = 5
     - step 3 - identify q1 and q3 by evaluating (TMP+1)/2 = (5+1)/2 = 3

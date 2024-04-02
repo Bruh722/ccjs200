@@ -325,12 +325,6 @@ mean(age)
 >
 ```
 
-and here is the chart for the population:
-
-<p align="center">
-<img src="/gfiles/f2.png" width="700px">
-</p>
-
 * Now, let's draw a simple random sample from the population, calculate the sample average, and draw a sample barplot.
 
 ```R

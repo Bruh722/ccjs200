@@ -1422,14 +1422,10 @@ Full solutions to practice problems:
    - step 5 - calculate the variance: 0.125*548 = 68.5
    - step 6 - take the square root: sqrt(68.5) = 8.3
 
-p(m|d) = p(m) p(d|m) / p(d)
-p(m & d) = p(m) p(d|m)
-
 4a. p(violent = no & nonviolent = no)
     p(violent = no) x p(nonviolent = no | violent=no)
     556/702           325/556                        
     0.792             0.585      = 0.463
-
 
 4b. p(violent or nonviolent)
     p(violent) + p(nonviolent) - p(violent and nonviolent) 

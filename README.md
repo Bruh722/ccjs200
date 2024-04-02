@@ -1210,7 +1210,7 @@ e. 12.1
 | Nonviolent = Yes   | 231 | 57 | 288 | 
 | Total    | 556 | 146 | 702 |
 
-a. What is the probability that someone drawn at random from this sample was not previously arrested?
+a. What is the probability that someone drawn at random from this sample was not previously arrested? (general multiplication rule)
 
 ```Rout
 a. 0.287
@@ -1220,7 +1220,7 @@ d. 0.224
 e. 0.512
 ```
 
-b. What is the probability that someone drawn at random from this sample was previously arrested for either a violent or a nonviolent offense?
+b. What is the probability that someone drawn at random from this sample was previously arrested for either a violent or a nonviolent offense? (general addition rule)
 
 ```Rout
 a. 0.537

@@ -1545,3 +1545,1095 @@ p(x=0|p=0.3) = 7!(0!(7-0)!)*0.3^0*(1-0.3)^(7-0)
 <p align="center">
 <img src="/gfiles/f1a.png" width="700px">
 </p>
+
+
+### Lesson 18 - Tuesday 4/9/24
+
+*Note*: final exam starts with today's material (we are at page 166 in the book)
+
+* We now consider several examples of binomial hypothesis testing using R.
+* Example 1: worked lojack example from pp. 166-172 of the textbook (one-tailed test).
+
+```r
+# hypothesis to be tested is theta = 0.4
+
+theta = 0.4
+
+# specify probability distribution of 
+# outcome count if we study 10 cars
+# and theta is fixed at 0.4
+
+n = 10
+x = seq(from=0,to=10,by=1)
+px = choose(n,x)*theta^x*(1-theta)^(n-x)
+data.frame(x,px)
+
+# example in book, pp. 166-172 is a
+# one-tailed or "directional" test
+# we only construe evidence in the upper
+# end of the distribution as contradicting
+# the hypothesis that theta = 0.4
+
+# what evidence would convince us to reject
+# the hypothesis that theta = 0.4
+# against the alternaative that theta > 0.4
+# set our p-value to be 0.05
+# p-value = p(reject hypothesis | hypothesis is right) < 0.05
+# p-value = p(result at least as extreme as obtained | hypothesis is right) < 0.05
+
+# add up probabilities at upper end of distribution
+# such that the sum is less than 0.05
+
+# these are the p-values
+
+px[11]
+px[10]+px[11]
+px[9]+px[10]+px[11]
+px[8]+px[9]+px[10]+px[11]
+
+# based on these calculations we see that the events
+# in the sample space x={8,9,10} form the critical region
+
+decision <- ifelse(x>=8,"reject","fail to reject")
+data.frame(x,px,decision)
+
+# what do our data say?
+# the data say that 8 out of 10 cars with lojack
+# were successfully recovered.
+# this result falls in the critical region so we
+# reject the hypothesis that theta = 0.4 in favor
+# of the hypothesis that theta > 0.4
+# hypothesis that theta > 0.4 is more consistent 
+# with the observed data
+```
+
+* Here is our output:
+
+```rout
+> # hypothesis to be tested is theta = 0.4
+> 
+> theta = 0.4
+> 
+> # specify probability distribution of 
+> # outcome count if we study 10 cars
+> # and theta is fixed at 0.4
+> 
+> n = 10
+> x = seq(from=0,to=10,by=1)
+> px = choose(n,x)*theta^x*(1-theta)^(n-x)
+> data.frame(x,px)
+    x           px
+1   0 0.0060466176
+2   1 0.0403107840
+3   2 0.1209323520
+4   3 0.2149908480
+5   4 0.2508226560
+6   5 0.2006581248
+7   6 0.1114767360
+8   7 0.0424673280
+9   8 0.0106168320
+10  9 0.0015728640
+11 10 0.0001048576
+> 
+> # example in book, pp. 166-172 is a
+> # one-tailed or "directional" test
+> # we only construe evidence in the upper
+> # end of the distribution as contradicting
+> # the hypothesis that theta = 0.4
+> 
+> # what evidence would convince us to reject
+> # the hypothesis that theta = 0.4
+> # against the alternaative that theta > 0.4
+> # set our p-value to be 0.05
+> # p-value = p(reject hypothesis | hypothesis is right) < 0.05
+> # p-value = p(result at least as extreme as obtained | hypothesis is right) < 0.05
+> 
+> # add up probabilities at upper end of distribution
+> # such that the sum is less than 0.05
+> 
+> # these are the p-values
+> 
+> px[11]
+[1] 0.0001048576
+> px[10]+px[11]
+[1] 0.001677722
+> px[9]+px[10]+px[11]
+[1] 0.01229455
+> px[8]+px[9]+px[10]+px[11]
+[1] 0.05476188
+> 
+> # based on these calculations we see that the events
+> # in the sample space x={8,9,10} form the critical region
+> 
+> decision <- ifelse(x>=8,"reject","fail to reject")
+> data.frame(x,px,decision)
+    x           px       decision
+1   0 0.0060466176 fail to reject
+2   1 0.0403107840 fail to reject
+3   2 0.1209323520 fail to reject
+4   3 0.2149908480 fail to reject
+5   4 0.2508226560 fail to reject
+6   5 0.2006581248 fail to reject
+7   6 0.1114767360 fail to reject
+8   7 0.0424673280 fail to reject
+9   8 0.0106168320         reject
+10  9 0.0015728640         reject
+11 10 0.0001048576         reject
+> 
+> # what do our data say?
+> # the data say that 8 out of 10 cars with lojack
+> # were successfully recovered.
+> # this result falls in the critical region so we
+> # reject the hypothesis that theta = 0.4 in favor
+> # of the hypothesis that theta > 0.4
+> # hypothesis that theta > 0.4 is more consistent 
+> # with the observed data
+>
+```
+
+* Example 1a: worked lojack example from pp. 166-172 of the textbook (two-tailed test).
+* For this example, keep your code and output from Example 1 in R's memory.
+
+```r
+# example 1a:
+# at the bottom of page 167, your book mentions a
+# non-directional or "two-tailed" hypothesis test
+# for this kind of test, we have to look at both
+# ends of the probability distribution
+
+# add up probabilities at both ends of the distribution
+# such that the sum at each end is less than 0.025
+
+data.frame(x,px)
+
+# lower tail p-values
+
+px[1]
+px[1]+px[2]
+
+# upper tail p-values
+
+px[11]
+px[10]+px[11]
+px[9]+px[10]+px[11]
+px[8]+px[9]+px[10]+px[11]
+
+# based on these calculations we see that the events
+# x={0,8,9,10} form the critical region
+
+decision <- ifelse(x==0 | x>=8,"reject","fail to reject")
+data.frame(x,px,decision)
+
+# what do our data say?
+# the data say that the number of car succesfully
+# recovered using lojack was 8 which is in the critical
+# region. we reject the hypothesis that theta = 0.4
+```
+
+* Here is our output for Example 1a:
+
+```rout
+> # example 1a:
+> # at the bottom of page 167, your book mentions a
+> # non-directional or "two-tailed" hypothesis test
+> # for this kind of test, we have to look at both
+> # ends of the probability distribution
+> 
+> # add up probabilities at both ends of the distribution
+> # such that the sum at each end is less than 0.025
+> 
+> data.frame(x,px)
+    x           px
+1   0 0.0060466176
+2   1 0.0403107840
+3   2 0.1209323520
+4   3 0.2149908480
+5   4 0.2508226560
+6   5 0.2006581248
+7   6 0.1114767360
+8   7 0.0424673280
+9   8 0.0106168320
+10  9 0.0015728640
+11 10 0.0001048576
+> 
+> # lower tail p-values
+> 
+> px[1]
+[1] 0.006046618
+> px[1]+px[2]
+[1] 0.0463574
+> 
+> # upper tail p-values
+> 
+> px[11]
+[1] 0.0001048576
+> px[10]+px[11]
+[1] 0.001677722
+> px[9]+px[10]+px[11]
+[1] 0.01229455
+> px[8]+px[9]+px[10]+px[11]
+[1] 0.05476188
+> 
+> # based on these calculations we see that the events
+> # x={0,8,9,10} form the critical region
+> 
+> decision <- ifelse(x==0 | x>=8,"reject","fail to reject")
+> data.frame(x,px,decision)
+    x           px       decision
+1   0 0.0060466176         reject
+2   1 0.0403107840 fail to reject
+3   2 0.1209323520 fail to reject
+4   3 0.2149908480 fail to reject
+5   4 0.2508226560 fail to reject
+6   5 0.2006581248 fail to reject
+7   6 0.1114767360 fail to reject
+8   7 0.0424673280 fail to reject
+9   8 0.0106168320         reject
+10  9 0.0015728640         reject
+11 10 0.0001048576         reject
+> 
+> # what do our data say?
+> # the data say that the number of car succesfully
+> # recovered using lojack was 8 which is in the critical
+> # region. we reject the hypothesis that theta = 0.4
+>
+```
+
+* Example 2: we study 30 cities at two time points. The data collected is the homicide rate at each time point.
+
+```r
+########################################################
+# example 2: 30 largest cities were measured on their 
+# homicide rate at two different times
+# 22 of the cities increased and 8 cities declined
+# test hypothesis that theta = 0.5 (two-tailed)
+# against the alternative that theta not equal to 0.5
+# p < 0.05 significance level
+
+options(scipen=100)
+theta = 0.5
+
+# specify probability distribution of 
+# outcome count if we study 30 cities
+# and theta is fixed at 0.5
+
+n = 30
+x = seq(from=0,to=30,by=1)
+px = choose(n,x)*theta^x*(1-theta)^(n-x)
+data.frame(x,px)
+
+# add up probabilities at both ends of the distribution
+# such that the sum at each end is less than 0.025
+
+# lower tail
+
+px[1]
+sum(px[1:2])
+sum(px[1:3])
+sum(px[1:4])
+sum(px[1:5])
+sum(px[1:6])
+sum(px[1:7])
+sum(px[1:8])
+sum(px[1:9])
+sum(px[1:10])
+sum(px[1:11])
+
+# upper tail
+
+px[31]
+sum(px[30:31])
+sum(px[29:31])
+sum(px[28:31])
+sum(px[27:31])
+sum(px[26:31])
+sum(px[25:31])
+sum(px[24:31])
+sum(px[23:31])
+sum(px[22:31])
+sum(px[21:31])
+
+# based on these calculations we see that the events
+# x={0:9,21:30} form the critical region
+
+decision <- ifelse(x %in% 0:9 | x %in% 21:30,"reject","fail to reject")
+data.frame(x,px,decision)
+
+# what do our data say?
+# the data say that 22 out of 30 cities experienced
+# an increase in their homicide rates from time 1 to time 2
+# it is unlikely we would get a result at least this extreme
+# if theta were equal to 0.5
+```
+
+* Here is the output for Example 2:
+
+```rout
+> ########################################################
+> # example 2: 30 largest cities were measured on their 
+> # homicide rate at two different times
+> # 22 of the cities increased and 8 cities declined
+> # test hypothesis that theta = 0.5 (two-tailed)
+> # against the alternative that theta not equal to 0.5
+> # p < 0.05 significance level
+> 
+> options(scipen=100)
+> theta = 0.5
+> 
+> # specify probability distribution of 
+> # outcome count if we study 30 cities
+> # and theta is fixed at 0.5
+> 
+> n = 30
+> x = seq(from=0,to=30,by=1)
+> px = choose(n,x)*theta^x*(1-theta)^(n-x)
+> data.frame(x,px)
+    x                 px
+1   0 0.0000000009313226
+2   1 0.0000000279396772
+3   2 0.0000004051253200
+4   3 0.0000037811696529
+5   4 0.0000255228951573
+6   5 0.0001327190548182
+7   6 0.0005529960617423
+8   7 0.0018959864974022
+9   8 0.0054509611800313
+10  9 0.0133245717734098
+11 10 0.0279816007241607
+12 11 0.0508756376802921
+13 12 0.0805530929937959
+14 13 0.1115350518375635
+15 14 0.1354354200884700
+16 15 0.1444644480943680
+17 16 0.1354354200884700
+18 17 0.1115350518375635
+19 18 0.0805530929937959
+20 19 0.0508756376802921
+21 20 0.0279816007241607
+22 21 0.0133245717734098
+23 22 0.0054509611800313
+24 23 0.0018959864974022
+25 24 0.0005529960617423
+26 25 0.0001327190548182
+27 26 0.0000255228951573
+28 27 0.0000037811696529
+29 28 0.0000004051253200
+30 29 0.0000000279396772
+31 30 0.0000000009313226
+> 
+> # add up probabilities at both ends of the distribution
+> # such that the sum at each end is less than 0.025
+> 
+> # lower tail
+> 
+> px[1]
+[1] 0.0000000009313226
+> sum(px[1:2])
+[1] 0.000000028871
+> sum(px[1:3])
+[1] 0.0000004339963
+> sum(px[1:4])
+[1] 0.000004215166
+> sum(px[1:5])
+[1] 0.00002973806
+> sum(px[1:6])
+[1] 0.0001624571
+> sum(px[1:7])
+[1] 0.0007154532
+> sum(px[1:8])
+[1] 0.00261144
+> sum(px[1:9])
+[1] 0.008062401
+> sum(px[1:10])
+[1] 0.02138697
+> sum(px[1:11])
+[1] 0.04936857
+> 
+> # upper tail
+> 
+> px[31]
+[1] 0.0000000009313226
+> sum(px[30:31])
+[1] 0.000000028871
+> sum(px[29:31])
+[1] 0.0000004339963
+> sum(px[28:31])
+[1] 0.000004215166
+> sum(px[27:31])
+[1] 0.00002973806
+> sum(px[26:31])
+[1] 0.0001624571
+> sum(px[25:31])
+[1] 0.0007154532
+> sum(px[24:31])
+[1] 0.00261144
+> sum(px[23:31])
+[1] 0.008062401
+> sum(px[22:31])
+[1] 0.02138697
+> sum(px[21:31])
+[1] 0.04936857
+> 
+> # based on these calculations we see that the events
+> # x={0:9,21:30} form the critical region
+> 
+> decision <- ifelse(x %in% 0:9 | x %in% 21:30,"reject","fail to reject")
+> data.frame(x,px,decision)
+    x                 px       decision
+1   0 0.0000000009313226         reject
+2   1 0.0000000279396772         reject
+3   2 0.0000004051253200         reject
+4   3 0.0000037811696529         reject
+5   4 0.0000255228951573         reject
+6   5 0.0001327190548182         reject
+7   6 0.0005529960617423         reject
+8   7 0.0018959864974022         reject
+9   8 0.0054509611800313         reject
+10  9 0.0133245717734098         reject
+11 10 0.0279816007241607 fail to reject
+12 11 0.0508756376802921 fail to reject
+13 12 0.0805530929937959 fail to reject
+14 13 0.1115350518375635 fail to reject
+15 14 0.1354354200884700 fail to reject
+16 15 0.1444644480943680 fail to reject
+17 16 0.1354354200884700 fail to reject
+18 17 0.1115350518375635 fail to reject
+19 18 0.0805530929937959 fail to reject
+20 19 0.0508756376802921 fail to reject
+21 20 0.0279816007241607 fail to reject
+22 21 0.0133245717734098         reject
+23 22 0.0054509611800313         reject
+24 23 0.0018959864974022         reject
+25 24 0.0005529960617423         reject
+26 25 0.0001327190548182         reject
+27 26 0.0000255228951573         reject
+28 27 0.0000037811696529         reject
+29 28 0.0000004051253200         reject
+30 29 0.0000000279396772         reject
+31 30 0.0000000009313226         reject
+> 
+> # what do our data say?
+> # the data say that 22 out of 30 cities experienced
+> # an increase in their homicide rates from time 1 to time 2
+> # it is unlikely we would get a result at least this extreme
+> # if theta were equal to 0.5
+>
+```
+
+* Example 3: hot spot patrols and crime reduction
+
+```r
+########################################################
+# example 3: 17 hot spots receive intensive patrol
+# calls for service dropped in 12 of them after patrol
+# test hypothesis that theta = 0.5 (one-tailed)
+# against alternative that theta > 0.5
+# p < 0.05 significance level
+
+# suppress scientific notation
+
+options(scipen=100)
+
+# set theta to 0.5
+
+theta = 0.5
+
+# specify probability distribution of 
+# outcome count if we study 17 hot spots
+# and theta is fixed at 0.5
+
+n = 17
+x = seq(from=0,to=17,by=1)
+px = choose(n,x)*theta^x*(1-theta)^(n-x)
+data.frame(x,px)
+
+# add up probabilities at upper end of the distribution
+# such that the sum at the upper end is less than 0.050
+
+# upper tail
+
+px[18]
+sum(px[17:18])
+sum(px[16:18])
+sum(px[15:18])
+sum(px[14:18])
+sum(px[13:18])
+sum(px[12:18])
+
+# based on these calculations we see that the events
+# x={13,14,15,16,17} form the critical region
+
+decision <- ifelse(x %in% 13:17,"reject","fail to reject")
+data.frame(x,px,decision)
+
+# what do our data say?
+# the data say that 12 out of 17 hot spots experienced
+# a decline after patrols
+# we fail to reject hypothesis that theta = 0.5
+# in other words, hypothesis that theta = 0.5 is more
+# consistent with the data than alternative hypothesis that
+# theta > 0.5
+
+# let's do a simulation to demonstrate the p-value for this test is right
+
+# use y>=13 as critical region
+
+reject = vector()
+for(i in 1:1000000){
+  y = rbinom(n=1,size=17,p=0.5)
+  reject[i] = ifelse(y>=13,"reject","fail to reject")
+  }
+
+table(reject)/length(reject)
+```
+
+* Here is the output for Example 3:
+
+```rout
+> ########################################################
+> # example 3: 17 hot spots receive intensive patrol
+> # calls for service dropped in 12 of them after patrol
+> # test hypothesis that theta = 0.5 (one-tailed)
+> # against alternative that theta > 0.5
+> # p < 0.05 significance level
+> 
+> # suppress scientific notation
+> 
+> options(scipen=100)
+> 
+> # set theta to 0.5
+> 
+> theta = 0.5
+> 
+> # specify probability distribution of 
+> # outcome count if we study 17 hot spots
+> # and theta is fixed at 0.5
+> 
+> n = 17
+> x = seq(from=0,to=17,by=1)
+> px = choose(n,x)*theta^x*(1-theta)^(n-x)
+> data.frame(x,px)
+    x             px
+1   0 0.000007629395
+2   1 0.000129699707
+3   2 0.001037597656
+4   3 0.005187988281
+5   4 0.018157958984
+6   5 0.047210693359
+7   6 0.094421386719
+8   7 0.148376464844
+9   8 0.185470581055
+10  9 0.185470581055
+11 10 0.148376464844
+12 11 0.094421386719
+13 12 0.047210693359
+14 13 0.018157958984
+15 14 0.005187988281
+16 15 0.001037597656
+17 16 0.000129699707
+18 17 0.000007629395
+> 
+> # add up probabilities at upper end of the distribution
+> # such that the sum at the upper end is less than 0.050
+> 
+> # upper tail
+> 
+> px[18]
+[1] 0.000007629395
+> sum(px[17:18])
+[1] 0.0001373291
+> sum(px[16:18])
+[1] 0.001174927
+> sum(px[15:18])
+[1] 0.006362915
+> sum(px[14:18])
+[1] 0.02452087
+> sum(px[13:18])
+[1] 0.07173157
+> sum(px[12:18])
+[1] 0.166153
+> 
+> # based on these calculations we see that the events
+> # x={13,14,15,16,17} form the critical region
+> 
+> decision <- ifelse(x %in% 13:17,"reject","fail to reject")
+> data.frame(x,px,decision)
+    x             px       decision
+1   0 0.000007629395 fail to reject
+2   1 0.000129699707 fail to reject
+3   2 0.001037597656 fail to reject
+4   3 0.005187988281 fail to reject
+5   4 0.018157958984 fail to reject
+6   5 0.047210693359 fail to reject
+7   6 0.094421386719 fail to reject
+8   7 0.148376464844 fail to reject
+9   8 0.185470581055 fail to reject
+10  9 0.185470581055 fail to reject
+11 10 0.148376464844 fail to reject
+12 11 0.094421386719 fail to reject
+13 12 0.047210693359 fail to reject
+14 13 0.018157958984         reject
+15 14 0.005187988281         reject
+16 15 0.001037597656         reject
+17 16 0.000129699707         reject
+18 17 0.000007629395         reject
+> 
+> # what do our data say?
+> # the data say that 12 out of 17 hot spots experienced
+> # a decline after patrols
+> # we fail to reject hypothesis that theta = 0.5
+> # in other words, hypothesis that theta = 0.5 is more
+> # consistent with the data than alternative hypothesis that
+> # theta > 0.5
+> 
+> # let's do a simulation to demonstrate the p-value for this test is right
+> 
+> # use y>=13 as critical region
+> 
+> reject = vector()
+> for(i in 1:1000000){
++   y = rbinom(n=1,size=17,p=0.5)
++   reject[i] = ifelse(y>=13,"reject","fail to reject")
++   }
+> 
+> table(reject)/length(reject)
+reject
+fail to reject         reject 
+      0.975722       0.024278 
+>
+```
+
+* Example 4: Prison treatment program and recidivism
+
+```R
+########################################################
+# example 4: 12 people released from prison after
+# receiving a treatment program. 
+# historical recidivism rate = 0.6
+# 4 out of the 12 were observed to recidivate
+# test hypothesis that theta = 0.6 (one-tailed)
+# against alternative that theta < 0.6
+# p < 0.05 significance level
+
+# suppress scientific notation
+
+options(scipen=100)
+
+# set theta to 0.6
+
+theta = 0.6
+
+# specify probability distribution of 
+# outcome count if we study 12 people
+# and theta is fixed at 0.6
+
+n = 12
+x = seq(from=0,to=12,by=1)
+px = choose(n,x)*theta^x*(1-theta)^(n-x)
+data.frame(x,px)
+
+# add up probabilities at lower end of the distribution
+# such that the sum is less than 0.05
+
+# lower tail
+
+px[1]
+sum(px[1:2])
+sum(px[1:3])
+sum(px[1:4])
+sum(px[1:5])
+
+# based on these calculations we see that the events
+# x={0,1,2,3} form the critical region
+
+decision <- ifelse(x %in% 0:3,"reject","fail to reject")
+data.frame(x,px,decision)
+
+# what do our data say?
+# the data say that 4 out of 12 people recidivated
+# it is plausible we could get a result at least this extreme
+# if theta were equal to 0.6
+# decision: fail to reject hypothesis that theta = 0.6
+```
+
+* Here is our output for Example 4:
+
+```Rout
+> ########################################################
+> # example 4: 12 people released from prison after
+> # receiving a treatment program. 
+> # historical recidivism rate = 0.6
+> # 4 out of the 12 were observed to recidivate
+> # test hypothesis that theta = 0.6 (one-tailed)
+> # against alternative that theta < 0.6
+> # p < 0.05 significance level
+> 
+> # suppress scientific notation
+> 
+> options(scipen=100)
+> 
+> # set theta to 0.6
+> 
+> theta = 0.6
+> 
+> # specify probability distribution of 
+> # outcome count if we study 12 people
+> # and theta is fixed at 0.6
+> 
+> n = 12
+> x = seq(from=0,to=12,by=1)
+> px = choose(n,x)*theta^x*(1-theta)^(n-x)
+> data.frame(x,px)
+    x            px
+1   0 0.00001677722
+2   1 0.00030198989
+3   2 0.00249141658
+4   3 0.01245708288
+5   4 0.04204265472
+6   5 0.10090237133
+7   6 0.17657914982
+8   7 0.22703033549
+9   8 0.21284093952
+10  9 0.14189395968
+11 10 0.06385228186
+12 11 0.01741425869
+13 12 0.00217678234
+> 
+> # add up probabilities at lower end of the distribution
+> # such that the sum is less than 0.05
+> 
+> # lower tail
+> 
+> px[1]
+[1] 0.00001677722
+> sum(px[1:2])
+[1] 0.0003187671
+> sum(px[1:3])
+[1] 0.002810184
+> sum(px[1:4])
+[1] 0.01526727
+> sum(px[1:5])
+[1] 0.05730992
+> 
+> # based on these calculations we see that the events
+> # x={0,1,2,3} form the critical region
+> 
+> decision <- ifelse(x %in% 0:3,"reject","fail to reject")
+> data.frame(x,px,decision)
+    x            px       decision
+1   0 0.00001677722         reject
+2   1 0.00030198989         reject
+3   2 0.00249141658         reject
+4   3 0.01245708288         reject
+5   4 0.04204265472 fail to reject
+6   5 0.10090237133 fail to reject
+7   6 0.17657914982 fail to reject
+8   7 0.22703033549 fail to reject
+9   8 0.21284093952 fail to reject
+10  9 0.14189395968 fail to reject
+11 10 0.06385228186 fail to reject
+12 11 0.01741425869 fail to reject
+13 12 0.00217678234 fail to reject
+> 
+> # what do our data say?
+> # the data say that 4 out of 12 people recidivated
+> # it is plausible we could get a result at least this extreme
+> # if theta were equal to 0.6
+> # decision: fail to reject hypothesis that theta = 0.6
+>
+```
+
+* Example 5: updated business cycle analysis
+
+```r
+########################################################
+# example 5: 13 business cycles
+# in 10 of the 13 cycles, robbery increased (relative to
+# its changes during the growth phase) when the economy
+# tipped into a recession
+# if economy were unrelated to crime we would expect
+# that p(robbery increases | recession) = 0.5
+# conduct a two-tailed test at p < .15 significance level
+
+# suppress scientific notation
+
+options(scipen=100)
+
+# set theta to 0.5
+
+theta = 0.5
+
+# specify probability distribution of 
+# outcome count if we study 12 people
+# and theta is fixed at 0.6
+
+n = 13
+x = seq(from=0,to=13,by=1)
+px = choose(n,x)*theta^x*(1-theta)^(n-x)
+data.frame(x,px)
+
+# add up probabilities at lower end of the distribution
+# such that the sum is less than 0.075
+
+# lower tail
+
+px[1]
+sum(px[1:2])
+sum(px[1:3])
+sum(px[1:4])
+sum(px[1:5])
+
+# add up probabilities at upper end of the distribution
+# such that the sum is less than 0.075
+
+# upper tail
+
+px[14]
+sum(px[13:14])
+sum(px[12:14])
+sum(px[11:14])
+sum(px[10:14])
+
+# based on these calculations we see that the events
+# x={0,1,2,3,10,11,12,13} form the critical region
+
+decision <- ifelse(x %in% 0:3 | x %in% 10:13,"reject","fail to reject")
+data.frame(x,px,decision)
+
+# what do our data say?
+# the data say that robbery increased at the end of 10 out of 13 
+# business cycles (i.e., when the economy tips into recession)
+# decision: we reject hypothesis that theta = 0.5
+# in favor of hypothesis that theta is not equal to 0.5
+```
+
+* Here is the output for Example 5.
+
+```rout
+> ########################################################
+> # example 5: 13 business cycles
+> # in 10 of the 13 cycles, robbery increased (relative to
+> # its changes during the growth phase) when the economy
+> # tipped into a recession
+> # if economy were unrelated to crime we would expect
+> # that p(robbery increases | recession) = 0.5
+> # conduct a two-tailed test at p < .15 significance level
+> 
+> # suppress scientific notation
+> 
+> options(scipen=100)
+> 
+> # set theta to 0.5
+> 
+> theta = 0.5
+> 
+> # specify probability distribution of 
+> # outcome count if we study 12 people
+> # and theta is fixed at 0.6
+> 
+> n = 13
+> x = seq(from=0,to=13,by=1)
+> px = choose(n,x)*theta^x*(1-theta)^(n-x)
+> data.frame(x,px)
+    x           px
+1   0 0.0001220703
+2   1 0.0015869141
+3   2 0.0095214844
+4   3 0.0349121094
+5   4 0.0872802734
+6   5 0.1571044922
+7   6 0.2094726562
+8   7 0.2094726562
+9   8 0.1571044922
+10  9 0.0872802734
+11 10 0.0349121094
+12 11 0.0095214844
+13 12 0.0015869141
+14 13 0.0001220703
+> 
+> # add up probabilities at lower end of the distribution
+> # such that the sum is less than 0.075
+> 
+> # lower tail
+> 
+> px[1]
+[1] 0.0001220703
+> sum(px[1:2])
+[1] 0.001708984
+> sum(px[1:3])
+[1] 0.01123047
+> sum(px[1:4])
+[1] 0.04614258
+> sum(px[1:5])
+[1] 0.1334229
+> 
+> # add up probabilities at upper end of the distribution
+> # such that the sum is less than 0.075
+> 
+> # upper tail
+> 
+> px[14]
+[1] 0.0001220703
+> sum(px[13:14])
+[1] 0.001708984
+> sum(px[12:14])
+[1] 0.01123047
+> sum(px[11:14])
+[1] 0.04614258
+> sum(px[10:14])
+[1] 0.1334229
+> 
+> # based on these calculations we see that the events
+> # x={0,1,2,3,10,11,12,13} form the critical region
+> 
+> decision <- ifelse(x %in% 0:3 | x %in% 10:13,"reject","fail to reject")
+> data.frame(x,px,decision)
+    x           px       decision
+1   0 0.0001220703         reject
+2   1 0.0015869141         reject
+3   2 0.0095214844         reject
+4   3 0.0349121094         reject
+5   4 0.0872802734 fail to reject
+6   5 0.1571044922 fail to reject
+7   6 0.2094726562 fail to reject
+8   7 0.2094726562 fail to reject
+9   8 0.1571044922 fail to reject
+10  9 0.0872802734 fail to reject
+11 10 0.0349121094         reject
+12 11 0.0095214844         reject
+13 12 0.0015869141         reject
+14 13 0.0001220703         reject
+> 
+> # what do our data say?
+> # the data say that robbery increased at the end of 10 out of 13 
+> # business cycles (i.e., when the economy tips into recession)
+> # decision: we reject hypothesis that theta = 0.5
+> # in favor of hypothesis that theta is not equal to 0.5
+>
+```
+
+* Example 6: standard normal variable
+
+```r
+#######################################################
+# example 6: x is a standard normal variable
+# this means it is normally distributed with a 
+# mean of zero and a standard deviation of one
+# what is the probability that a case drawn at random
+# from this distribution is greater than zero?
+
+x = rnorm(n=10000000,mean=0,sd=1)
+
+x0 = ifelse(x>0,"greater than zero","less than zero")
+table(x0)/length(x0)
+```
+
+* Here is the output:
+
+```rout
+> #######################################################
+> # example 6: x is a standard normal variable
+> # this means it is normally distributed with a 
+> # mean of zero and a standard deviation of one
+> # what is the probability that a case drawn at random
+> # from this distribution is greater than zero
+> 
+> x = rnorm(n=10000000,mean=0,sd=1)
+> 
+> x0 = ifelse(x>0,"greater than zero","less than zero")
+> table(x0)/length(x0)
+x0
+greater than zero    less than zero 
+        0.5002064         0.4997936 
+>
+```
+
+* Example 7: measuring the probability that a case drawn from a standard normal distribution will be between 0 and 1.5.
+
+```r
+#######################################################
+# example 7: x is a standard normal variable
+# this means it is normally distributed with a 
+# mean of zero and a standard deviation of one
+# what is the probability that a case drawn at random
+# from this distribution lies between 0 and 1.5
+# compare results to z-table on page 533
+
+x = rnorm(n=10000000,mean=0,sd=1)
+
+xint = ifelse(x>0 & x<1.5,"between 0 and 1.5","other")
+table(xint)/length(xint)
+```
+
+* Here is our output:
+  
+```rout
+> #######################################################
+> # example 7: x is a standard normal variable
+> # this means it is normally distributed with a 
+> # mean of zero and a standard deviation of one
+> # what is the probability that a case drawn at random
+> # from this distribution lies between 0 and 1.5
+> # compare results to z-table on page 533
+> 
+> x = rnorm(n=10000000,mean=0,sd=1)
+> 
+> xint = ifelse(x>0 & x<1.5,"between 0 and 1.5","other")
+> table(xint)/length(xint)
+xint
+between 0 and 1.5             other 
+        0.4334062         0.5665938
+```
+
+* Example 8: waiting time between verdict and sentencing.
+
+```r
+#######################################################
+# example 8: let x be the waiting time (in days) between 
+# verdict and sentencing in a state's criminal court system
+# based on long-term historical data, we know the 
+# average waiting time is normally distributed with a
+# mean of 52 and a standard deviation of 8.
+
+# now use the standard normal distribution to calculate 
+# the percentile rank of someone who waits 62 days to be 
+# sentenced after receiving their verdict
+
+
+z = (62-52)/8
+z
+
+x = rnorm(n=10000000,mean=0,sd=1)
+xpct = ifelse(x<z,"x<z","x>z")
+table(xpct)/length(xpct)
+
+# compare results to table on page 533
+```
+
+* Here is the output for Example 8:
+
+```rout
+> #######################################################
+> # example 8: let x be the waiting time (in days) between 
+> # verdict and sentencing in a state's criminal court system
+> # based on long-term historical data, we know the 
+> # average waiting time is normally distributed with a
+> # mean of 52 and a standard deviation of 8.
+> 
+> # now use the standard normal distribution to calculate 
+> # the percentile rank of someone who waits 62 days to be 
+> # sentenced after receiving their verdict
+> 
+> 
+> z = (62-52)/8
+> z
+[1] 1.25
+> 
+> x = rnorm(n=10000000,mean=0,sd=1)
+> xpct = ifelse(x<z,"x<z","x>z")
+> table(xpct)/length(xpct)
+xpct
+      x<z       x>z 
+0.8943224 0.1056776 
+> 
+```

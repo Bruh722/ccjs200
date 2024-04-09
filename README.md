@@ -1912,11 +1912,50 @@ data.frame(x,px,decision)
 >
 ```
 
-* Example 3: hot spot patrols and crime reduction
+* Example 3: standard normal variable
+
+```r
+#######################################################
+# example 3: x is a standard normal variable
+# this means it is normally distributed with a 
+# mean of zero and a standard deviation of one
+# what is the probability that a case drawn at random
+# from this distribution is greater than zero?
+
+x = rnorm(n=10000000,mean=0,sd=1)
+
+x0 = ifelse(x>0,"greater than zero","less than zero")
+table(x0)/length(x0)
+```
+
+* Here is the output:
+
+```rout
+> #######################################################
+> # example 3: x is a standard normal variable
+> # this means it is normally distributed with a 
+> # mean of zero and a standard deviation of one
+> # what is the probability that a case drawn at random
+> # from this distribution is greater than zero
+> 
+> x = rnorm(n=10000000,mean=0,sd=1)
+> 
+> x0 = ifelse(x>0,"greater than zero","less than zero")
+> table(x0)/length(x0)
+x0
+greater than zero    less than zero 
+        0.5002064         0.4997936 
+>
+```
+
+### Lesson 19 - Thursday 4/11/24
+
+* We continue with a few more examples of binomial hypothesis testing and exercises using the normal distribution.
+* Example 1: hot spot patrols and crime reduction
 
 ```r
 ########################################################
-# example 3: 17 hot spots receive intensive patrol
+# example 1: 17 hot spots receive intensive patrol
 # calls for service dropped in 12 of them after patrol
 # test hypothesis that theta = 0.5 (one-tailed)
 # against alternative that theta > 0.5
@@ -1979,11 +2018,11 @@ for(i in 1:1000000){
 table(reject)/length(reject)
 ```
 
-* Here is the output for Example 3:
+* Here is the output for Example 1:
 
 ```rout
 > ########################################################
-> # example 3: 17 hot spots receive intensive patrol
+> # example 1: 17 hot spots receive intensive patrol
 > # calls for service dropped in 12 of them after patrol
 > # test hypothesis that theta = 0.5 (one-tailed)
 > # against alternative that theta > 0.5
@@ -2095,11 +2134,11 @@ fail to reject         reject
 >
 ```
 
-* Example 4: Prison treatment program and recidivism
+* Example 2: Prison treatment program and recidivism
 
 ```R
 ########################################################
-# example 4: 12 people released from prison after
+# example 2: 12 people released from prison after
 # receiving a treatment program. 
 # historical recidivism rate = 0.6
 # 4 out of the 12 were observed to recidivate
@@ -2148,11 +2187,11 @@ data.frame(x,px,decision)
 # decision: fail to reject hypothesis that theta = 0.6
 ```
 
-* Here is our output for Example 4:
+* Here is our output for Example 2:
 
 ```Rout
 > ########################################################
-> # example 4: 12 people released from prison after
+> # example 2: 12 people released from prison after
 > # receiving a treatment program. 
 > # historical recidivism rate = 0.6
 > # 4 out of the 12 were observed to recidivate
@@ -2235,11 +2274,11 @@ data.frame(x,px,decision)
 >
 ```
 
-* Example 5: updated business cycle analysis
+* Example 3: updated business cycle analysis
 
 ```r
 ########################################################
-# example 5: 13 business cycles
+# example 3: 13 business cycles
 # in 10 of the 13 cycles, robbery increased (relative to
 # its changes during the growth phase) when the economy
 # tipped into a recession
@@ -2299,11 +2338,11 @@ data.frame(x,px,decision)
 # in favor of hypothesis that theta is not equal to 0.5
 ```
 
-* Here is the output for Example 5.
+* Here is the output for Example 3.
 
 ```rout
 > ########################################################
-> # example 5: 13 business cycles
+> # example 3: 13 business cycles
 > # in 10 of the 13 cycles, robbery increased (relative to
 > # its changes during the growth phase) when the economy
 > # tipped into a recession
@@ -2404,47 +2443,11 @@ data.frame(x,px,decision)
 >
 ```
 
-* Example 6: standard normal variable
+* Example 4: measuring the probability that a case drawn from a standard normal distribution will be between 0 and 1.5.
 
 ```r
 #######################################################
-# example 6: x is a standard normal variable
-# this means it is normally distributed with a 
-# mean of zero and a standard deviation of one
-# what is the probability that a case drawn at random
-# from this distribution is greater than zero?
-
-x = rnorm(n=10000000,mean=0,sd=1)
-
-x0 = ifelse(x>0,"greater than zero","less than zero")
-table(x0)/length(x0)
-```
-
-* Here is the output:
-
-```rout
-> #######################################################
-> # example 6: x is a standard normal variable
-> # this means it is normally distributed with a 
-> # mean of zero and a standard deviation of one
-> # what is the probability that a case drawn at random
-> # from this distribution is greater than zero
-> 
-> x = rnorm(n=10000000,mean=0,sd=1)
-> 
-> x0 = ifelse(x>0,"greater than zero","less than zero")
-> table(x0)/length(x0)
-x0
-greater than zero    less than zero 
-        0.5002064         0.4997936 
->
-```
-
-* Example 7: measuring the probability that a case drawn from a standard normal distribution will be between 0 and 1.5.
-
-```r
-#######################################################
-# example 7: x is a standard normal variable
+# example 4: x is a standard normal variable
 # this means it is normally distributed with a 
 # mean of zero and a standard deviation of one
 # what is the probability that a case drawn at random
@@ -2461,7 +2464,7 @@ table(xint)/length(xint)
   
 ```rout
 > #######################################################
-> # example 7: x is a standard normal variable
+> # example 4: x is a standard normal variable
 > # this means it is normally distributed with a 
 > # mean of zero and a standard deviation of one
 > # what is the probability that a case drawn at random
@@ -2477,11 +2480,11 @@ between 0 and 1.5             other
         0.4334062         0.5665938
 ```
 
-* Example 8: waiting time between verdict and sentencing.
+* Example 5: waiting time between verdict and sentencing.
 
 ```r
 #######################################################
-# example 8: let x be the waiting time (in days) between 
+# example 5: let x be the waiting time (in days) between 
 # verdict and sentencing in a state's criminal court system
 # based on long-term historical data, we know the 
 # average waiting time is normally distributed with a
@@ -2502,11 +2505,11 @@ table(xpct)/length(xpct)
 # compare results to table on page 533
 ```
 
-* Here is the output for Example 8:
+* Here is the output for Example 5:
 
 ```rout
 > #######################################################
-> # example 8: let x be the waiting time (in days) between 
+> # example 5: let x be the waiting time (in days) between 
 > # verdict and sentencing in a state's criminal court system
 > # based on long-term historical data, we know the 
 > # average waiting time is normally distributed with a

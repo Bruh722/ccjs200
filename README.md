@@ -2645,7 +2645,7 @@ mean(mx)
 ```
 
 * Notice the mean of the samples is very close to the population mean we calculated in Example 6,
-* Notice also that the distribution of the sample means (i.e., the sampling distribution) looks symmetric, like a normal distribution.
+* Notice also that the distribution of the sample means (i.e., the sampling distribution) looks approximately symmetric, like a normal distribution.
 
 <p align="center">
 <img src="/gfiles/mxhist.png" width="700px">

@@ -1950,7 +1950,7 @@ greater than zero    less than zero
 
 ### Lesson 19 - Thursday 4/11/24
 
-* We continue with a few more examples of binomial hypothesis testing and exercises using the normal distribution.
+* We continue with a few more examples of binomial hypothesis testing and applications of the normal distribution, including sampling distributions.
 * Example 1: hot spot patrols and crime reduction
 
 ```r
@@ -2532,3 +2532,121 @@ xpct
 0.8943224 0.1056776 
 > 
 ```
+
+* Example 6: Drawing random samples from a population
+* Suppose we have a variable, *x*, measured for a large population. The distribution of *x* looks like this:
+
+<p align="center">
+<img src="/gfiles/barplot1.png" width="700px">
+</p>
+
+and the frequency distribution looks like this:
+
+```r
+x = c(rep(0,100049),rep(1,253065),rep(2,295441),rep(3,208522),rep(4,99242),rep(5,33588),
+  rep(6,8364),rep(7,1500),rep(8,211),rep(9,17),10)
+mean(x)
+median(x)
+table(x)
+```
+
+```rout
+> x = c(rep(0,100049),rep(1,253065),rep(2,295441),rep(3,208522),rep(4,99242),rep(5,33588),
++   rep(6,8364),rep(7,1500),rep(8,211),rep(9,17),10)
+> mean(x)
+[1] 2.096956
+> median(x)
+[1] 2
+> table(x)
+x
+     0      1      2      3      4      5      6      7      8 
+100049 253065 295441 208522  99242  33588   8364   1500    211 
+     9     10 
+    17      1 
+>
+```
+
+* Now, let's draw 3 random samples of size 10 from this population (with replacement).
+* Notice the variability of the means between the 3 samples.
+
+```r
+xs1 = sample(x,size=10,replace=T)
+xs2 = sample(x,size=10,replace=T)
+xs3 = sample(x,size=10,replace=T)
+
+table(xs1)
+table(xs2)
+table(xs3)
+
+mean(xs1)
+mean(xs2)
+mean(xs3)
+```
+
+```rout
+> xs1 = sample(x,size=10,replace=T)
+> xs2 = sample(x,size=10,replace=T)
+> xs3 = sample(x,size=10,replace=T)
+> 
+> table(xs1)
+xs1
+0 1 2 4 5 
+1 4 2 1 2 
+> table(xs2)
+xs2
+0 1 2 3 4 5 
+1 2 2 3 1 1 
+> table(xs3)
+xs3
+0 1 2 3 
+2 3 3 2 
+> 
+> mean(xs1)
+[1] 2.2
+> mean(xs2)
+[1] 2.4
+> mean(xs3)
+[1] 1.5
+> 
+```
+
+* Example 7: Drawing random samples from a population
+* Next, let's draw 100,000 samples of size 10 (with replacement) from the population we studied in example 6.
+* This exercise results in an approximation to the *sampling distribution* of the sample means:
+
+```r
+x = c(rep(0,100049),rep(1,253065),rep(2,295441),rep(3,208522),rep(4,99242),rep(5,33588),
+  rep(6,8364),rep(7,1500),rep(8,211),rep(9,17),10)
+
+mx = vector()
+
+for(i in 1:100000){
+  xs = sample(x,size=10,replace=T)
+  mx[i] = mean(xs)
+  }
+
+mean(mx)
+```
+
+```rout
+> x = c(rep(0,100049),rep(1,253065),rep(2,295441),rep(3,208522),rep(4,99242),rep(5,33588),
++   rep(6,8364),rep(7,1500),rep(8,211),rep(9,17),10)
+> 
+> mx = vector()
+> 
+> for(i in 1:100000){
++   xs = sample(x,size=10,replace=T)
++   mx[i] = mean(xs)
++   }
+> 
+> mean(mx)
+[1] 2.095825
+>
+```
+
+* Notice the mean of the samples is very close to the population mean we calculated in Example 6,
+* Notice also that the distribution of the sample means (i.e., the sampling distribution) looks symmetric, like a normal distribution.
+
+<p align="center">
+<img src="/gfiles/mxhist.png" width="700px">
+</p>

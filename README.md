@@ -2004,18 +2004,6 @@ data.frame(x,px,decision)
 # in other words, hypothesis that theta = 0.5 is more
 # consistent with the data than alternative hypothesis that
 # theta > 0.5
-
-# let's do a simulation to demonstrate the p-value for this test is right
-
-# use y>=13 as critical region
-
-reject = vector()
-for(i in 1:1000000){
-  y = rbinom(n=1,size=17,p=0.5)
-  reject[i] = ifelse(y>=13,"reject","fail to reject")
-  }
-
-table(reject)/length(reject)
 ```
 
 * Here is the output for Example 1:
@@ -2117,21 +2105,6 @@ table(reject)/length(reject)
 > # consistent with the data than alternative hypothesis that
 > # theta > 0.5
 > 
-> # let's do a simulation to demonstrate the p-value for this test is right
-> 
-> # use y>=13 as critical region
-> 
-> reject = vector()
-> for(i in 1:1000000){
-+   y = rbinom(n=1,size=17,p=0.5)
-+   reject[i] = ifelse(y>=13,"reject","fail to reject")
-+   }
-> 
-> table(reject)/length(reject)
-reject
-fail to reject         reject 
-      0.975722       0.024278 
->
 ```
 
 * Example 2: Prison treatment program and recidivism

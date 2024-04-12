@@ -72,7 +72,7 @@ This is an aspirational course outline. I will try to stick to the schedule that
 * Week 9 - 3/26-3/29: Point estimation and confidence intervals (chapter 7).
 * Week 10 - 4/2 is catch-up/review day and Exam 2 will be on Thursday 4/4.
 * Week 11 - 4/9-4/12: Identification intervals (no chapter; I will provide information)
-* Assignment #3 posted on Friday 4/12; due at end of the day on Friday 4/19.
+* Assignment #3 posted on Friday ~~4/12~~ 4/19; due at end of the day on Friday ~~4/19~~ 4/26.
 * Week 12 - 4/16-4/19: One-sample hypothesis tests (chapter 8).
 * Week 13 - 4/23-4/26: Categorical data (chapter 9).
 * Week 14 - 4/30-5/3: Two-sample tests (chapter 10).
@@ -1950,6 +1950,7 @@ greater than zero    less than zero
 
 ### Lesson 19 - Thursday 4/11/24
 
+* Please note that I am delaying Assignment #3 by 1 week. It will be distributed on Friday 4/19 and will be due by 11:59pm on Friday 4/26.
 * We continue with a few more examples of binomial hypothesis testing and applications of the normal distribution, including sampling distributions.
 * Example 1: hot spot patrols and crime reduction
 

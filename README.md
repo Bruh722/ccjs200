@@ -2454,7 +2454,11 @@ between 0 and 1.5             other
         0.4334062         0.5665938
 ```
 
-* Example 5: waiting time between verdict and sentencing.
+### Lesson 20 - Tuesday 4/16/24
+
+* Reminder: Assignment #3 will be distributed on Friday 4/19 and will be due at the end of the day (11:59pm) on Friday 4/26.
+* Today, we consider normal distributions and sampling distributions.
+* Example 1: waiting time between verdict and sentencing.
 
 ```r
 #######################################################
@@ -2479,7 +2483,7 @@ table(xpct)/length(xpct)
 # compare results to table on page 533
 ```
 
-* Here is the output for Example 5:
+* Here is the output for Example 1:
 
 ```rout
 > #######################################################
@@ -2507,7 +2511,7 @@ xpct
 > 
 ```
 
-* Example 6: Drawing random samples from a population
+* Example 2: Drawing random samples from a population
 * Suppose we have a variable, *x*, measured for a large population. The distribution of *x* looks like this:
 
 <p align="center">
@@ -2584,7 +2588,7 @@ xs3
 > 
 ```
 
-* Example 7: Drawing random samples from a population
+* Example 3: Drawing random samples from a population
 * Next, let's draw 100,000 samples of size 10 (with replacement) from the population we studied in example 6.
 * This exercise results in an approximation to the *sampling distribution* of the sample means:
 

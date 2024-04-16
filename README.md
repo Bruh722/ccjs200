@@ -2548,53 +2548,53 @@ x
 * Notice the variability of the means between the 3 samples.
 
 ```r
+set.seed(1)
 xs1 = sample(x,size=10,replace=T)
 xs2 = sample(x,size=10,replace=T)
 xs3 = sample(x,size=10,replace=T)
 
-table(xs1)
-table(xs2)
-table(xs3)
+xs1
+xs2
+xs3
 
 mean(xs1)
 mean(xs2)
 mean(xs3)
 ```
 
+* Here are the 3 samples we drew:
+
 ```rout
+> set.seed(1)
 > xs1 = sample(x,size=10,replace=T)
 > xs2 = sample(x,size=10,replace=T)
 > xs3 = sample(x,size=10,replace=T)
 > 
-> table(xs1)
-xs1
-0 1 2 4 5 
-1 4 2 1 2 
-> table(xs2)
-xs2
-0 1 2 3 4 5 
-1 2 2 3 1 1 
-> table(xs3)
-xs3
-0 1 2 3 
-2 3 3 2 
+> xs1
+ [1] 2 2 1 2 3 3 0 1 2 2
+> xs2
+ [1] 2 1 2 4 1 2 2 5 1 2
+> xs3
+ [1] 2 4 3 2 2 2 2 2 2 2
 > 
 > mean(xs1)
-[1] 2.2
+[1] 1.8
 > mean(xs2)
-[1] 2.4
+[1] 2.2
 > mean(xs3)
-[1] 1.5
+[1] 2.3
 > 
 ```
 
 * Example 3: Drawing random samples from a population
-* Next, let's draw 100,000 samples of size 10 (with replacement) from the population we studied in example 6.
+* Next, let's draw 100,000 samples of size 10 (with replacement) from the population we studied in example 2.
 * This exercise results in an approximation to the *sampling distribution* of the sample means:
 
 ```r
 x = c(rep(0,100049),rep(1,253065),rep(2,295441),rep(3,208522),rep(4,99242),rep(5,33588),
   rep(6,8364),rep(7,1500),rep(8,211),rep(9,17),10)
+
+set.seed(1)
 
 mx = vector()
 
@@ -2606,9 +2606,13 @@ for(i in 1:100000){
 mean(mx)
 ```
 
+* Notice that when we draw 100K samples of size 10 in each sample *and* we calculate the mean of *x* in each sample, we obtain a *sampling distribution* of sample means. The *typical value* of the sample mean in this exercise closely approximates the true population mean.
+
 ```rout
 > x = c(rep(0,100049),rep(1,253065),rep(2,295441),rep(3,208522),rep(4,99242),rep(5,33588),
 +   rep(6,8364),rep(7,1500),rep(8,211),rep(9,17),10)
+> 
+> set.seed(1)
 > 
 > mx = vector()
 > 
@@ -2618,8 +2622,8 @@ mean(mx)
 +   }
 > 
 > mean(mx)
-[1] 2.095825
->
+[1] 2.096811
+> 
 ```
 
 * Notice the mean of the samples is very close to the population mean we calculated in Example 6,
@@ -2629,8 +2633,69 @@ mean(mx)
 <img src="/gfiles/mxhist.png" width="700px">
 </p>
 
-* Example 4: The dispersion of a sampling distribution of sample means.
-* We will draw samples of size 300 from the population.
+* Our next step is to see if this distribution is approximately normal (it's hard to tell just by looking at the distribution).
+* To assess this issue, we need to measure the standard deviation of the sampling distribution:
+
+```r
+sd(mx)
+```
+
+which gives us:
+
+```rout
+> sd(mx)
+[1] 0.4156848
+>
+```
+
+* Now, let's suppose we draw a sample with a sample mean that is 1 standard deviation above the average of the sampling distribution.
+* This calculation would be 2.097+0.416 = 2.513.
+* Let's see what fraction of the distribution lies between 2.097 and 2.513:
+
+```r
+mx.int = ifelse(mx>2.097 & mx<2.513,"inside the interval","outside the interval")
+table(mx.int)
+```
+
+* The result tells us that 0.3975 or 39.8% of the distribution lies between 2.097 and 2.513:
+
+```rout
+> mx.int = ifelse(mx>2.097 & mx<2.513,"inside the interval","outside the interval")
+> table(mx.int)
+mx.int
+ inside the interval outside the interval 
+               39753                60247 
+>
+```
+
+* We can use our z-table on page 533 to see that the area between the mean and 1 standard deviation above the mean of a normal distribution should be about 0.3413 or 34.1% of the curve.
+* Since the area between 2.097 and 2.513 is 0.3975 and the area between 0 and 1 on a standard normal z-table is 0.3413, we conclude that our sampling distribution is not normal.
+* We've determined the distribution is not normal. Is it symmetric?
+* We can check on how close to symmetric it is by calculating the percent of the distribution that is below the mean of the distribution:
+
+```r
+mx.sym = ifelse(mx<2.097,"below the mean","above the mean")
+table(mx.sym)
+```
+
+which gives us the following result:
+
+```rout
+> mx.sym = ifelse(mx<2.097,"below the mean","above the mean")
+> table(mx.sym)
+mx.sym
+above the mean below the mean 
+         53541          46459 
+>
+```
+
+* So we learn from this result that a little more than half the distribution is below the mean (53.5%) and a little less than half the distribution is above the mean (46.5%). With 100,000 samples, it seems pretty clear that the distribution is not quite symmetric.
+* Based on this evidence, it seems the sampling distribution is neither normal nor symmetric.
+* Keep in mind that we've been working with very small samples (size N = 10) from a skewed distribution.
+* We now want to see what happens if we increase the sample size to size N = 500.
+
+* Example 4: Increasing the sample size to N = 500
+* We will draw samples of size 500 from the population.
 * For each sample we will calculate the sample mean.
 * When the "sampling loop" finishes, we will calculate the mean and standard deviation of the sample means.
 
@@ -2638,10 +2703,12 @@ mean(mx)
 x = c(rep(0,100049),rep(1,253065),rep(2,295441),rep(3,208522),rep(4,99242),rep(5,33588),
   rep(6,8364),rep(7,1500),rep(8,211),rep(9,17),10)
 
+set.seed(1)
+
 mx = vector()
 
 for(i in 1:100000){
-  xs = sample(x,size=300,replace=T)
+  xs = sample(x,size=500,replace=T)
   mx[i] = mean(xs)
   }
 
@@ -2655,25 +2722,75 @@ sd(mx)
 > x = c(rep(0,100049),rep(1,253065),rep(2,295441),rep(3,208522),rep(4,99242),rep(5,33588),
 +   rep(6,8364),rep(7,1500),rep(8,211),rep(9,17),10)
 > 
+> set.seed(1)
+> 
 > mx = vector()
 > 
 > for(i in 1:100000){
-+   xs = sample(x,size=300,replace=T)
++   xs = sample(x,size=500,replace=T)
 +   mx[i] = mean(xs)
 +   }
 > 
 > mean(mx)
-[1] 2.09676
+[1] 2.097015
 > sd(mx)
-[1] 0.07606464
+[1] 0.05871931
+> 
+```
+
+* Now, let's suppose we draw a sample with a sample mean that is 1 standard deviation above the average of the sampling distribution.
+* This calculation would be 2.097+0.059 = 2.156.
+* Let's see what fraction of the distribution lies between 2.097 and 2.156:
+
+```r
+mx.int = ifelse(mx>2.097 & mx<2.156,"inside the interval","outside the interval")
+table(mx.int)
+```
+
+* Here are our results:
+
+```rout
+> mx.int = ifelse(mx>2.097 & mx<2.156,"inside the interval","outside the interval")
+> table(mx.int)
+mx.int
+ inside the interval outside the interval 
+               34276                65724 
 >
 ```
 
-* Next, we will analyze the 100,000th sample we just drew.
-* We calculate the sample mean and the *standard error* of the sample mean.
+* We can use our z-table on page 533 to see that the area between the mean and 1 standard deviation above the mean of a normal distribution should be about 0.3413 or 34.1% of the curve.
+* Since the area between 2.097 and 2.156 is 0.3428 and the area between 0 and 1 on a standard normal z-table is 0.3413, we conclude that our sampling distribution is much closer to being normal (compared to what we get when we draw samples of size 10).
+* If we continued to increase the sample size, the area between the mean and 1 standard deviation above the mean under our curve would get closer and closer to the area between the mean and 1 standard deviation above the mean in the table on page 533.
+* Conclusion: (1) even if the variable we are studying is not normally distributed, the sampling distribution for the mean of that variable will approach normality as the sample size gets large; and (2) this result is a manifestation of a great scientific discovery: the *central limit theorem*.
+* Here is the histogram of the sampling distribution of sample means :
+
+<p align="center">
+<img src="/gfiles/clt-ill2.png" width="700px">
+</p>
+
+* Example 5: Standard Errors
+* When we discuss the dispersion of a sampling distribution, we often rely on a statistic called the *standard error* which is an estimate of the standard deviation of the sampling distribution.
+* We now consider the idea of a population parameter (population mean of x = 2.1) and a sample statistic (mean of x in a sample).
+* If we drew many thousands of samples and calculated the mean of x in each sample, we would have a sampling distribution of sample statistics -- in this case a sampling distribution of sample means.
+* The standard deviation of the sampling distribution is a scientifically interesting quantity: it tells us how much we expect our sample statistic to "bounce around" from sample to sample.
+* Within a single sample, we can estimate the standard deviation of the sampling distribution of sample means by calculating the *standard error* of the sample mean:
 
 ```r
-N = 300
+x = c(rep(0,100049),rep(1,253065),rep(2,295441),rep(3,208522),rep(4,99242),rep(5,33588),
+  rep(6,8364),rep(7,1500),rep(8,211),rep(9,17),10)
+
+set.seed(1)
+
+mx = vector()
+
+for(i in 1:100000){
+  xs = sample(x,size=500,replace=T)
+  mx[i] = mean(xs)
+  }
+
+mean(mx)
+sd(mx)
+N = 500
 mean(xs)
 sd(xs)/sqrt(N)
 ```
@@ -2681,66 +2798,31 @@ sd(xs)/sqrt(N)
 * Here is the output:
 
 ```r
-> N = 300
-> mean(xs)
-[1] 2.013333
-> sd(xs)/sqrt(N)
-[1] 0.07465615
-```
-
-* Notice the similarity between the standard error of the mean we calculated in our sample in comparison to the actual standard deviation of the sampling distribution. This similarity is not a coincidence. We can see it here:
-
-```R
-x = c(rep(0,100049),rep(1,253065),rep(2,295441),rep(3,208522),rep(4,99242),rep(5,33588),
-  rep(6,8364),rep(7,1500),rep(8,211),rep(9,17),10)
-
-mx = vector()
-std.err.mx = vector()
-
-N = 300
-
-for(i in 1:100000){
-  xs = sample(x,size=300,replace=T)
-  mx[i] = mean(xs)
-  std.err.mx[i] = sd(xs)/sqrt(N)
-  }
-
-mean(mx)
-sd(mx)
-mean(std.err.mx)
-median(std.err.mx)
-```
-
-* Here is the output where we see that the "typical" standard error is very close to the actual standard deviation of the sampling distribution:
-
-```rout
 > x = c(rep(0,100049),rep(1,253065),rep(2,295441),rep(3,208522),rep(4,99242),rep(5,33588),
 +   rep(6,8364),rep(7,1500),rep(8,211),rep(9,17),10)
 > 
-> mx = vector()
-> std.err.mx = vector()
+> set.seed(1)
 > 
-> N = 300
+> mx = vector()
 > 
 > for(i in 1:100000){
-+   xs = sample(x,size=300,replace=T)
++   xs = sample(x,size=500,replace=T)
 +   mx[i] = mean(xs)
-+   std.err.mx[i] = sd(xs)/sqrt(N)
 +   }
 > 
 > mean(mx)
-[1] 2.096973
+[1] 2.097015
 > sd(mx)
-[1] 0.07585451
-> mean(std.err.mx)
-[1] 0.07590074
-> median(std.err.mx)
-[1] 0.07586366
->
+[1] 0.05871931
+> N = 500
+> mean(xs)
+[1] 2.068
+> sd(xs)/sqrt(N)
+[1] 0.05890409
+> 
 ```
 
-* Some conclusions: (1) a sampling distribution of means has a symmetric distribution; (2) when the sample size gets large, the sampling distribution of means approximates a normal distribution; and (3) the standard deviation of the sampling distribution of means is estimated by the sample standard error formula (s/sqrt(N)). Remember the original distribution of the variable *x* is *not normal*. So, what we have just observed is a manifestation of a great scientific discovery: the *central limit theorem*. Here is the histogram of the sampling distribution of sample means:
-
-<p align="center">
-<img src="/gfiles/clt-illustrate.png" width="700px">
-</p>
+* Notice the similarity between the standard error of the mean we calculated in our sample in comparison to the actual standard deviation of the sampling distribution. This similarity is not a coincidence.
+* Standard errors are a fundamental part of the toolbox we use for *statistical inference*.
+* Remember a scientist is expected to produce an estimate and a measure of uncertainty to accompany the estimate.
+* For our example, the estimate is the sample mean; the measure of uncertainty to accompany the estimate is the standard error of the mean.

@@ -2653,7 +2653,7 @@ which gives us:
 
 * Now, let's suppose we draw a sample with a sample mean that is 1 standard deviation above the average of the sampling distribution.
 * This calculation would be 2.097+0.416 = 2.513.
-* Let's see what fraction of the distribution lies between 2.097 and 2.513:
+* Let's see what fraction of the sampling distribution lies between 2.097 and 2.513:
 
 ```r
 mx.int = ifelse(mx>2.097 & mx<2.513,"inside the interval","outside the interval")

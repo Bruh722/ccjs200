@@ -2457,7 +2457,7 @@ between 0 and 1.5             other
 ### Lesson 20 - Tuesday 4/16/24
 
 * Reminder: Assignment #3 will be distributed on Friday 4/19 and will be due at the end of the day (11:59pm) on Friday 4/26.
-* Today, we consider normal distributions and sampling distributions.
+* Today, we consider normal distributions, sampling distributions, and the central limit theorem.
 
 #### Example 1: waiting time between verdict and sentencing.
 
@@ -2831,3 +2831,185 @@ sd(xs)/sqrt(N)
 * Standard errors are a fundamental part of the toolbox we use for *statistical inference*.
 * Remember a scientist is expected to produce an estimate and a measure of uncertainty to accompany the estimate.
 * For our example, the estimate is the sample mean; the measure of uncertainty to accompany the estimate is the standard error of the mean.
+
+#### Example 6: Binomial Application of the Central Limit Theorem
+
+* Suppose we study domestic violence escalation patterns for a sample of people in the local domestic violence court; note that all of the people we studied were being prosecuted for domestic violence for the first time. Among the subsample of those who are arrested for a new incident of domestic violence within the next 5 years, we find that about 32% of them escalated the severity of their violence (so the binomial probability parameter is θ = 0.311). Here is the population data set (N = 12,372):
+
+```R
+x = c(rep(0,8525),rep(1,3847)
+table(x)
+mean(x)
+```
+
+* Here is our output:
+
+```rout
+> x = c(rep(0,8525),rep(1,3847))
+> table(x)
+x
+   0    1 
+8525 3847 
+> mean(x)
+[1] 0.3109441
+>
+```
+where x=0 means the person did not escalate and x=1 means the person did escalate. Notice that the mean of x is 0.311 which is our population value of θ.
+
+* Now, suppose we take a new sample of 3 cases where each of the 3 people were arrested for new domestic violence within 5 years' time. What does the sampling distribution of θ look like if N = 3 and the population θ = 0.311?
+
+```R
+set.seed(1)
+
+mx = vector()
+se = vector()
+
+Ncases = 3
+
+for(i in 1:1000){
+  xs = sample(x,size=Ncases,replace=T)
+  mx[i] = mean(xs)
+  se[i] = sd(xs)/sqrt(Ncases)
+  }
+
+mean(mx)
+sd(mx)
+mean(se)
+hist(mx)
+```
+
+* Here is our output:
+
+```Rout
+> set.seed(1)
+> 
+> mx = vector()
+> se = vector()
+> 
+> Ncases = 3
+> 
+> for(i in 1:1000){
++   xs = sample(x,size=Ncases,replace=T)
++   mx[i] = mean(xs)
++   se[i] = sd(xs)/sqrt(Ncases)
++   }
+> 
+> mean(mx)
+[1] 0.308
+> sd(mx)
+[1] 0.2651743
+> mean(se)
+[1] 0.2143333
+> hist(mx)
+> 
+```
+
+<p align="center">
+<img src="/gfiles/binomial-clt1.png" width="500px">
+</p>
+
+* Now, let's increase our sample size to 30:
+
+```R
+set.seed(1)
+
+mx = vector()
+se = vector()
+
+Ncases = 30
+
+for(i in 1:1000){
+  xs = sample(x,size=Ncases,replace=T)
+  mx[i] = mean(xs)
+  se[i] = sd(xs)/sqrt(Ncases)
+  }
+
+mean(mx)
+sd(mx)
+mean(se)
+hist(mx)
+```
+
+* Here is our output with N = 30 sample size:
+
+```Rout
+> set.seed(1)
+> 
+> mx = vector()
+> se = vector()
+> 
+> Ncases = 30
+> 
+> for(i in 1:1000){
++   xs = sample(x,size=Ncases,replace=T)
++   mx[i] = mean(xs)
++   se[i] = sd(xs)/sqrt(Ncases)
++   }
+> 
+> mean(mx)
+[1] 0.3091
+> sd(mx)
+[1] 0.08292339
+> mean(se)
+[1] 0.08412959
+> hist(mx)
+>
+```
+
+<p align="center">
+<img src="/gfiles/binomial-clt2.png" width="500px">
+</p>
+
+* Now, let's increase our sample size to 300:
+
+```R
+set.seed(1)
+
+mx = vector()
+se = vector()
+
+Ncases = 300
+
+for(i in 1:1000){
+  xs = sample(x,size=Ncases,replace=T)
+  mx[i] = mean(xs)
+  se[i] = sd(xs)/sqrt(Ncases)
+  }
+
+mean(mx)
+sd(mx)
+mean(se)
+hist(mx)
+```
+
+* Here is our output:
+
+```Rout
+> set.seed(1)
+> 
+> mx = vector()
+> se = vector()
+> 
+> Ncases = 300
+> 
+> for(i in 1:1000){
++   xs = sample(x,size=Ncases,replace=T)
++   mx[i] = mean(xs)
++   se[i] = sd(xs)/sqrt(Ncases)
++   }
+> 
+> mean(mx)
+[1] 0.311
+> sd(mx)
+[1] 0.02651316
+> mean(se)
+[1] 0.02671899
+> hist(mx)
+>
+```
+
+<p align="center">
+<img src="/gfiles/binomial-clt3.png" width="500px">
+</p>
+
+* Notice from these examples how the sampling distribution grows more symmetric and normal looking as the sample size gets larger; also notice how our standard error formula is becoming more accurate as the sample size increases.

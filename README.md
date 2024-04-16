@@ -2609,7 +2609,7 @@ for(i in 1:100000){
 mean(mx)
 ```
 
-* Notice that when we draw 100K samples of size 10 in each sample *and* we calculate the mean of *x* in each sample, we obtain a *sampling distribution* of sample means. The *typical value* of the sample mean in this exercise closely approximates the true population mean.
+* Notice that when we draw 100K samples of size 10 in each sample *and* we calculate the mean of *x* in each sample, we obtain a *sampling distribution* of sample means. The *typical value* of the sample mean in this exercise closely approximates the true population mean (demonstrates that the sample mean is an unbiased estimator or formula for the population mean, even if the variable we are studying has a skewed distribution).
 
 ```rout
 > x = c(rep(0,100049),rep(1,253065),rep(2,295441),rep(3,208522),rep(4,99242),rep(5,33588),

@@ -2629,7 +2629,7 @@ mean(mx)
 > 
 ```
 
-* Notice the mean of the samples is very close to the population mean we calculated in Example 6,
+* Notice the mean of the samples is very close to the population mean we calculated in Example 2.
 * Notice also that the distribution of the sample means (i.e., the sampling distribution) looks approximately symmetric, like a normal distribution.
 
 <p align="center">
@@ -2671,7 +2671,7 @@ mx.int
 >
 ```
 
-* We can use our z-table on page 533 to see that the area between the mean and 1 standard deviation above the mean of a normal distribution should be about 0.3413 or 34.1% of the curve.
+* We can use our z-table on page 533 to see that the area between the mean and 1 standard deviation above the mean of a normal distribution should be about 0.3413 or 34.1% of the area under the curve.
 * Since the area between 2.097 and 2.513 is 0.3975 and the area between 0 and 1 on a standard normal z-table is 0.3413, we conclude that our sampling distribution is not normal.
 * We've determined the distribution is not normal. Is it symmetric? (*Note*: normality implies symmetry but symmetry does not imply normality).
 * We can check on how close to symmetric it is by calculating the percent of the distribution that is below the mean of the distribution:

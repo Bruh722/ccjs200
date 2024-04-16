@@ -2628,3 +2628,115 @@ mean(mx)
 <p align="center">
 <img src="/gfiles/mxhist.png" width="700px">
 </p>
+
+* Example 4: The dispersion of a sampling distribution of sample means.
+* We will draw samples of size 300 from the population.
+* For each sample we will calculate the sample mean.
+* When the "sampling loop" finishes, we will calculate the mean and standard deviation of the sample means.
+
+```
+x = c(rep(0,100049),rep(1,253065),rep(2,295441),rep(3,208522),rep(4,99242),rep(5,33588),
+  rep(6,8364),rep(7,1500),rep(8,211),rep(9,17),10)
+
+mx = vector()
+
+for(i in 1:100000){
+  xs = sample(x,size=300,replace=T)
+  mx[i] = mean(xs)
+  }
+
+mean(mx)
+sd(mx)
+```
+
+* Here are the results:
+
+```rout
+> x = c(rep(0,100049),rep(1,253065),rep(2,295441),rep(3,208522),rep(4,99242),rep(5,33588),
++   rep(6,8364),rep(7,1500),rep(8,211),rep(9,17),10)
+> 
+> mx = vector()
+> 
+> for(i in 1:100000){
++   xs = sample(x,size=300,replace=T)
++   mx[i] = mean(xs)
++   }
+> 
+> mean(mx)
+[1] 2.09676
+> sd(mx)
+[1] 0.07606464
+>
+```
+
+* Next, we will analyze the 100,000th sample we just drew.
+* We calculate the sample mean and the *standard error* of the sample mean.
+
+```r
+N = 300
+mean(xs)
+sd(xs)/sqrt(N)
+```
+
+* Here is the output:
+
+```r
+> N = 300
+> mean(xs)
+[1] 2.013333
+> sd(xs)/sqrt(N)
+[1] 0.07465615
+```
+
+* Notice the similarity between the standard error of the mean we calculated in our sample in comparison to the actual standard deviation of the sampling distribution. This similarity is not a coincidence. We can see it here:
+
+```R
+x = c(rep(0,100049),rep(1,253065),rep(2,295441),rep(3,208522),rep(4,99242),rep(5,33588),
+  rep(6,8364),rep(7,1500),rep(8,211),rep(9,17),10)
+
+mx = vector()
+std.err.mx = vector()
+
+N = 300
+
+for(i in 1:100000){
+  xs = sample(x,size=300,replace=T)
+  mx[i] = mean(xs)
+  std.err.mx[i] = sd(xs)/sqrt(N)
+  }
+
+mean(mx)
+sd(mx)
+mean(std.err.mx)
+median(std.err.mx)
+```
+
+* Here is the output where we see that the "typical" standard error is very close to the actual standard deviation of the sampling distribution:
+
+```rout
+> x = c(rep(0,100049),rep(1,253065),rep(2,295441),rep(3,208522),rep(4,99242),rep(5,33588),
++   rep(6,8364),rep(7,1500),rep(8,211),rep(9,17),10)
+> 
+> mx = vector()
+> std.err.mx = vector()
+> 
+> N = 300
+> 
+> for(i in 1:100000){
++   xs = sample(x,size=300,replace=T)
++   mx[i] = mean(xs)
++   std.err.mx[i] = sd(xs)/sqrt(N)
++   }
+> 
+> mean(mx)
+[1] 2.096973
+> sd(mx)
+[1] 0.07585451
+> mean(std.err.mx)
+[1] 0.07590074
+> median(std.err.mx)
+[1] 0.07586366
+>
+```
+
+* Some conclusions: (1) a sampling distribution of means has a symmetric distribution; (2) when the sample size gets large, the sampling distribution of means approximates a normal distribution; and (3) the standard deviation of the sampling distribution of means is estimated by the sample standard error formula (s/sqrt(N)). Remember the original distribution of the variable *x* is *not normal*. So, what we have just observed is a manifestation of a great scientific discovery: the *central limit theorem*.

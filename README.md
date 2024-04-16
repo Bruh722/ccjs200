@@ -2742,5 +2742,5 @@ median(std.err.mx)
 * Some conclusions: (1) a sampling distribution of means has a symmetric distribution; (2) when the sample size gets large, the sampling distribution of means approximates a normal distribution; and (3) the standard deviation of the sampling distribution of means is estimated by the sample standard error formula (s/sqrt(N)). Remember the original distribution of the variable *x* is *not normal*. So, what we have just observed is a manifestation of a great scientific discovery: the *central limit theorem*. Here is the histogram of the sampling distribution of sample means:
 
 <p align="center">
-<img src="/gfiles/mxhist.png" width="700px">
+<img src="/gfiles/clt-illustrate.png" width="700px">
 </p>

@@ -2458,11 +2458,12 @@ between 0 and 1.5             other
 
 * Reminder: Assignment #3 will be distributed on Friday 4/19 and will be due at the end of the day (11:59pm) on Friday 4/26.
 * Today, we consider normal distributions and sampling distributions.
-* Example 1: waiting time between verdict and sentencing.
+
+#### Example 1: waiting time between verdict and sentencing.
 
 ```r
 #######################################################
-# example 5: let x be the waiting time (in days) between 
+# example 1: let x be the waiting time (in days) between 
 # verdict and sentencing in a state's criminal court system
 # based on long-term historical data, we know the 
 # average waiting time is normally distributed with a
@@ -2511,8 +2512,9 @@ xpct
 > 
 ```
 
-* Example 2: Drawing random samples from a population
-* Suppose we have a variable, *x*, measured for a large population. The distribution of *x* looks like this:
+#### Example 2: Drawing random samples from a population
+
+* Suppose we have a variable, *x*, measured for a large population. Also suppose that *x* is a population measure for the number of adult convictions up to age 21 for a population of people who got into trouble as adolescents. The distribution of *x* looks like this:
 
 <p align="center">
 <img src="/gfiles/barplot1.png" width="700px">
@@ -2586,7 +2588,8 @@ mean(xs3)
 > 
 ```
 
-* Example 3: Drawing random samples from a population
+#### Example 3: Drawing random samples from a population
+
 * Next, let's draw 100,000 samples of size 10 (with replacement) from the population we studied in example 2.
 * This exercise results in an approximation to the *sampling distribution* of the sample means:
 
@@ -2694,7 +2697,8 @@ above the mean below the mean
 * Keep in mind that we've been working with very small samples (size N = 10) from a skewed distribution.
 * We now want to see what happens if we increase the sample size to size N = 500.
 
-* Example 4: Increasing the sample size to N = 500
+#### Example 4: Increasing the sample size to N = 500 (Central Limit Theorem)
+
 * We will draw samples of size 500 from the population.
 * For each sample we will calculate the sample mean.
 * When the "sampling loop" finishes, we will calculate the mean and standard deviation of the sample means.
@@ -2768,7 +2772,8 @@ mx.int
 <img src="/gfiles/clt-ill2.png" width="700px">
 </p>
 
-* Example 5: Standard Errors
+#### Example 5: Standard Error of the Sample Mean
+
 * When we discuss the dispersion of a sampling distribution, we often rely on a statistic called the *standard error* which is an estimate of the standard deviation of the sampling distribution.
 * We now consider the idea of a population parameter (population mean of x = 2.1) and a sample statistic (mean of x in a sample).
 * If we drew many thousands of samples and calculated the mean of x in each sample, we would have a sampling distribution of sample statistics -- in this case a sampling distribution of sample means.

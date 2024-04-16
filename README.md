@@ -2636,7 +2636,7 @@ mean(mx)
 <img src="/gfiles/mxhist.png" width="700px">
 </p>
 
-* Our next step is to see if this distribution is approximately normal (it's hard to tell just by looking at the distribution).
+* Our next step is to see if this distribution actually is approximately normal (it's hard to tell just by looking at the distribution).
 * To assess this issue, we need to measure the standard deviation of the sampling distribution:
 
 ```r
@@ -2673,7 +2673,7 @@ mx.int
 
 * We can use our z-table on page 533 to see that the area between the mean and 1 standard deviation above the mean of a normal distribution should be about 0.3413 or 34.1% of the curve.
 * Since the area between 2.097 and 2.513 is 0.3975 and the area between 0 and 1 on a standard normal z-table is 0.3413, we conclude that our sampling distribution is not normal.
-* We've determined the distribution is not normal. Is it symmetric?
+* We've determined the distribution is not normal. Is it symmetric? (*Note*: normality implies symmetry but symmetry does not imply normality).
 * We can check on how close to symmetric it is by calculating the percent of the distribution that is below the mean of the distribution:
 
 ```r

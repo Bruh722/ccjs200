@@ -3481,3 +3481,27 @@ trap
 </p>
 
 * An important point to keep in mind about confidence intervals: the bounds of a single-sample confidence interval *cannot* be interpreted as a probability interval. In other words, we *can't* make statements like the following: "there is a 95% chance that the true population $\hat{\theta}$ lies inside the interval." Instead, a XX% confidence interval is a *repeated sampling concept*: if we follow this procedure in many random samples, then XX% of the calculated intervals will contain the true population parameter value.
+
+#### Thinking About Final Grades in this Class
+
+* Here is some R code for you to use as you think about your CCJS 200 grade:
+
+```R
+# exam grades
+
+e1 <- 75
+e2 <- 84
+e3 <- 77
+
+# assignment grades
+
+a1 <- 91
+a2 <- 82
+a3 <- 85
+assgn.avg <- (a1+a2+a3)/3
+
+# two grade formulas
+
+0.20*e1+0.20*e2+0.20*e3+0.40*assgn.avg
+0.25*e1+0.25*e2+0.25*e3+0.25*assgn.avg
+```

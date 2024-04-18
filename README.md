@@ -2908,28 +2908,32 @@ x
 [1] 0.3109441
 >
 ```
-where x=0 means the person did not escalate and x=1 means the person did escalate. Notice that the mean of x is 0.311 which is our population value of θ.
+where x=0 means the person did not escalate and x=1 means the person did escalate. Notice that the mean of x is 0.311 which is our population value of θ. The estimate of $\theta$ in any given sample is called $\hat{\theta}$.
 
-* Now, suppose we take a new sample of 3 cases where each of the 3 people were arrested for new domestic violence within 5 years' time. What does the sampling distribution of θ look like if N = 3 and the population θ = 0.311?
+* Now, suppose we take a new sample of 3 cases where each of the 3 people were arrested for new domestic violence within 5 years' time. What does the sampling distribution of the sample values of $\hat{\theta}$ look like if N = 3 and the population θ = 0.311?
 
 ```R
 set.seed(1)
 
-mx = vector()
+x = c(rep(0,8525),rep(1,3847))
+table(x)
+mean(x)
+
+theta.hat = vector()
 se = vector()
 
 Ncases = 3
 
 for(i in 1:1000){
   xs = sample(x,size=Ncases,replace=T)
-  mx[i] = mean(xs)
+  theta.hat[i] = mean(xs)
   se[i] = sd(xs)/sqrt(Ncases)
   }
 
-mean(mx)
-sd(mx)
+mean(theta.hat)
+sd(theta.hat)
 mean(se)
-hist(mx)
+hist(theta.hat)
 ```
 
 * Here is our output:
@@ -2937,29 +2941,37 @@ hist(mx)
 ```Rout
 > set.seed(1)
 > 
-> mx = vector()
+> x = c(rep(0,8525),rep(1,3847))
+> table(x)
+x
+   0    1 
+8525 3847 
+> mean(x)
+[1] 0.3109441
+> 
+> theta.hat = vector()
 > se = vector()
 > 
 > Ncases = 3
 > 
 > for(i in 1:1000){
 +   xs = sample(x,size=Ncases,replace=T)
-+   mx[i] = mean(xs)
++   theta.hat[i] = mean(xs)
 +   se[i] = sd(xs)/sqrt(Ncases)
 +   }
 > 
-> mean(mx)
+> mean(theta.hat)
 [1] 0.308
-> sd(mx)
+> sd(theta.hat)
 [1] 0.2651743
 > mean(se)
 [1] 0.2143333
-> hist(mx)
+> hist(theta.hat)
 > 
 ```
 
 <p align="center">
-<img src="/gfiles/binomial-clt1.png" width="500px">
+<img src="/gfiles/theta-size3.png" width="500px">
 </p>
 
 * Now, let's increase our sample size to 30:
@@ -2967,21 +2979,25 @@ hist(mx)
 ```R
 set.seed(1)
 
-mx = vector()
+x = c(rep(0,8525),rep(1,3847))
+table(x)
+mean(x)
+
+theta.hat = vector()
 se = vector()
 
 Ncases = 30
 
 for(i in 1:1000){
   xs = sample(x,size=Ncases,replace=T)
-  mx[i] = mean(xs)
+  theta.hat[i] = mean(xs)
   se[i] = sd(xs)/sqrt(Ncases)
   }
 
-mean(mx)
-sd(mx)
+mean(theta.hat)
+sd(theta.hat)
 mean(se)
-hist(mx)
+hist(theta.hat)
 ```
 
 * Here is our output with N = 30 sample size:
@@ -2989,29 +3005,37 @@ hist(mx)
 ```Rout
 > set.seed(1)
 > 
-> mx = vector()
+> x = c(rep(0,8525),rep(1,3847))
+> table(x)
+x
+   0    1 
+8525 3847 
+> mean(x)
+[1] 0.3109441
+> 
+> theta.hat = vector()
 > se = vector()
 > 
 > Ncases = 30
 > 
 > for(i in 1:1000){
 +   xs = sample(x,size=Ncases,replace=T)
-+   mx[i] = mean(xs)
++   theta.hat[i] = mean(xs)
 +   se[i] = sd(xs)/sqrt(Ncases)
 +   }
 > 
-> mean(mx)
+> mean(theta.hat)
 [1] 0.3091
-> sd(mx)
+> sd(theta.hat)
 [1] 0.08292339
 > mean(se)
 [1] 0.08412959
-> hist(mx)
->
+> hist(theta.hat)
+> 
 ```
 
 <p align="center">
-<img src="/gfiles/binomial-clt2.png" width="500px">
+<img src="/gfiles/theta-size30.png" width="500px">
 </p>
 
 * Now, let's increase our sample size to 300:
@@ -3019,21 +3043,25 @@ hist(mx)
 ```R
 set.seed(1)
 
-mx = vector()
+x = c(rep(0,8525),rep(1,3847))
+table(x)
+mean(x)
+
+theta.hat = vector()
 se = vector()
 
 Ncases = 300
 
 for(i in 1:1000){
   xs = sample(x,size=Ncases,replace=T)
-  mx[i] = mean(xs)
+  theta.hat[i] = mean(xs)
   se[i] = sd(xs)/sqrt(Ncases)
   }
 
-mean(mx)
-sd(mx)
+mean(theta.hat)
+sd(theta.hat)
 mean(se)
-hist(mx)
+hist(theta.hat)
 ```
 
 * Here is our output:
@@ -3041,29 +3069,37 @@ hist(mx)
 ```Rout
 > set.seed(1)
 > 
-> mx = vector()
+> x = c(rep(0,8525),rep(1,3847))
+> table(x)
+x
+   0    1 
+8525 3847 
+> mean(x)
+[1] 0.3109441
+> 
+> theta.hat = vector()
 > se = vector()
 > 
 > Ncases = 300
 > 
 > for(i in 1:1000){
 +   xs = sample(x,size=Ncases,replace=T)
-+   mx[i] = mean(xs)
++   theta.hat[i] = mean(xs)
 +   se[i] = sd(xs)/sqrt(Ncases)
 +   }
 > 
-> mean(mx)
+> mean(theta.hat)
 [1] 0.311
-> sd(mx)
+> sd(theta.hat)
 [1] 0.02651316
 > mean(se)
 [1] 0.02671899
-> hist(mx)
->
+> hist(theta.hat)
+> 
 ```
 
 <p align="center">
-<img src="/gfiles/binomial-clt3.png" width="500px">
+<img src="/gfiles/theta-size300.png" width="500px">
 </p>
 
 * Notice from these examples how the sampling distribution grows more symmetric and "normal looking" as the sample size gets larger; also notice how our standard error formula is becoming more accurate as the sample size increases.

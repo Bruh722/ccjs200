@@ -3392,7 +3392,6 @@ trap
 <img src="/gfiles/stderr-theta.png" width="450px">
 </p>
 
-* In large samples this formula is equivalent to the $\frac{s}{\sqrt{N}}$ formula given earlier.
 * For our example, suppose we return to our domestic violence escalation problem from Example 1 above.
 
 ```R

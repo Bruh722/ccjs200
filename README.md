@@ -3024,7 +3024,8 @@ hist(mx)
 * We know the standard error of a mean is the standard deviation divided by the square root of the sample size; in arithmetic symbols, the formula is:
 
 <p align="center">
-<img src="/gfiles/binomial-clt3.png" width="500px">
+<img src="/gfiles/stderr-mean.png" width="500px">
 </p>
 
 * It turns out that a proportion estimate, $\hat{p}$, also has a standard error:
+

@@ -3019,8 +3019,9 @@ hist(mx)
 
 * Notice from these examples how the sampling distribution grows more symmetric and "normal looking" as the sample size gets larger; also notice how our standard error formula is becoming more accurate as the sample size increases.
 
-#### Example 2: Standard Error of a Proportion
+#### Example 2: Standard Error of a Mean and a Proportion
 
+* Remember from last time that a standard error is sample-based estimate of the standard deviation of the sampling distribution for a parameter estimate such as the sample mean or the sample proportion.
 * We know the standard error of a mean is the standard deviation divided by the square root of the sample size; in arithmetic symbols, the formula is:
 
 <p align="center">
@@ -3030,5 +3031,5 @@ hist(mx)
 * It turns out that a proportion estimate, $\hat{p}$, also has a standard error:
 
 <p align="center">
-<img src="/gfiles/stderr-phat.png" width="400px">
+<img src="/gfiles/stderr-phat.png" width="500px">
 </p>

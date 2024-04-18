@@ -3029,6 +3029,7 @@ hist(mx)
 </p>
 
 * See pages 182-185 (chapter 6) in the textbook for further discussion of this formula.
+* See pages 198-207 (chapter 7) for a related discussion (including confidence intervals discussed below).
 * We examine a set of prison sentence lengths (in years) for a population of people convicted of robbery:
 
 ```r

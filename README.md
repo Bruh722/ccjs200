@@ -3021,7 +3021,7 @@ hist(mx)
 
 #### Example 2: Standard Error of a Mean and a Proportion
 
-* Remember from last time that a standard error is sample-based estimate of the standard deviation of the sampling distribution for a parameter estimate such as the sample mean or the sample proportion.
+* Remember from last time that a *standard error* is a sample-based estimate of the standard deviation of the sampling distribution for a parameter estimate such as the sample mean (which we discussed last time) or the sample proportion (which we haven't discussed yet).
 * We know the standard error of a mean is the standard deviation divided by the square root of the sample size; in arithmetic symbols, the formula is:
 
 <p align="center">
@@ -3031,5 +3031,110 @@ hist(mx)
 * It turns out that a proportion estimate, $\hat{p}$, also has a standard error:
 
 <p align="center">
-<img src="/gfiles/stderr-phat.png" width="500px">
+<img src="/gfiles/stderr-phat.png" width="450px">
+</p>
+
+* We examine a set of prison sentence lengths (in years) for a population of people convicted of robbery:
+
+```r
+x = c(rep(0,9),rep(1,72),rep(2,215),rep(3,373),rep(4,451),
+  rep(5,358),rep(6,206),rep(7,70),rep(8,22),rep(9,6))
+table(x)
+mean(x)
+```
+
+* Here is the output:
+
+```rout
+> x = c(rep(0,9),rep(1,72),rep(2,215),rep(3,373),rep(4,451),
++   rep(5,358),rep(6,206),rep(7,70),rep(8,22),rep(9,6))
+> table(x)
+x
+  0   1   2   3   4   5   6   7   8   9 
+  9  72 215 373 451 358 206  70  22   6 
+> mean(x)
+[1] 4.02413
+>
+```
+
+* Now, we draw 1000's of samples (with replacement) from this population. Each sample is comprised of 300 people.
+
+```r
+set.seed(1)
+x = c(rep(0,9),rep(1,72),rep(2,215),rep(3,373),rep(4,451),
+  rep(5,358),rep(6,206),rep(7,70),rep(8,22),rep(9,6))
+mu = mean(x)
+mu
+n = 300
+
+xbar = vector()
+se.xbar = vector()
+
+for(i in 1:100000){
+  xs = sample(x,size=n,replace=T)
+  xbar[i] = mean(xs)
+  se.xbar[i] = sd(xs)/sqrt(n)
+  }
+
+mean(xbar)
+sd(xbar)
+mean(se.xbar[i])
+```
+
+* Here is our output:
+
+```Rout
+> set.seed(1)
+> x = c(rep(0,9),rep(1,72),rep(2,215),rep(3,373),rep(4,451),
++   rep(5,358),rep(6,206),rep(7,70),rep(8,22),rep(9,6))
+> mu = mean(x)
+> mu
+[1] 4.02413
+> n = 300
+> 
+> xbar = vector()
+> se.xbar = vector()
+> 
+> for(i in 1:100000){
++   xs = sample(x,size=n,replace=T)
++   xbar[i] = mean(xs)
++   se.xbar[i] = sd(xs)/sqrt(n)
++   }
+> 
+> mean(xbar)
+[1] 4.024376
+> sd(xbar)
+[1] 0.08996219
+> mean(se.xbar[i])
+[1] 0.08895445
+>
+```
+
+* Notice how the mean of the xbars (sample estimates of the mean) is virtually identical to the population mean, mu.
+* Notice how the average standard error of the sample mean is virtually identical to the standard deviation of the sampling distribution of sample means.
+* This is a demonstration that: (1) the sample mean is an *unbiased estimator* of the population mean, mu; and (2) the standard error formula is, on average, converging on the actual standard deviation of the sampling distribution.
+* With these results in hand, it is useful to identify the 2.5th and 97.5th percentiles of the sampling distribution. These numbers tell us the interval that contains the central 95% of the sampling distribution:
+
+```R
+quantile(xbar,0.025)
+quantile(xbar,0.975)
+```
+
+and the output is:
+
+```rout
+> quantile(xbar,0.025)
+    2.5% 
+3.846667 
+> quantile(xbar,0.975)
+97.5% 
+  4.2 
+>
+```
+
+* So, the interval that contains the central 95% of the sampling distribution is [3.847,4.200].
+* It is also useful to look at the sampling distribution:
+
+<p align="center">
+<img src="/gfiles/xbar-hist.png" width="500px">
 </p>

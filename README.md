@@ -2842,7 +2842,7 @@ sd(xs)/sqrt(N)
 * Suppose we study domestic violence escalation patterns for a sample of people in the local domestic violence court; note that all of the people we studied were being prosecuted for domestic violence for the first time. Among the subsample of those who are arrested for a new incident of domestic violence within the next 5 years, we find that about 31% of them escalated the severity of their violence (so the binomial probability parameter is θ = 0.311). Here is the population data set (N = 12,372):
 
 ```R
-x = c(rep(0,8525),rep(1,3847)
+x = c(rep(0,8525),rep(1,3847))
 table(x)
 mean(x)
 ```
@@ -3295,9 +3295,57 @@ trap
 ```
 
 * Notice how the confidence interval includes (traps) the true population parameter value about 94.9% of the time which is very close to 95%; we could make it even closer by drawing more than 100,000 repeated samples.
-* It turns out that a proportion estimate, $\hat{p}$, also has a standard error:
+* Confidence intervals can be (and quite often are) set for different confidence levels.
+* We will illustrate that with our next example.
+
+#### Example 5: Confidence Interval for a Proportion
+
+* It turns out that a proportion estimate, $\hat{p}$, also has a standard error (which makes sense since it is reasonable to think about a sampling distribution of sample proportions):
 
 <p align="center">
 <img src="/gfiles/stderr-phat.png" width="450px">
 </p>
 
+* For our example, suppose we return to our domestic violence escalation problem from Example 1 above.
+
+```R
+x = c(rep(0,8525),rep(1,3847))
+table(x)
+mean(x)
+```
+
+* Here is our output:
+
+```rout
+> x = c(rep(0,8525),rep(1,3847))
+> table(x)
+x
+   0    1 
+8525 3847 
+> mean(x)
+[1] 0.3109441
+>
+```
+where x=0 means the person did not escalate and x=1 means the person did escalate. Notice that the mean of x is 0.311 which is our population value of the proportion θ.
+
+* Now, let's consider what happens when we draw a single sample of 300 cases from our population (with replacement). We calculate our sample estimate of $\hat{\theta}$ as the mean of the 0's and 1's in our sample:
+
+```R
+set.seed(2)
+xs = sample(x,size=300,replace=T)
+theta.hat = mean(xs)
+theta.hat
+```
+
+and the output of this code is:
+
+```Rout
+> set.seed(2)
+> xs = sample(x,size=300,replace=T)
+> theta.hat = mean(xs)
+> theta.hat
+[1] 0.31
+>
+```
+
+* So, in this particular sample of size 300, our estimate of $\hat{\theta} = 0.31$ is very close to the population value of $\theta$ which is 0.311.

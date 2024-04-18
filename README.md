@@ -3072,7 +3072,7 @@ for(i in 1:100000){
 
 mean(xbar)
 sd(xbar)
-mean(se.xbar[i])
+mean(se.xbar)
 ```
 
 * Here is our output:
@@ -3099,9 +3099,9 @@ mean(se.xbar[i])
 [1] 4.024376
 > sd(xbar)
 [1] 0.08996219
-> mean(se.xbar[i])
-[1] 0.08895445
->
+> mean(se.xbar)
+[1] 0.09000293
+> 
 ```
 
 * Notice how the mean of the xbars (sample estimates of the mean) is virtually identical to the population mean, mu.
@@ -3243,7 +3243,7 @@ for(i in 1:100000){
 
 mean(xbar)
 sd(xbar)
-mean(se.xbar[i])
+mean(se.xbar)
 trap = ifelse(lcl<4.024 & ucl>4.024,"hit","miss")
 
 # notice we divide the table by i because i represents the number of
@@ -3280,13 +3280,13 @@ which gives us the following output:
 [1] 4.024376
 > sd(xbar)
 [1] 0.08996219
-> mean(se.xbar[i])
-[1] 0.08895445
+> mean(se.xbar)
+[1] 0.09000293
 > trap = ifelse(lcl<4.024 & ucl>4.024,"hit","miss")
->
+> 
 > # notice we divide the table by i because i represents the number of
 > # repeated samples we drew after the loop has finished running
->
+> 
 > table(trap)/i
 trap
     hit    miss 
@@ -3349,3 +3349,127 @@ and the output of this code is:
 ```
 
 * So, in this particular sample of size 300, our estimate of $\hat{\theta} = 0.31$ is very close to the population value of $\theta$ which is 0.311.
+* Now, we calculate the standard error of $\hat{\theta}$ within our single sample using the formula above:
+
+```R
+n = 300
+se.theta = sqrt(theta.hat*(1-theta.hat)/n)
+se.theta
+```
+
+and the results are:
+
+```Rout
+> n = 300
+> se.theta = sqrt(theta.hat*(1-theta.hat)/n)
+> se.theta
+[1] 0.02670206
+>
+```
+
+* Now, because we *believe* the central limit theorem assures that our sampling distribution of $\hat{\theta}$ is approximately normal, we can use the z-table on page 533 and the estimates we've already obtained ($\hat{theta}$ and the standard error of $\hat{\theta}$) to calculate a 95% confidence interval based on the information in our single sample.
+* Here is the R code:
+
+```R
+lcl95 = theta.hat-1.96*se.theta
+lcl95
+ucl95 = theta.hat+1.96*se.theta
+ucl95
+```
+
+* and, here are the results:
+  
+```Rout
+> lcl95 = theta.hat-1.96*se.theta
+> lcl95
+[1] 0.257664
+> ucl95 = theta.hat+1.96*se.theta
+> ucl95
+[1] 0.362336
+> 
+```
+
+* So, this indicates that our single-sample based 95% confidence interval is [0.258,0.362].
+* Now, to verify that this worked, we can construct (an approximation to) the sampling distribution.
+
+```R
+set.seed(2)
+x = c(rep(0,8525),rep(1,3847))
+table(x)
+mean(x)
+n = 300
+
+theta.hat = vector()
+se.theta = vector()
+
+for(i in 1:100000){
+  xs = sample(x,size=n,replace=T)
+  theta.hat[i] = mean(xs)
+  se.theta[i] = sqrt(theta.hat[i]*(1-theta.hat[i])/n)
+  }
+
+mean(theta.hat)
+sd(theta.hat)
+mean(se.theta)
+quantile(theta.hat,0.025)
+quantile(theta.hat,0.975)
+lcl = theta.hat-(1.96*se.theta)
+ucl = theta.hat+(1.96*se.theta)
+trap = ifelse(lcl<0.311 & ucl>0.311,"hit","miss")
+
+# notice we divide the table by i because i represents the number of
+# repeated samples we drew after the loop has finished running
+
+table(trap)/i
+```
+
+and the results are:
+
+```Rout
+> set.seed(2)
+> x = c(rep(0,8525),rep(1,3847))
+> table(x)
+x
+   0    1 
+8525 3847 
+> mean(x)
+[1] 0.3109441
+> n = 300
+> 
+> theta.hat = vector()
+> se.theta = vector()
+> 
+> for(i in 1:100000){
++   xs = sample(x,size=n,replace=T)
++   theta.hat[i] = mean(xs)
++   se.theta[i] = sqrt(theta.hat[i]*(1-theta.hat[i])/n)
++   }
+> 
+> mean(theta.hat)
+[1] 0.3111189
+> sd(theta.hat)
+[1] 0.02676007
+> mean(se.theta)
+[1] 0.02667624
+> quantile(theta.hat,0.025)
+2.5% 
+0.26 
+> quantile(theta.hat,0.975)
+    97.5% 
+0.3633333 
+> lcl = theta.hat-(1.96*se.theta)
+> ucl = theta.hat+(1.96*se.theta)
+> trap = ifelse(lcl<0.311 & ucl>0.311,"hit","miss")
+> # notice we divide the table by i because i represents the number of
+> # repeated samples we drew after the loop has finished running
+> 
+> table(trap)/i
+trap
+   hit   miss 
+0.9455 0.0545 
+>
+```
+
+* Recall that the confidence interval we calculated from our single sample was  [0.258,0.362]. Here we see that the 2.5th and 97.5th percentiles of the sampling distribution were [0.260,0.363] which is quite close to the confidence interval from the single sample.
+* We also see that our 95% confidence interval traps the true population parameter value of 0.311 in about 94.6% of the samples we drew. Again, we could get this number closer to 95% by increasing the number of samples drawn.
+* This is strong evidence that even though we are working with proportion data, the sampling distribution of the sample proportion, $\hat{\theta}$ is approximately normal (central limit theorem).

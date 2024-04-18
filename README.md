@@ -3367,7 +3367,7 @@ and the results are:
 >
 ```
 
-* Now, because we *believe* the central limit theorem assures that our sampling distribution of $\hat{\theta}$ is approximately normal, we can use the z-table on page 533 and the estimates we've already obtained ($\hat{theta}$ and the standard error of $\hat{\theta}$) to calculate a 95% confidence interval based on the information in our single sample.
+* Now, because we *believe* the central limit theorem assures that our sampling distribution of $\hat{\theta}$ is approximately normal, we can use the z-table on page 533 and the estimates we've already obtained ($\hat{\theta}$ and the standard error of $\hat{\theta}$) to calculate a 95% confidence interval based on the information in our single sample.
 * Here is the R code:
 
 ```R

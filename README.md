@@ -3106,8 +3106,8 @@ x
 
 #### Example 2: Sampling Distribution and the Central Limit Theorem
 
-* Remember from last time that a *standard error* is a sample-based estimate of the standard deviation of the sampling distribution for a parameter estimate such as the sample mean (which we discussed last time) or the sample proportion (which we haven't discussed yet).
-* We know the standard error of a mean is the standard deviation divided by the square root of the sample size; in arithmetic symbols, the formula is:
+* Remember from last time that a *standard error* is a sample-based estimate of the standard deviation of the sampling distribution for a parameter estimate.
+* We know the standard error of a sample mean is the standard deviation divided by the square root of the sample size; in arithmetic symbols, the formula is:
 
 <p align="center">
 <img src="/gfiles/stderr-mean.png" width="400px">
@@ -3392,6 +3392,7 @@ trap
 <img src="/gfiles/stderr-theta.png" width="450px">
 </p>
 
+* It turns out that in large samples this formula is equivalent to the $\frac{s}{\sqrt{N}}$ formula given earlier.
 * For our example, suppose we return to our domestic violence escalation problem from Example 1 above.
 
 ```R

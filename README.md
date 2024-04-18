@@ -2844,16 +2844,16 @@ sd(xs)/sqrt(N)
 ```R
 # exam grades
 
-e1 <- 75
-e2 <- 84
-e3 <- 77
+e1 = 75
+e2 = 84
+e3 = 77
 
 # assignment grades
 
-a1 <- 91
-a2 <- 82
-a3 <- 85
-assgn.avg <- (a1+a2+a3)/3
+a1 = 91
+a2 = 82
+a3 = 85
+assgn.avg = (a1+a2+a3)/3
 
 # two grade formulas (we will use the higher of the 2 grades)
 
@@ -2866,24 +2866,24 @@ assgn.avg <- (a1+a2+a3)/3
 ```Rout
 > # exam grades
 > 
-> e1 <- 75
-> e2 <- 84
-> e3 <- 77
+> e1 = 75
+> e2 = 84
+> e3 = 77
 > 
 > # assignment grades
 > 
-> a1 <- 91
-> a2 <- 82
-> a3 <- 85
-> assgn.avg <- (a1+a2+a3)/3
+> a1 = 91
+> a2 = 82
+> a3 = 85
+> assgn.avg = (a1+a2+a3)/3
 > 
-> # two grade formulas
+> # two grade formulas (we will use the higher of the 2 grades)
 > 
 > 0.20*e1+0.20*e2+0.20*e3+0.40*assgn.avg
 [1] 81.6
 > 0.25*e1+0.25*e2+0.25*e3+0.25*assgn.avg
 [1] 80.5
->
+> 
 ```
 
 #### Example 1: Binomial Application of the Central Limit Theorem

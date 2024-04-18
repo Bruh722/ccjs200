@@ -3392,7 +3392,7 @@ trap
 <img src="/gfiles/stderr-theta.png" width="450px">
 </p>
 
-* It turns out that in large samples this formula is equivalent to the $\frac{s}{\sqrt{N}}$ formula given earlier.
+* In large samples this formula is equivalent to the $\frac{s}{\sqrt{N}}$ formula given earlier.
 * For our example, suppose we return to our domestic violence escalation problem from Example 1 above.
 
 ```R
@@ -3440,18 +3440,35 @@ and the output of this code is:
 
 ```R
 n = 300
-se.theta = sqrt(theta.hat*(1-theta.hat)/n)
-se.theta
+se.theta1 = sqrt(theta.hat*(1-theta.hat)/n)
+se.theta1
+se.theta2 = sd(xs)/sqrt(n)
+se.theta2
 ```
 
 and the results are:
 
 ```Rout
+> x = c(rep(0,8525),rep(1,3847))
+> table(x)
+x
+   0    1 
+8525 3847 
+> mean(x)
+[1] 0.3109441
+> set.seed(2)
+> xs = sample(x,size=300,replace=T)
+> theta.hat = mean(xs)
+> theta.hat
+[1] 0.31
 > n = 300
-> se.theta = sqrt(theta.hat*(1-theta.hat)/n)
-> se.theta
+> se.theta1 = sqrt(theta.hat*(1-theta.hat)/n)
+> se.theta1
 [1] 0.02670206
->
+> se.theta2 = sd(xs)/sqrt(n)
+> se.theta2
+[1] 0.02674667
+> 
 ```
 
 * Now, because we *believe* the central limit theorem assures that our sampling distribution of $\hat{\theta}$ is approximately normal, we can use the z-table on page 533 and the estimates we've already obtained ($\hat{\theta}$ and the standard error of $\hat{\theta}$) to calculate a 95% confidence interval based on the information in our single sample.

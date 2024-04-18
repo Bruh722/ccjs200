@@ -3472,7 +3472,10 @@ trap
 * Recall that the confidence interval we calculated from our single sample was  [0.258,0.362]. Here we see that the 2.5th and 97.5th percentiles of the sampling distribution were [0.260,0.363] which is quite close to the confidence interval from the single sample.
 * We also see that our 95% confidence interval traps the true population parameter value of 0.311 in about 94.6% of the samples we drew. Again, we could get this number closer to 95% by increasing the number of samples drawn.
 * This is strong evidence that even though we are working with proportion data, the sampling distribution of the sample proportion, $\hat{\theta}$ is approximately normal (central limit theorem).
+* Here is a histogram showing the (approximate) sampling distribution of $\hat{\theta}$:
 
 <p align="center">
 <img src="/gfiles/phat-plot.png" width="500px">
 </p>
+
+* An important point to keep in mind about confidence intervals: the bounds of a single-sample confidence interval *cannot* be interpreted as a probability interval. In other words, we *can't* make statements like the following: "there is a 95% chance that the true population $\hat{\theta}$ lies inside the interval." Instead, a XX% confidence interval is a *repeated sampling concept*: if we follow this procedure in many random samples, then XX% of the calculated intervals will contain the true population parameter value.

@@ -3019,19 +3019,13 @@ hist(mx)
 
 * Notice from these examples how the sampling distribution grows more symmetric and "normal looking" as the sample size gets larger; also notice how our standard error formula is becoming more accurate as the sample size increases.
 
-#### Example 2: Standard Error of a Mean and a Proportion
+#### Example 2: Sampling Distribution and the Central Limit Theorem
 
 * Remember from last time that a *standard error* is a sample-based estimate of the standard deviation of the sampling distribution for a parameter estimate such as the sample mean (which we discussed last time) or the sample proportion (which we haven't discussed yet).
 * We know the standard error of a mean is the standard deviation divided by the square root of the sample size; in arithmetic symbols, the formula is:
 
 <p align="center">
 <img src="/gfiles/stderr-mean.png" width="400px">
-</p>
-
-* It turns out that a proportion estimate, $\hat{p}$, also has a standard error:
-
-<p align="center">
-<img src="/gfiles/stderr-phat.png" width="450px">
 </p>
 
 * We examine a set of prison sentence lengths (in years) for a population of people convicted of robbery:
@@ -3131,10 +3125,179 @@ and the output is:
   4.2 
 >
 ```
-
 * So, the interval that contains the central 95% of the sampling distribution is [3.847,4.200].
 * It is also useful to look at the sampling distribution:
 
 <p align="center">
 <img src="/gfiles/xbar-hist.png" width="500px">
 </p>
+
+* Now, if the sampling distribution is (or is approaching) a normal distribution, we could use the z-table on page 533 to get this same information. Let's see if it works.
+* The mean of the sampling distribution is 4.024 and the standard deviation is 0.090.
+* We can calculate the z-score for the 97.5th percentile of our sampling distribution which corresponds to (4.200-4.024)/0.090 = 1.956 (which rounds to 1.96; remember the z-scores in the table on page 533 only go out to decimal places).
+* We can look up this z-score in our table on page 533.
+* The area between 0 and 1.96 in our z-table is 0.4750. If we add that number to 0.5 (since half the standard normal distribution is below the value of zero) we get 0.975.
+* We can calculate the z-score for the 2.5th percentile of our sampling distribution which corresponds to (3.847-4.024)/0.090 = -1.967.
+* The area between 0 and 1.97 in our z-table is 0.4756. If we subtract that number from 0.5 (since half the standard normal distribution is below the value of zero we get 0.0244 which is slightly smaller than the 2.5th percentile (but still quite close).
+* This is strong evidence that the sampling distribution of the sample means is approximately normal.
+* Since the original data (robbery prison sentences) was definitely not normal, this is an example of the central limit theorem in action.
+
+#### Example 3: The Standard Error of the Mean for a Single Sample
+
+* We now return to the population robbery prison sentence data and this time we will draw only a single sample of size 300:
+
+```R
+set.seed(1)
+x = c(rep(0,9),rep(1,72),rep(2,215),rep(3,373),rep(4,451),
+  rep(5,358),rep(6,206),rep(7,70),rep(8,22),rep(9,6))
+mu = mean(x)
+mu
+n = 300
+xs = sample(x,size=n,replace=T)
+xbar = mean(xs)
+xbar
+se.xbar = sd(xs)/sqrt(n)
+se.xbar
+```
+
+* and we obtain the following results:
+
+```rout
+> set.seed(1)
+> x = c(rep(0,9),rep(1,72),rep(2,215),rep(3,373),rep(4,451),
++   rep(5,358),rep(6,206),rep(7,70),rep(8,22),rep(9,6))
+> mu = mean(x)
+> mu
+[1] 4.02413
+> n = 300
+> xs = sample(x,size=n,replace=T)
+> xbar = mean(xs)
+> xbar
+[1] 4
+> se.xbar = sd(xs)/sqrt(n)
+> se.xbar
+[1] 0.08681147
+>
+```
+
+* Compare the results we got from our single sample to the population mean and the information we got from the sampling distribution we calculated in Example 2.
+* Note that the population mean is 4.024 while the mean for our single sample is 4. The standard deviation of the sampling distribution was 0.090 while the standard error we estimated in our single sample was 0.087. Not bad!
+* From example 2 above (and the z-table on page 533), we know that a z-score of 1.96 corresponds to the 0.5+0.4750 = 0.975 or 97.5th percentile of the standard normal distribution while a z-score of -1.96 corresponds to the 0.5-0.4750 = 0.025 or 2.5th percentile of the standard  normal distribution.
+* We can use the information in our single sample, then, to estimate the 2.5th and 97.5th percentiles of our sampling distribution, provided we believe that our sampling distribution is approximately normal (which we do based on Example 2).
+* Here is the R code for the 2.5th percentile:
+
+```R
+4-(1.96*0.087)
+```
+
+which gives us:
+
+```Rout
+> 4-(1.96*0.087)
+[1] 3.82948
+>
+```
+* Here is the R code for the 97.5th percentile:
+
+```R
+4+(1.96*0.087)
+```
+
+which leads to the estimate of:
+
+```Rout
+> 4+(1.96*0.087)
+[1] 4.17052
+>
+```
+
+* So, the 2.5th percentile (in our single sample) is estimated to be 3.829 (compared to the actual 2.5th percentile from the sampling distribution which was 3.847) and the 97.5th percentile (in our single sample) is estimated to be 4.171 (compared to the actual 97.5th percentile from the sampling distribution which was 4.2).
+* The two numbers we have just calculated -- 3.829 and 4.171 -- are called lower and upper 95% confidence limits. The two numbers together form the lower and upper bounds of the 95% confidence interval.
+* The interpretation of a valid 95% confidence interval is as follows: if we draw many random samples from a population *and* we calculate a valid 95% confidence interval for each sample, *then* 95% of the confidence intervals will include or "trap" the true value of the population parameter (in this case, 4.024).
+
+#### Example 4: Confidence Interval
+
+* We now illustrate that the confidence interval procedure described above actually does what it is supposed to do.
+* Here is the R code to read the data and perform repeated sampling:
+
+```R
+set.seed(1)
+x = c(rep(0,9),rep(1,72),rep(2,215),rep(3,373),rep(4,451),
+  rep(5,358),rep(6,206),rep(7,70),rep(8,22),rep(9,6))
+mu = mean(x)
+mu
+n = 300
+
+xbar = vector()
+se.xbar = vector()
+lcl = vector()
+ucl = vector()
+
+for(i in 1:100000){
+  xs = sample(x,size=n,replace=T)
+  xbar[i] = mean(xs)
+  se.xbar[i] = sd(xs)/sqrt(n)
+  lcl[i] = xbar[i]-1.96*se.xbar[i]
+  ucl[i] = xbar[i]+1.96*se.xbar[i]
+  }
+
+mean(xbar)
+sd(xbar)
+mean(se.xbar[i])
+trap = ifelse(lcl<4.024 & ucl>4.024,"hit","miss")
+
+# notice we divide the table by i because i represents the number of
+# repeated samples we drew after the loop has finished running
+
+table(trap)/i
+```
+
+which gives us the following output:
+
+```Rout
+> set.seed(1)
+> x = c(rep(0,9),rep(1,72),rep(2,215),rep(3,373),rep(4,451),
++   rep(5,358),rep(6,206),rep(7,70),rep(8,22),rep(9,6))
+> mu = mean(x)
+> mu
+[1] 4.02413
+> n = 300
+> 
+> xbar = vector()
+> se.xbar = vector()
+> lcl = vector()
+> ucl = vector()
+> 
+> for(i in 1:100000){
++   xs = sample(x,size=n,replace=T)
++   xbar[i] = mean(xs)
++   se.xbar[i] = sd(xs)/sqrt(n)
++   lcl[i] = xbar[i]-1.96*se.xbar[i]
++   ucl[i] = xbar[i]+1.96*se.xbar[i]
++   }
+> 
+> mean(xbar)
+[1] 4.024376
+> sd(xbar)
+[1] 0.08996219
+> mean(se.xbar[i])
+[1] 0.08895445
+> trap = ifelse(lcl<4.024 & ucl>4.024,"hit","miss")
+>
+> # notice we divide the table by i because i represents the number of
+> # repeated samples we drew after the loop has finished running
+>
+> table(trap)/i
+trap
+    hit    miss 
+0.94935 0.05065 
+>
+```
+
+* Notice how the confidence interval includes (traps) the true population parameter value about 94.9% of the time which is very close to 95%; we could make it even closer by drawing more than 100,000 repeated samples.
+* It turns out that a proportion estimate, $\hat{p}$, also has a standard error:
+
+<p align="center">
+<img src="/gfiles/stderr-phat.png" width="450px">
+</p>
+

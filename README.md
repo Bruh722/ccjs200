@@ -2832,9 +2832,14 @@ sd(xs)/sqrt(N)
 * Remember a scientist is expected to produce an estimate and a measure of uncertainty to accompany the estimate.
 * For our example, the estimate is the sample mean; the measure of uncertainty to accompany the estimate is the standard error of the mean.
 
-#### Example 6: Binomial Application of the Central Limit Theorem
+### Lesson 21 - Thursday 4/18/24
 
-* Suppose we study domestic violence escalation patterns for a sample of people in the local domestic violence court; note that all of the people we studied were being prosecuted for domestic violence for the first time. Among the subsample of those who are arrested for a new incident of domestic violence within the next 5 years, we find that about 32% of them escalated the severity of their violence (so the binomial probability parameter is θ = 0.311). Here is the population data set (N = 12,372):
+* We consider another example application of the central limit theorem.
+* Then, we turn to the topic of confidence intervals
+
+#### Example 1: Binomial Application of the Central Limit Theorem
+
+* Suppose we study domestic violence escalation patterns for a sample of people in the local domestic violence court; note that all of the people we studied were being prosecuted for domestic violence for the first time. Among the subsample of those who are arrested for a new incident of domestic violence within the next 5 years, we find that about 31% of them escalated the severity of their violence (so the binomial probability parameter is θ = 0.311). Here is the population data set (N = 12,372):
 
 ```R
 x = c(rep(0,8525),rep(1,3847)
@@ -3012,4 +3017,14 @@ hist(mx)
 <img src="/gfiles/binomial-clt3.png" width="500px">
 </p>
 
-* Notice from these examples how the sampling distribution grows more symmetric and normal looking as the sample size gets larger; also notice how our standard error formula is becoming more accurate as the sample size increases.
+* Notice from these examples how the sampling distribution grows more symmetric and "normal looking" as the sample size gets larger; also notice how our standard error formula is becoming more accurate as the sample size increases.
+
+#### Example 2: Standard Error of a Proportion
+
+* We know the standard error of a mean is the standard deviation divided by the square root of the sample size; in arithmetic symbols, the formula is:
+
+<p align="center">
+<img src="/gfiles/binomial-clt3.png" width="500px">
+</p>
+
+* It turns out that a proportion estimate, $\hat{p}$, also has a standard error:

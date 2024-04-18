@@ -3296,14 +3296,13 @@ trap
 
 * Notice how the confidence interval includes (traps) the true population parameter value about 94.9% of the time which is very close to 95%; we could make it even closer by drawing more than 100,000 repeated samples.
 * Confidence intervals can be (and quite often are) set for different confidence levels.
-* We will illustrate that with our next example.
 
 #### Example 5: Confidence Interval for a Proportion
 
-* It turns out that a proportion estimate, $\hat{p}$, also has a standard error (which makes sense since it is reasonable to think about a sampling distribution of sample proportions):
+* It turns out that a proportion estimate, $\hat{\theta}$, also has a standard error (which makes sense since it is reasonable to think about a sampling distribution of sample proportions). The formula is:
 
 <p align="center">
-<img src="/gfiles/stderr-phat.png" width="450px">
+<img src="/gfiles/stderr-theta.png" width="450px">
 </p>
 
 * For our example, suppose we return to our domestic violence escalation problem from Example 1 above.
@@ -3473,3 +3472,7 @@ trap
 * Recall that the confidence interval we calculated from our single sample was  [0.258,0.362]. Here we see that the 2.5th and 97.5th percentiles of the sampling distribution were [0.260,0.363] which is quite close to the confidence interval from the single sample.
 * We also see that our 95% confidence interval traps the true population parameter value of 0.311 in about 94.6% of the samples we drew. Again, we could get this number closer to 95% by increasing the number of samples drawn.
 * This is strong evidence that even though we are working with proportion data, the sampling distribution of the sample proportion, $\hat{\theta}$ is approximately normal (central limit theorem).
+
+<p align="center">
+<img src="/gfiles/phat-plot.png" width="500px">
+</p>

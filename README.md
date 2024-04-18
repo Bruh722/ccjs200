@@ -3028,6 +3028,7 @@ hist(mx)
 <img src="/gfiles/stderr-mean.png" width="400px">
 </p>
 
+* See pages 182-185 (chapter 6) in the textbook for further discussion of this formula.
 * We examine a set of prison sentence lengths (in years) for a population of people convicted of robbery:
 
 ```r
@@ -3325,7 +3326,7 @@ x
 [1] 0.3109441
 >
 ```
-where x=0 means the person did not escalate and x=1 means the person did escalate. Notice that the mean of x is 0.311 which is our population value of the proportion θ.
+where x=0 means the person did not escalate and x=1 means the person did escalate. Notice that the mean of x is 0.311 which is our population value of the proportion θ. One way to think about this mean value is to say that if we draw someone at random from this population there is a 31.1% chance that the person we draw is someone who escalated.
 
 * Now, let's consider what happens when we draw a single sample of 300 cases from our population (with replacement). We calculate our sample estimate of $\hat{\theta}$ as the mean of the 0's and 1's in our sample:
 

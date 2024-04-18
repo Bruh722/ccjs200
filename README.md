@@ -2459,55 +2459,6 @@ between 0 and 1.5             other
 * Reminder: Assignment #3 will be distributed on Friday 4/19 and will be due at the end of the day (11:59pm) on Friday 4/26.
 * Today, we consider normal distributions, sampling distributions, and the central limit theorem.
 
-#### Thinking About Final Grades in this Class
-
-* Here is some R code for you to use as you think about your CCJS 200 grade:
-
-```R
-# exam grades
-
-e1 <- 75
-e2 <- 84
-e3 <- 77
-
-# assignment grades
-
-a1 <- 91
-a2 <- 82
-a3 <- 85
-assgn.avg <- (a1+a2+a3)/3
-
-# two grade formulas (we will use the higher of the 2 grades)
-
-0.20*e1+0.20*e2+0.20*e3+0.40*assgn.avg
-0.25*e1+0.25*e2+0.25*e3+0.25*assgn.avg
-```
-
-* Here is the output for our example student:
-
-```Rout
-> # exam grades
-> 
-> e1 <- 75
-> e2 <- 84
-> e3 <- 77
-> 
-> # assignment grades
-> 
-> a1 <- 91
-> a2 <- 82
-> a3 <- 85
-> assgn.avg <- (a1+a2+a3)/3
-> 
-> # two grade formulas
-> 
-> 0.20*e1+0.20*e2+0.20*e3+0.40*assgn.avg
-[1] 81.6
-> 0.25*e1+0.25*e2+0.25*e3+0.25*assgn.avg
-[1] 80.5
->
-```
-
 #### Example 1: waiting time between verdict and sentencing.
 
 ```r
@@ -2885,6 +2836,55 @@ sd(xs)/sqrt(N)
 
 * We consider another example application of the central limit theorem.
 * Then, we turn to the topic of confidence intervals
+
+#### Thinking About Final Grades in this Class
+
+* Here is some R code for you to use as you think about your CCJS 200 grade:
+
+```R
+# exam grades
+
+e1 <- 75
+e2 <- 84
+e3 <- 77
+
+# assignment grades
+
+a1 <- 91
+a2 <- 82
+a3 <- 85
+assgn.avg <- (a1+a2+a3)/3
+
+# two grade formulas (we will use the higher of the 2 grades)
+
+0.20*e1+0.20*e2+0.20*e3+0.40*assgn.avg
+0.25*e1+0.25*e2+0.25*e3+0.25*assgn.avg
+```
+
+* Here is the output for our example student:
+
+```Rout
+> # exam grades
+> 
+> e1 <- 75
+> e2 <- 84
+> e3 <- 77
+> 
+> # assignment grades
+> 
+> a1 <- 91
+> a2 <- 82
+> a3 <- 85
+> assgn.avg <- (a1+a2+a3)/3
+> 
+> # two grade formulas
+> 
+> 0.20*e1+0.20*e2+0.20*e3+0.40*assgn.avg
+[1] 81.6
+> 0.25*e1+0.25*e2+0.25*e3+0.25*assgn.avg
+[1] 80.5
+>
+```
 
 #### Example 1: Binomial Application of the Central Limit Theorem
 

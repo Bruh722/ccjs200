@@ -3504,11 +3504,15 @@ n = 300
 
 theta.hat = vector()
 se.theta = vector()
+lcl = vector()
+ucl = vector()
 
 for(i in 1:100000){
   xs = sample(x,size=n,replace=T)
   theta.hat[i] = mean(xs)
   se.theta[i] = sqrt(theta.hat[i]*(1-theta.hat[i])/n)
+  lcl[i] = theta.hat[i]-(1.96*se.theta[i])
+  ucl[i] = theta.hat[i]+(1.96*se.theta[i])
   }
 
 mean(theta.hat)
@@ -3516,8 +3520,6 @@ sd(theta.hat)
 mean(se.theta)
 quantile(theta.hat,0.025)
 quantile(theta.hat,0.975)
-lcl = theta.hat-(1.96*se.theta)
-ucl = theta.hat+(1.96*se.theta)
 trap = ifelse(lcl<0.311 & ucl>0.311,"hit","miss")
 
 # notice we divide the table by i because i represents the number of
@@ -3541,11 +3543,15 @@ x
 > 
 > theta.hat = vector()
 > se.theta = vector()
+> lcl = vector()
+> ucl = vector()
 > 
 > for(i in 1:100000){
 +   xs = sample(x,size=n,replace=T)
 +   theta.hat[i] = mean(xs)
 +   se.theta[i] = sqrt(theta.hat[i]*(1-theta.hat[i])/n)
++   lcl[i] = theta.hat[i]-(1.96*se.theta[i])
++   ucl[i] = theta.hat[i]+(1.96*se.theta[i])
 +   }
 > 
 > mean(theta.hat)
@@ -3560,17 +3566,12 @@ x
 > quantile(theta.hat,0.975)
     97.5% 
 0.3633333 
-> lcl = theta.hat-(1.96*se.theta)
-> ucl = theta.hat+(1.96*se.theta)
 > trap = ifelse(lcl<0.311 & ucl>0.311,"hit","miss")
-> # notice we divide the table by i because i represents the number of
-> # repeated samples we drew after the loop has finished running
-> 
 > table(trap)/i
 trap
    hit   miss 
 0.9455 0.0545 
->
+> 
 ```
 
 * Recall that the confidence interval we calculated from our single sample was  [0.258,0.362]. Here we see that the 2.5th and 97.5th percentiles of the sampling distribution were [0.260,0.363] which is quite close to the confidence interval from the single sample.

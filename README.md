@@ -3584,3 +3584,55 @@ trap
 </p>
 
 * An important point to keep in mind about confidence intervals: the bounds of a single-sample confidence interval *cannot* be interpreted as a probability interval. In other words, we *can't* make statements like the following: "there is a 95% chance that the true population $\hat{\theta}$ lies inside the interval." Instead, a XX% confidence interval is a *repeated sampling concept*: if we follow this procedure in many random samples, then XX% of the calculated intervals will contain the true population parameter value.
+
+### Assignment #3 - Due 11:59pm Friday 4/26/24
+
+* Instructions: You are allowed to discuss your work with other students and the TA's but the work you submit should be your own work. If you have a question you want to submit in writing, we ask that you post it to the discussion board rather than email. If you do not want to be identified as a questioner by the rest of the class, you may send your question to one of us and we will respond (during business hours). Please note that all questions and answers that we judge to be of interest to the entire class will also be posted on the discussion board. This assignment will be due in pdf format on ELMS by 11:59pm on Friday April 26, 2024.
+
+* Dataset #1: We have homicide clearance rates for 15 cities at two time points. The data reveal that 4 of the cities experienced an increase in the clearance rate while the other 11 declined. Using R for your calculations, please perform the following tasks:
+
+1. Calculate the probability distribution for the number of cities experiencing an increase if the probability of an increase for each city is 0.5 (10pts).
+2. Identify the critical region for a two-tailed test of the hypothesis that the probability of an increase for each city is 0.5 (use the p < .12 significance level) (10pts).
+3. Make a decision about whether you reject the hypothesis, why you made the decision you did, and clearly state your conclusion (10pts).
+
+* Dataset #2: We have a population of probationers who have recently been sentenced. Each of these probationers received a "risk score" at the time they began probation. The risk score is normally distributed with a mean of 100 and a standard deviation of 10. 
+
+4. Using R, determine the percentile rank of a person who has a score of 122 (7.5pts).
+5. Compare your R results to what you would get if you used the z-table on page 533 (7.5pts). 
+
+* Dataset #3: There is a population of 17,820 people who got arrested for a felony at age 18. For each of these people we know how old they were the first time they were ever arrested. The code to read the data (x) and calculate the sampling distribution is below:
+
+```Rout
+set.seed(7)
+
+x = c(9,rep(10,2),rep(11,21),rep(12,153),rep(13,755),
+     rep(14,2263),rep(15,4989),rep(16,6174),rep(17,3462))
+table(x)
+
+n = 300
+
+xbar = vector()
+se.xbar = vector()
+lcl = vector()
+ucl = vector()
+
+for(i in 1:100000){
+  xs = sample(x,size=n,replace=T)
+  xbar[i] = mean(xs)
+  se.xbar[i] = sd(xs)/sqrt(n)
+  lcl[i] = xbar[i]-1.96*se.xbar[i]
+  ucl[i] = xbar[i]+1.96*se.xbar[i]
+  }
+```
+
+6. Calculate the population mean (3pts).
+7. Calculate the mean of the sample means (3pts).
+8. Calculate the standard deviation of the sample means (3pts).
+9. Calculate the average value of the standard errors (3pts).
+10. Identify the fraction of the sampling distribution that falls below the mean value of the sampling distribution (10pts).
+11. Present a histogram of the sampling distribution (8pts).
+12. Use the 95% confidence intervals from each of the 100,000 samples to document the fraction of confidence intervals that trap the true population parameter value (8pts).
+13. Calculate the 2.5th and 97.5th percentiles of the sampling distribution (7pts).
+14. Use set.seed(your UID number). Then, draw a single sample of 300 people from the population and calculate the sample mean, standard error, and 95% confidence interval based on your single sample (7pts).
+
+Your work should be assembled into a neatly formatted, readable, and well-organized pdf file so Jane and Jordan can easily read it (3 points).

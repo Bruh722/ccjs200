@@ -3636,3 +3636,10 @@ for(i in 1:100000){
 14. Use set.seed(your UID number). Then, draw a single sample of 300 people from the population and calculate the sample mean, standard error, and 95% confidence interval based on your single sample (7pts).
 
 Your work should be assembled into a neatly formatted, readable, and well-organized pdf file so Jane and Jordan can easily read it (3 points).
+
+### Lesson 22 - Tuesday 4/22/24
+
+* In today's class, we closely examine the material in Chapter 7 pertaining to interval estimation.
+* We will also consider a topic not covered in the book -- partial identification.
+* The slides for today's lesson are [here](https://github.com/rwb/ccjs200/blob/main/gfiles/lesson22.pdf).
+* Reminder: Assignment 3 submissions are due on Friday 4/26/24 at 11:59pm.

@@ -3637,7 +3637,7 @@ for(i in 1:100000){
 
 Your work should be assembled into a neatly formatted, readable, and well-organized pdf file so Jane and Jordan can easily read it (3 points).
 
-### Lesson 22 - Tuesday 4/22/24
+### Lesson 22 - Tuesday 4/23/24
 
 * In today's class, we closely examine the material in Chapter 7 pertaining to interval estimation.
 * We will also consider a topic not covered in the book -- partial identification.

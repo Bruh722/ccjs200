@@ -2692,7 +2692,7 @@ above the mean below the mean
 >
 ```
 
-* So we learn from this result that a little more than half the distribution is below the mean (53.5%) and a little less than half the distribution is above the mean (46.5%). With 100,000 samples, it seems pretty clear that the distribution is not quite symmetric.
+* So we learn from this result that a little more than half the distribution is above the mean (53.5%) and a little less than half the distribution is above the mean (46.5%). With 100,000 samples, it seems pretty clear that the distribution is not quite symmetric.
 * Based on this evidence, it seems the sampling distribution is neither normal nor symmetric.
 * Keep in mind that we've been working with very small samples (size N = 10) from a skewed distribution.
 * We now want to see what happens if we increase the sample size to size N = 500.

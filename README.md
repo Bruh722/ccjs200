@@ -3651,3 +3651,9 @@ Your work should be assembled into a neatly formatted, readable, and well-organi
 * The slides for today's lesson are [here](https://github.com/rwb/ccjs200/blob/main/gfiles/lesson23t.pdf).
 * Reminder #1: Assignment 3 submissions are due on Friday 4/26/24 at 11:59pm.
 * Reminder #2: Final exam is scheduled for Saturday 5/11/24 from 10:30am-12:30pm. You will have the full 2 hours to work on your exam.
+
+### Lesson 24 - Tuesday 4/29/24
+
+* In today's class, we continue our discussion of single sample hypothesis testing (Chapter 8).
+* The slides for today's lesson are [here](https://github.com/rwb/ccjs200/blob/main/gfiles/lesson23t.pdf).
+* Reminder: Final exam is scheduled for Saturday 5/11/24 from 10:30am-12:30pm. You will have the full 2 hours to work on your exam.

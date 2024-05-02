@@ -3657,3 +3657,11 @@ Your work should be assembled into a neatly formatted, readable, and well-organi
 * In today's class, we continue our discussion of single sample hypothesis testing (Chapter 8) and then we will introduce the categorical data analysis material in Chapter 9.
 * The slides for today's lesson are [here](https://github.com/rwb/ccjs200/blob/main/gfiles/lesson24.pdf).
 * Reminder: Final exam is scheduled for Saturday 5/11/24 from 10:30am-12:30pm. You will have the full 2 hours to work on your exam.
+
+### Lesson 25 - Thursday 5/2/24
+
+* In today's class, we will continue discussing topics related to categorical data analysis in Chapter 9.
+* Please make sure you download the most recent version of Lesson 24's notes because there were a couple of mistakes in the notes I presented in class that had to be corrected.
+* The slides for today's lesson are [here](https://github.com/rwb/ccjs200/blob/main/gfiles/lesson25.pdf).
+* Reminder: Final exam is scheduled for Saturday 5/11/24 from 10:30am-12:30pm. You will have the full 2 hours to work on your exam.
+* Today's material is the last new material that will be on the final exam. I will work practice problems that cover the range of topics on the final exam in next week's classes.

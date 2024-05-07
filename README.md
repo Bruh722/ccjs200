@@ -3665,3 +3665,9 @@ Your work should be assembled into a neatly formatted, readable, and well-organi
 * The slides for today's lesson are [here](https://github.com/rwb/ccjs200/blob/main/gfiles/lesson25.pdf).
 * Reminder: Final exam is scheduled for Saturday 5/11/24 from 10:30am-12:30pm. You will have the full 2 hours to work on your exam.
 * Today's material is the last new material that will be on the final exam. I will work practice problems that cover the range of topics on the final exam in next week's classes (lessons 26 and 27).
+
+### Lesson 26 - Tuesday 5/7/24
+
+* Reminder: Final exam is scheduled for Saturday 5/11/24 from 10:30am-12:30pm. You will have the full 2 hours to work on your exam.
+* This week we will be working on practice problems in preparation for the final exam.
+* Today's practice problems are [here](https://github.com/rwb/ccjs200/blob/main/gfiles/final-practice1.pdf).

@@ -3673,7 +3673,8 @@ Your work should be assembled into a neatly formatted, readable, and well-organi
 * Today's practice problems are [here](https://github.com/rwb/ccjs200/blob/main/gfiles/final-practice1.pdf).
 * Worked solutions are [here](https://github.com/rwb/ccjs200/blob/main/gfiles/final-practice1-worked.pdf).
 
-### Lesson 27 - Thursday 5/7/24
+### Lesson 27 - Thursday 5/9/24
 
 * Reminder: Final exam is scheduled for Saturday 5/11/24 from 10:30am-12:30pm. You will have the full 2 hours to work on your exam.
 * Final exam formula sheet and t-table are [here](https://github.com/rwb/ccjs200/blob/main/gfiles/formula.pdf).
+* Second set of practice problems are [here](https://github.com/rwb/ccjs200/blob/main/gfiles/practice2.pdf).

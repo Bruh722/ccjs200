@@ -3677,4 +3677,4 @@ Your work should be assembled into a neatly formatted, readable, and well-organi
 
 * Reminder: Final exam is scheduled for Saturday 5/11/24 from 10:30am-12:30pm. You will have the full 2 hours to work on your exam.
 * Final exam formula sheet and t-table are [here](https://github.com/rwb/ccjs200/blob/main/gfiles/formula.pdf).
-* Second set of practice problems are [here](https://github.com/rwb/ccjs200/blob/main/gfiles/practice2.pdf).
+* Second set of practice problems are [here](https://github.com/rwb/ccjs200/blob/main/gfiles/practice2.pdf); correction made after class on Thursday at 1:00pm.

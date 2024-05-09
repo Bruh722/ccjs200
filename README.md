@@ -3696,4 +3696,4 @@ Your work should be assembled into a neatly formatted, readable, and well-organi
 * difference between two conditional probabilities
 * chi-square test of independence for 2x2 contingency tables
 * Yule's Q and correlation
-* confidence intervals for correlations
+* confidence intervals for Yule's Q

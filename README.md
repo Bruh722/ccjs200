@@ -3678,3 +3678,22 @@ Your work should be assembled into a neatly formatted, readable, and well-organi
 * Reminder: Final exam is scheduled for Saturday 5/11/24 from 10:30am-12:30pm. You will have the full 2 hours to work on your exam.
 * Final exam formula sheet and t-table are [here](https://github.com/rwb/ccjs200/blob/main/gfiles/formula2.pdf). (Formula sheet updated at 4:50pm on Thursday 5/9/24).
 * Second set of practice problems are [here](https://github.com/rwb/ccjs200/blob/main/gfiles/practice2.pdf). (Updated on Thursday 5/9 at 1:00pm).
+
+#### List of Topics For Final Exam
+
+* standard errors (means and proportions)
+* point estimates (means, proportions, correlations - single number estimates)
+* interval estimates (confidence intervals and partial identification intervals)
+* small sample confidence intervals for the mean of a continuous variable (t-distributions)
+* large sample confidence intervals for the mean of a continuous variable (normal or z-distributions)
+* large sample confidence intervals for proportions (normal or z-distributions)
+* partial identification intervals
+* single sample hypothesis tests (small sample means - t-distribution)
+* single sample hypothesis tests (large sample means and proportions - z/normal distribution)
+* contingency tables
+* conditional probabilities derived from contingency tables
+* relative risk statistics (ratio of one conditional probability to another conditional probability)
+* difference between two conditional probabilities
+* chi-square test of independence for 2x2 contingency tables
+* Yule's Q and correlation
+* confidence intervals for correlations

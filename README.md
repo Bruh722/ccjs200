@@ -3687,7 +3687,7 @@ Your work should be assembled into a neatly formatted, readable, and well-organi
 * small sample confidence intervals for the mean of a continuous variable (t-distributions)
 * large sample confidence intervals for the mean of a continuous variable (normal or z-distributions)
 * large sample confidence intervals for proportions (normal or z-distributions)
-* partial identification intervals
+* partial identification intervals (not covered in textbook)
 * single sample hypothesis tests (small sample means - t-distribution)
 * single sample hypothesis tests (large sample means and proportions - z/normal distribution)
 * contingency tables
@@ -3696,4 +3696,4 @@ Your work should be assembled into a neatly formatted, readable, and well-organi
 * difference between two conditional probabilities
 * chi-square test of independence for 2x2 contingency tables
 * Yule's Q and correlation
-* confidence intervals for Yule's Q
+* confidence intervals for Yule's Q (not covered in textbook)
